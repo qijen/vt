@@ -1,0 +1,336 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXT
+//
+
+IDR_LICENSE             TEXT                    "res\\license.txt"
+IDR_ABOUT               TEXT                    "res\\about.txt"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 273, 199
+STYLE DS_SETFONT | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "About"
+FONT 9, "Verdana", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TAB,"SysTabControl32",WS_TABSTOP,7,22,259,155,WS_EX_ACCEPTFILES
+    DEFPUSHBUTTON   "OK",IDOK,111,180,50,12,WS_GROUP
+END
+
+IDD_DIALOGINIT DIALOG  0, 0, 600, 300
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Loading Virtools Player ....",IDC_STATIC_LOADING,46,18,82,8
+    ICON            IDI_VIRTOOLS,IDC_STATIC,13,12,20,20,SS_REALSIZEIMAGE
+END
+
+IDD_SPLASH DIALOGEX 0, 0, 400, 184
+STYLE DS_SETFONT | WS_POPUP
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Loading Virtools Player ....",IDC_STATIC_SPLASHLOADING,161,143,82,8
+    CONTROL         104,IDC_STATIC,"Static",SS_BITMAP,0,0,400,233
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 341, 195
+STYLE DS_ABSALIGN | DS_SYSMODAL | DS_SETFONT | DS_SETFOREGROUND | DS_CENTER | DS_CENTERMOUSE | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Grafikoptionen"
+FONT 12, "Tahoma", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,14,163,50,14
+    LISTBOX         IDC_LISTDRIVER,7,37,180,49,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&abbrechen",IDC_CANCEL2,76,164,60,13,BS_NOTIFY | NOT WS_TABSTOP
+    LISTBOX         IDC_LISTMODE,198,56,85,30,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_WINSIZE,64,6,125,137,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Windowed Resolution",IDC_STATIC,12,7,39,8
+    CONTROL         "Fullscreen",IDC_CHB_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,107,52,11
+    COMBOBOX        IDCB_RRATE,198,37,39,137,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDCB_BPP,245,37,39,137,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Antialiasing",IDC_STATIC,12,92,39,8
+    CONTROL         "0",IDC_FSSA_0,"Button",BS_AUTORADIOBUTTON,64,90,20,10
+    CONTROL         "1",IDC_FSSA_1,"Button",BS_AUTORADIOBUTTON,85,90,20,10
+    CONTROL         "2",IDC_FSSA_2,"Button",BS_AUTORADIOBUTTON,104,90,20,10
+END
+
+IDD_STYLE DIALOGEX 0, 0, 231, 201
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Configuration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_COMBO1,8,180,62,84,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_DRIVER_LIST,8,14,206,94,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CB_FMODE,8,123,62,69,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CB_BPPS,82,123,52,33,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CB_RRATES,151,123,63,51,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Fullscreen",IDC_CHECKB_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,82,183,48,10
+    LTEXT           "Fullscreen Driver",IDC_STATIC,17,3,77,8
+    LTEXT           "Fullscreen Resolution",IDC_STATIC,8,112,68,8
+    LTEXT           "Color Depth",IDC_STATIC,89,112,38,8
+    LTEXT           "Refresh Rate",IDC_STATIC,153,112,43,8
+    LTEXT           "Anti Alias",IDC_STATIC,10,139,30,8
+    LTEXT           "Windowed Resolution",IDC_STATIC,8,168,74,8
+    COMBOBOX        IDC_CB_FSSA,8,148,43,43,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ERROR DIALOGEX 0, 0, 234, 137
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CAPTION
+CAPTION "Error"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_ERROR_RICHT_TEXT,"RichEdit20A",ES_CENTER | ES_MULTILINE | ES_READONLY | WS_TABSTOP,0,0,233,134
+END
+
+IDD_ABOUTP DIALOGEX 0, 0, 236, 133
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CAPTION
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_ERROR_RICHT_TEXT,"RichEdit20A",ES_CENTER | ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | WS_TABSTOP,0,0,236,133
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOGINIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        VERTGUIDE, 64
+        VERTGUIDE, 189
+        BOTTOMMARGIN, 177
+        HORZGUIDE, 100
+        HORZGUIDE, 105
+    END
+
+    IDD_STYLE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 228
+        VERTGUIDE, 8
+        VERTGUIDE, 82
+        VERTGUIDE, 214
+        BOTTOMMARGIN, 197
+        HORZGUIDE, 55
+        HORZGUIDE, 70
+        HORZGUIDE, 134
+    END
+
+    IDD_ERROR, DIALOG
+    BEGIN
+        HORZGUIDE, 134
+    END
+
+    IDD_ABOUTP, DIALOG
+    BEGIN
+        RIGHTMARGIN, 206
+        HORZGUIDE, 132
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#if defined(APSTUDIO_INVOKED) || !defined(CUSTOM_PLAYER_STATIC)
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "PlayGen Player"
+            VALUE "CompanyName", "PlayGen Ltd"
+            VALUE "FileDescription", "PlayGen Player"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "CustomPlayer"
+            VALUE "LegalCopyright", "© 2001-2007 PlayGen Ltd"
+            VALUE "LegalTrademarks", "© 2001-2007 PlayGen Ltd"
+            VALUE "OriginalFilename", "CustomPlayer.exe"
+            VALUE "ProductName", "PlayGen Player"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(CUSTOM_PLAYER_STATIC)
+#if defined(APSTUDIO_INVOKED)
+VS_VERSION_INFO$(CUSTOM_PLAYER_STATIC) VERSIONINFO
+#else
+VS_VERSION_INFO VERSIONINFO
+#endif
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "PlayGen Player"
+            VALUE "CompanyName", "PlayGen Ltd"
+            VALUE "FileDescription", "PlayGen Player"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "CustomPlayerStatic"
+            VALUE "LegalCopyright", "© 2001-2007 PlayGen Ltd"
+            VALUE "LegalTrademarks", "© 2001-2007 PlayGen Ltd"
+            VALUE "OriginalFilename", "CustomPlayerStatic.exe"
+            VALUE "ProductName", "PlayGen Player"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+#endif
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUT_ABOUTTEXTss   "About text from string table"
+    IDS_ABOUT_THANKSTOTEXT  "thanks text"
+    IDS_ABOUT_ABOUT         "Information"
+    IDS_ABOUT_THANKSTO      "Thanks To"
+    IDS_ABOUT_LICENSEAGREEMENT "License"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Information"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_VIRTOOLS            ICON                    "res\\app.ico"
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

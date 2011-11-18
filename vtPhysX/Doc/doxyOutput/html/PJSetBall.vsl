@@ -1,0 +1,43 @@
+void main()
+{
+	PhysicManager pm = GetPhysicManager();
+	pFactory pf  = getPFactory();
+	
+		
+	pRigidBody bodyA = pm.getBody(bodyARef);
+	pRigidBody bodyB = pm.getBody(bodyBRef);
+
+	//sanity check : 
+	if(!bodyA && !bodyB )
+		return;
+
+	pWorld w  = null;
+	
+	//bodyARef or bodyBRef can be zero. This creates a ball constraint with the environment then.
+	//However, we need a valid world object : 
+	if(bodyA)
+	{
+		w = bodyA.getWorld();
+	}
+	
+	if(bodyB)
+	{
+		w = bodyB.getWorld();
+	}
+	
+
+	//we ask the world whether a joint of the type spherical exists already amongst the both bodies : 
+	pJoint joint  = w.getJoint(bodyARef,bodyBRef,JT_Spherical);
+
+	pJointBall ballJoint = null;
+	
+	if(!joint)
+	{
+		Vector globalAnchor  = anchor;
+		if(anchorReference)
+			anchorReference.Transform(globalAnchor,anchor);
+		
+		ballJoint = pf.createBallJoint(bodyARef,bodyBRef,globalAnchor,swingLimitAxis);
+	}
+	
+}

@@ -1,0 +1,336 @@
+#include <StdAfx.h>
+#include "pCommon.h"
+#include "pFactory.h"
+
+#include "CK3dPointCloud.h"
+
+int RenderParticles_P(CKRenderContext *dev,CKRenderObject *obj,void *arg);
+
+void pFactory::copyToEmitterDesc(NxFluidEmitterDesc&dst,pFluidEmitterDesc src)
+{
+
+
+	
+
+	dst.dimensionX = src.dimensionX;
+	dst.dimensionY = src.dimensionY;
+	dst.flags = (NxFluidEmitterFlag)src.flags;
+	dst.fluidVelocityMagnitude = src.fluidVelocityMagnitude;
+	dst.maxParticles = src.maxParticles;
+	dst.particleLifetime = src.particleLifetime;
+	dst.randomAngle = src.randomAngle;
+	dst.randomPos = getFrom( src.randomPos);
+	dst.rate = src.rate;
+	dst.type = (NxEmitterType)src.type;
+	dst.repulsionCoefficient = src.repulsionCoefficient;
+	if (src.frameShape)
+	{
+		pWorld *w  = GetPMan()->getWorldByShapeReference(src.frameShape);
+		if (w)
+		{
+			NxShape *shape = w->getShapeByEntityID(src.frameShape->GetID());
+			if (shape)
+			{
+				dst.frameShape = shape;
+			}else
+			{
+				dst.frameShape = NULL;
+			}
+		}
+	}
+	
+	
+
+
+}
+
+void pFactory::initParticles(pFluidDesc &desc,NxParticleData&dst,CK3dEntity*srcReference,CK3dEntity*dstEntity)
+{
+
+	
+	CKMesh *mesh  = dstEntity->GetCurrentMesh();
+	if (!mesh)
+	return;
+
+	//////////////////////////////////////////////////////////////////////////
+	mesh->SetVertexCount(desc.maxParticles);
+	CKDWORD stride;
+	void*	ptr = mesh->GetPositionsPtr(&stride);
+	XPtrStrided<VxVector> vpos(ptr,stride);
+
+	VxVector pos(0,0,0);
+
+	for (int i = 0 ; i < mesh->GetVertexCount();i++ )
+	{
+		pos.x +=(float)(i*0.0001f);
+		mesh->SetVertexPosition(i,&pos);
+	}
+	//////////////////////////////////////////////////////////////////////////
+
+	mesh->VertexMove();
+
+	char* bufferPos = reinterpret_cast<char*>(dst.bufferPos);
+	char* bufferVel = reinterpret_cast<char*>(dst.bufferVel);
+	char* bufferLife = reinterpret_cast<char*>(dst.bufferLife);
+
+	
+//	if(bufferPos == NULL && bufferVel == NULL && bufferLife == NULL)
+//		return;
+/*
+	NxVec3 aabbDim;
+	aabb.getExtents(aabbDim);
+	aabbDim *= 2.0f;
+*/
+	(*dst.numParticlesPtr) = 0;
+
+	for (int j = 0 ; j < desc.maxParticles ; j ++ )
+	{
+		VxVector mPos;
+		mesh->GetVertexPosition(j,&mPos);
+
+		srcReference->Transform(&mPos,&mPos);
+
+		NxVec3 p(mPos.x,mPos.y,mPos.z);
+
+
+		NxVec3& position = *reinterpret_cast<NxVec3*>(bufferPos);
+		position = p;
+		int stride = dst.bufferPosByteStride;
+		bufferPos += dst.bufferPosByteStride;
+
+
+		NxVec3& velocity = *reinterpret_cast<NxVec3*>(bufferVel);
+		NxVec3 vel;
+		velocity = vel;
+		bufferVel += dst.bufferVelByteStride;
+
+		if (bufferLife)
+		{
+			NxReal& life = *reinterpret_cast<NxReal*>(bufferLife);
+			life = 0.0f;
+			bufferLife += dst.bufferLifeByteStride;
+		}
+
+		(*dst.numParticlesPtr)++;
+	}
+
+}
+
+pFluid* pFactory::createFluid(CK3dEntity *srcReference ,pFluidDesc desc)
+{
+
+	//Create a set of initial particles
+	
+	pParticle*	initParticle = new pParticle[desc.maxParticles];
+	unsigned initParticlesNum = 0;
+
+	//Setup structure to pass initial particles.
+	NxParticleData initParticleData;
+	initParticleData.numParticlesPtr		= &initParticlesNum;
+	initParticleData.bufferPos				= &initParticle[0].position.x;
+	initParticleData.bufferPosByteStride	= sizeof(pParticle);
+	initParticleData.bufferVel				= &initParticle[0].velocity.x;
+	initParticleData.bufferVelByteStride	= sizeof(pParticle);
+
+	CK3dEntity *particleEntity = createFluidEntity();
+
+	CKMesh *mesh = particleEntity->GetCurrentMesh();
+	mesh->SetVertexCount(desc.maxParticles);
+	
+	VxVector pos;
+
+	srcReference->GetPosition(&pos);
+	particleEntity->SetPosition(&pos);
+
+	CK3dPointCloud *cloud  = createPointCloud(desc);
+	if (cloud)
+	{
+		cloud->SetReferentialPosition(pos);
+	}
+
+	//initParticles(desc,initParticleData,srcReference,particleEntity);
+	
+
+	//Setup fluid descriptor
+	NxFluidDesc fluidDesc;
+	fluidDesc.setToDefault();
+
+	copyToFluidDescr(fluidDesc,desc);
+
+	/*fluidDesc.maxParticles                  = desc.maxParticles;
+	fluidDesc.kernelRadiusMultiplier		= 2.0f;
+	fluidDesc.restParticlesPerMeter			= 10.0f;
+	fluidDesc.motionLimitMultiplier			= 3.0f;
+	fluidDesc.packetSizeMultiplier			= 8;
+	fluidDesc.collisionDistanceMultiplier   = 0.1;
+	fluidDesc.stiffness						= 50.0f;
+	fluidDesc.viscosity						= 40.0f;
+	fluidDesc.restDensity					= 1000.0f;
+	fluidDesc.damping						= 0.0f;
+	fluidDesc.restitutionForStaticShapes	= 0.2f;
+	fluidDesc.dynamicFrictionForStaticShapes= 0.05f;
+	fluidDesc.simulationMethod				= NX_F_SPH;*/
+	fluidDesc.flags &= ~NX_FF_HARDWARE;
+
+
+	//Add initial particles to fluid creation.
+	fluidDesc.initialParticleData			= initParticleData;
+
+
+	//Create user fluid.
+	//- create NxFluid in NxScene
+	//- setup the buffers to read from data from the SDK
+	//- set NxFluid::userData field to MyFluid instance
+	bool trackUserData = false;
+	bool provideCollisionNormals = false;
+
+	pFluid* fluid = new pFluid(fluidDesc, trackUserData, provideCollisionNormals, getFrom(NxVec3(0.4f,0.5f,0.9f)), 0.03f);
+
+	
+	if (fluidDesc.flags & NX_FF_HARDWARE)
+	{
+		int  op = 2;
+	}
+
+	////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+	CK3dEntity*worldReference = (CK3dEntity*)GetPMan()->m_Context->GetObject(desc.worldReference);
+
+	if (!worldReference)
+	{
+		if (GetPMan()->getDefaultWorld())
+		{
+			worldReference = GetPMan()->getDefaultWorld()->getReference();
+		}else
+			return NULL;
+	}
+
+	pWorld*world  = GetPMan()->getWorld(worldReference->GetID());
+	if (!world)
+	{
+		return NULL;
+
+	}
+
+	int s  = fluidDesc.isValid(); 
+	//////////////////////////////////////////////////////////////////////////	//////////////////////////////////////////////////////////////////////////
+	NxFluid* xfluid  = world->getScene()->createFluid(fluidDesc);
+	if (xfluid)
+	{
+		xfluid->userData = fluid;
+		fluid->setFluid( xfluid );
+		fluid->setEntityID( particleEntity->GetID() );
+
+		particleEntity->SetRenderCallBack(RenderParticles_P,fluid);
+
+		return fluid;
+	}
+
+	return NULL;
+}
+
+void pFactory::copyToFluidDescr(NxFluidDesc &dst , pFluidDesc src )
+{
+
+	dst.attractionForDynamicShapes = src.attractionForDynamicShapes;
+	dst.attractionForStaticShapes = src.attractionForStaticShapes;
+	dst.collisionDistanceMultiplier = src.collisionDistanceMultiplier;
+	dst.collisionGroup = src.collisionGroup;
+	dst.collisionMethod = src.collisionMethod;
+	dst.collisionResponseCoefficient =src.collisionResponseCoefficient;
+	dst.damping = src.damping;
+	dst.dynamicFrictionForDynamicShapes = src.dynamicFrictionForDynamicShapes;
+	dst.dynamicFrictionForStaticShapes = src.dynamicFrictionForStaticShapes;
+	dst.externalAcceleration = getFrom(src.externalAcceleration);
+	dst.fadeInTime = src.fadeInTime;
+	dst.kernelRadiusMultiplier = src.kernelRadiusMultiplier;
+	dst.packetSizeMultiplier = src.packetSizeMultiplier;
+	dst.maxParticles = src.maxParticles;
+	dst.motionLimitMultiplier = src.motionLimitMultiplier;
+	dst.numReserveParticles = src.numReserveParticles;
+	dst.packetSizeMultiplier = src.packetSizeMultiplier;
+	dst.restitutionForDynamicShapes = src.restitutionForDynamicShapes;
+	dst.restitutionForStaticShapes =src.restitutionForStaticShapes;
+	dst.restParticlesPerMeter = src.restParticlesPerMeter;
+	dst.restDensity = src.restDensity;
+	dst.simulationMethod = src.simulationMethod;
+	dst.staticFrictionForDynamicShapes  = src.staticFrictionForDynamicShapes;
+	dst.staticFrictionForStaticShapes = src.staticFrictionForStaticShapes;
+	dst.stiffness = src.stiffness;
+	dst.surfaceTension  =src.surfaceTension;
+	dst.viscosity =src.viscosity;
+	dst.flags = src.flags;
+
+}
+
+
+
+
+
+CK3dEntity*pFactory::createFluidEntity()
+{
+
+	CK3dEntity *result = NULL;
+	CK_OBJECTCREATION_OPTIONS creaoptions = CK_OBJECTCREATION_DYNAMIC;
+
+	XString name;
+	name << "_Decal";
+
+	CK3dEntity* decal = (CK3dEntity*)ctx()->CreateObject(CKCID_3DOBJECT,name.Str(),creaoptions);
+
+	name << "Mesh";
+	CKMesh* decalmesh = (CKMesh*)ctx()->CreateObject(CKCID_MESH,name.Str(),creaoptions);
+	if (!decalmesh) return NULL;
+
+	// Add to the level
+	CKLevel* level = ctx()->GetCurrentLevel();
+	CKScene* scene = ctx()->GetCurrentScene();
+
+	level->AddObject(decal);
+	level->AddObject(decalmesh);
+
+	// And to the current scene if any
+	if (scene != level->GetLevelScene()) {
+		scene->AddObject(decal);
+		scene->AddObject(decalmesh);
+	}
+
+	// 3DEntity
+	decal->SetWorldMatrix(VxMatrix::Identity());
+	decal->SetCurrentMesh(decalmesh);
+
+	return decal;
+
+}
+
+
+CK3dPointCloud*pFactory::createPointCloud(const pFluidDesc&descr)
+{
+
+	CK3dPointCloud*result = NULL;
+	CK_OBJECTCREATION_OPTIONS creaoptions = CK_OBJECTCREATION_DYNAMIC;
+
+	XString name;
+	name << "_FluidCloud";
+
+	result = (CK3dPointCloud*)ctx()->CreateObject(CKCID_3DPOINTCLOUD,name.Str(),creaoptions);
+	// Add to the level
+	CKLevel* level = ctx()->GetCurrentLevel();
+	CKScene* scene = ctx()->GetCurrentScene();
+
+	level->AddObject((CKObject*)result);
+
+	// And to the current scene if any
+	if (scene != level->GetLevelScene()) {
+		scene->AddObject((CKSceneObject*)result);
+	}
+
+	// 3DEntity
+	result->SetWorldMatrix(VxMatrix::Identity());
+	//decal->SetCurrentMesh(decalmesh);
+
+	return result;
+
+
+
+
+}

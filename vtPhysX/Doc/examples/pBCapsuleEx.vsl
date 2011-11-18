@@ -1,0 +1,29 @@
+pObjectDescr oDescr;
+
+oDescr.flags 	 					= BF_Moving + BF_Collision + BF_Gravity;
+
+oDescr.hullType 					= HT_Capsule;//	set hull type
+
+
+pCapsuleSettingsEx capsule;
+
+capsule.height.referenceAxis	= DIR_Y;	//  capsule longest side is along local Y Axis
+capsule.height.reference		= ref;		//	measure length from input entity
+
+capsule.radius.referenceAxis	= DIR_Y;	//
+capsule.radius.reference		= ref;		//
+
+oDescr.setCapsule(capsule);
+
+
+//	tell manager, there are capsule settings being used, otherwise,
+//	it looks for capsule settings in the objects attributes, lookup order :
+//		- 	3D-entity
+//		- 	current mesh
+//		-	materials
+//
+//	If there is no such attribute, capsule is set to default :
+//		height from BoxSize[Y]
+//		radius from BoxSize[X]
+//
+oDescr.mask 						+=OD_Capsule;

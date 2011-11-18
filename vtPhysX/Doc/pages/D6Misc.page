@@ -1,0 +1,284 @@
+/*! \page D6Frames
+
+
+<b>Frames</b>
+
+Setting up the joint constraint frames is the first step in successfully configuring a joint. A frame marks a position and orientation in space. It is viewed as a set of three right angle axes meeting at a point that is considered the origin of the frame.
+
+The d6joint uses a pair of frames, one fixed in the world and one fixed in the constrained body. The frame locations are specified by their fixed offset relative to their respective actor frame (or the world frame).
+
+A common way to specify 6 DOF frame offsets in computer graphics is as 4x4 homogeneous rigid body transformation matrices that contain both the position offset of the origin and the rotational offset of the frame as a 3x3 submatrix. In the AGEIA PhysX SDK, joint frames are specified using an anchor point and a pair of unit vectors which represent the joint frames orientation relative to the body frames. The third axis can be derived from the other two axes since they are orthogonal, where the z-axis is computed as a cross product of x and y (see the diagram in the 6-Degree-of-Freedom Configurable Joint section).
+
+The x-axis is the principal axis in a d6joint frame for the purposes of a twist and swing decomposition of the joint's rotation; an arbitrary orientation is achieved by (1) a twist rotation about the x-axis followed by (2) a swing rotation about an axis in the yz plane. 
+
+<b>Parent and Child Constraint Frames</b>
+Using the parent/child naming conventions, the first frame is the parent, corresponding to actor[0] and the second frame is the child, corresponding to actor[1]. Usually the parent frame is fixed in the world or located in the limb that is closer to the central root in a hierarchy, but this is not enforced.
+
+The principal axis of the child frame will usually be aligned with the symmetry axis of its actor (e.g., the long axis of a limb or the rotation axis of a wheel). The principal axis of the parent frame is used to specify the center of a swing limit so should be set in the middle range of motion of the child limb.
+
+The y and z axes provide a reference for the twist rotation of the principal axis between parent and child. The y and z axes of the parent frame are also used for aligning an optional swing limit.
+
+<b>Drive Frames</b>
+
+When driving the joint it can be useful to imagine a third drive frame specified by the drive position input – an offset from the parent constraint frame. Drive velocities are specified relative to the parent joint frame.
+
+
+<b>Frame Relationship Summary</b>
+
+
+By now there are six frames involved, including the world frame and the actor frames but ignoring other frames such as the center of mass frames which are not directly involved with the joint configuration. There is plenty of scope for confusion if it is not clear how frame offsets are being specified or what conventions are being used.
+
+Note that once the joint constraint frames have been set up, as above, at some (fixed) offset from their respective actor body frames then the actor body frames can be forgotten; their position and alignment has no effect on the action of the joint, only the constraint frames are involved in the operation of the joint.
+
+The following sketch shows the relative frame offsets as they are stored and treated by the d6joint. 
+
+\image html 6dof_axisrelationship.png
+
+The joint frames are sketched separate from each other for clarity, but the joint constraints will act to bring the two constraint frames together and drive constraints will act to bring the drive frame and the child frame together.
+
+The AGEIA PhysX SDK allows for frame setup in global coordinates (i.e., relative to the world frame or absolute). A single global frame position and orientation can be used to initialize both constraint frames. This can be convenient in simple cases when the actors are in suitable starting positions; however, for more complex cases, like setting up rag doll joint limits, parent and child frames are best set up separately.
+
+The pJoint::setGlobalAnchor() and pJoint::setGlobalAxis() functions are used to set the frame position and orientation in the global frame (remember when using setGlobalAxis() that the x-axis is the principle axis for a d6joint, unlike other joints).
+
+<h3> D6Joint Coordinates </h3>
+
+
+For specifying position constraints, it is useful to think of the joint's 6DOF as being parameterized by six coordinates, three linear and three angular, between the constraint frame fixed in the parent actor and the constraint frame fixed in the child actor.
+
+For the angular DOFs, the concept of ‘twist and swing’ is used to structure the API for specifying angular joint types and limits and to actually implement the default angular drive behavior so that twist and swing freedoms are decoupled.
+
+<b>Linear Coordinates: Cartesian X, Y, Z </b>
+The three linear DOFs are uncomplicated; they are naturally specified by the three Cartesian origin coordinates of the child frame in the parent frame. Similarly, the drive frame position is specified by Cartesian coordinates relative to the parent frame, and the velocity components are simply derivatives of the position coordinates.
+
+<b>Default Angular Coordinates: Twist & Swing</b>
+
+
+Twist and swing coordinates are the default angular coordinates for the d6joint. They decouple a 3D rotation into a 1D twist rotation about the principal frame axis and a swing rotation about an axis in the orthogonal plane of the two remaining frame axes.
+
+Twist and swing coordinates have a singularity; when the child limb swings a full 180 degrees so that its principal axis points in exactly the reverse direction of the parent’s principal axis, the limb’s twist is not defined. Avoid this singularity; limits should be used when a zero-twist joint is configured or when driving a ball-and-socket joint with the default twist and swing coordinates.
+
+This intuitive idea of twist and swing is all that is needed to configure joints and limits. More details are given in the Angular Drives section.
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+/*! \page D6Projection
+
+The d6joint provides the ability to correct large joint errors by projecting the joint back to valid configuration. This is similar to the projection functionality provided by other joints such as the spherical joint and revolute joint.
+
+Projection is provided for joint errors on locked DOFs and limit violations on limited DOFs with a couple of exceptions.
+
+The d6joint provides projection for the following cases:
+
+- Free linear motion 
+- Limited linear motion 
+- Free and Limited twist motion 
+- Both swing axes locked 
+- Swing 1 locked and Swing 2 limited 
+- Swing 2 locked and Swing 1 limited 
+- Swing 1 and Swing 2 locked 
+
+The d6joint does NOT provide projection for the instances below:
+
+- Swing 1 limited and Swing 2 free 
+- Swing 2 limited and Swing 1 free 
+
+By default, joint projection is disabled. To enable joint projection, it is necessary to set the members of d6 appropriately as demonstrated below:
+
+d6Desc.projectionMode = NX_JPM_POINT_MINDIST;    
+d6Desc.projectionDistance = 0.1f;    
+d6Desc.projectionAngle = 0.0872f;
+
+
+
+NOTE: In some cases, projection may negatively influence the behavior of a system, depending on how the system is tuned. This is particularly true for small projection distances when the solver fights with the way the joint is projected. Obtaining the best configuration is generally a matter of experimentation.
+
+
+
+*/
+
+
+
+
+/*! \page D6SoftLimitsAndRes Soft Limits and Restitution
+
+<b>Soft Limits</b>
+
+The d6joint allows a limit to be 'soft' (i.e., allows a certain amount of limit violation when the joint is pushing against a limit). This creates a smoother and more realistic response when an object hits a limit, in addition to improving the joint's stability. 
+
+A common scenario for using soft limits is when the joint is being driven by animation data. In some cases, the data may not be perfect and try to force the joint outside the range defined by its limits. In this case, it looks more realistic to give a little than to stop the motion dead.
+
+To enable soft limits for a joint, set the spring and damping parameters of the appropriate joint limit to a positive value. A value of zero is the default, used to signify a hard limit.
+
+<b>Restitution</b>
+
+When a joint hits a limit, it is possible to give the limit a bounce so that it reflects back with a proportion of the velocity that it hits the limit with (along the axis of the limit). This is similar to specifying a restitution value when dealing with contacts. A restitution value of zero is the default which causes the joint to stop dead - a value of 1 will cause the joint to bounce back from the limit with the same velocity that it hit.
+
+In situations where the joint has many locked DOFs (e.g., 5) the restitution may not be applied correctly. This is due to a limitation in the solver which causes the restitution velocity to become zero as the solver enforces constraints on the other DOFs.
+
+This limitation applies to both angular and linear limits; however, it is generally most apparent with limited angular DOFs.
+
+Disabling joint projection and increasing the solver iteration count may improve this behavior to some extent.
+
+Also, combining soft joint limits with joint motors trying to drive past those limits may affect stability. This can be alleviated through either tweaking the limit's and drive's parameters (such as making the target lie within the limits), or avoiding the situation entirely, either by eschewing the combination or by switching off the motor.
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! \page TwistAndSwing Twist and Swing
+   
+   <h3>Twist and Swing</h3> 
+   
+   Twist and swing coordinates for 3D orientation are based on its decomposition into a two orthogonal rotation sequence. They sit between Euler angle decompositions into a three orthogonal rotation sequence and direct representations of the single shortest rotation axis/angle.
+
+In the twist and swing decomposition, an orientation is achieved by a sequence of two rotations:
+
+(1) a twist rotation about a selected axis and (2) a swing rotation about an axis in its perpendicular plane.
+
+Hence, twist describes the DOF spin about the selected twist axis, while swing describes the direction in space of the twist axis. With two bodies involved, the twist and swing decomposition is based on a selected twist axis in both the parent and child; the twist axis in the parent acts as the central reference direction relative to which the swing direction of the child twist axis is measured.
+
+<b>Globe Visualization</b>
+
+Imagine the twist axis as a radius tracing out points on the globe as it swings and the central reference swing direction positioned towards the North Pole. A swing rotation plots a point from the North Pole to the target point by following the shortest path on the sphere - a line of longitude in this case.
+
+The swing rotation axis lies in the plane of the equator 90 degrees east of the swing longitude. NOTE: The direction is computed from the cross product of the parent and child twist axes.
+
+Now set a zero reference for twist as a given heading at the North Pole. This twist reference is transferred to other target points on the globe by maintaining the heading along the shortest path to the target point. This is an isotropic definition of twist in that it is independent of the swing direction to the target point.
+
+<b>The Singularity at Full-Swing</b>
+
+The South Pole is a problem case because there is no unique single shortest path from the North Pole; all lines of longitude meet at both poles, therefore a 180 degree swing rotation around any arbitrary equatorial axis takes a point from the North to the South Pole. Twist cannot be defined and swing is redundant.
+
+<b>Twist Parameter</b>
+Twist can be specified and stored as an angle; however, performing the rotation requires trig functions to be evaluated. Therefore, it is more efficient to store a pre-computed trig function, which will be demonstrated later in this section.
+
+
+<b>Swing Parameters as Rotation Vector Components</b>
+Swing is parameterized by the two Cartesian coordinates of its rotation vector in the equator plane. The swing direction is inherent in the direction of the vector, i.e., the relative values of its two coordinates. The swing angle is encoded in the magnitude of the vector, i.e., its length as given by the norm of its two coordinates. The options of suitable trig functions for mapping angle to magnitude is covered below.
+
+Note that swing is NOT parameterized by swing-angle and swing-direction, or latitude and longitude angles as a picture of the globe might seem to suggest; these are the natural coordinates for a pair of sequential Euler angle rotations rather than two parameters of a single rotation. They are singular at the origin; namely, the North Pole, where swing-angle is zero and swing-direction is redundant.
+
+
+<b>Swing Parameters as Projected Components</b>
+The two swing parameters can also be seen as components of the twist axis projected flat onto the equatorial plane. The equivalent rotation vector lays 90 degrees east of the projected axis. The projection is more general than just a shadow; it can be any suitable function for mapping angle to magnitude.
+
+
+<b>Choice of Projection for Mapping Magnitude</b>
+The angle itself is an obvious choice for the magnitude function; however, to execute the rotation requires costly sine and cosine evaluations. Below are four trig functions based on spherical projections in order of increasing suitability for numerical work.
+
+<h5>sin-angle</h5>
+
+The cross product of the parent and child twist axes is a vector in the direction of the swing rotation axis. Its magnitude is the sine of the swing angle. This corresponds to parallel projection form, a light source far above the North Pole. However, note that the shadow of the twist axis on the equatorial plane does not distinguish a North hemisphere point from its reflection through the equator in the South hemisphere.
+
+The sine function is not a suitable magnitude-mapping function because it only works for angles up to 90 degrees.
+
+<h5>tan-half-angle</h5>
+
+This choice is of more theoretical than practical use.
+
+A light source located at the South Pole maps all North hemisphere points to inside the equator and South hemisphere points to outside the equator; however, as the South Pole is approached, the image goes to infinity. This is the stereographic projection. Its magnitude is the tangent of half the swing angle. This projection is the unique conformal projection between the sphere and the plane in that it preserves all angles. Circles on the sphere generally map to circles on the plane except for great circles which map to straight lines.
+
+Instead of the familiar 2-sphere, i.e., a 2D spherical surface embedded in 3D space, imagine the 3-sphere, the space inhabited by unit quaternions, as a 3D spherical surface embedded in 4D space. In fact, only half the 3-sphere is needed because diametrically opposite points represent the same orientation. The tan-half-angle projection is the central projection from the hemi-3-sphere onto the tangent (hyper) plane at its pole! In the central projection, the light source is placed at the center of the sphere.
+
+
+<h5>tan-quarter-angle</h5>
+This corresponds to the stereographic projection from the quaternion sphere into 3D space. It is the unique conformal projection from the space of rotations into Euclidean space.
+
+It is easy to compute the quaternion (cos-half-angle and sin-half-angle) from tan-quarter-angle.
+
+<b>Twist and Swing is not Axis and Angle</b>
+
+Do not confuse swing and twist with axis-and-angle. Both describe the direction of an axis and an angle of rotation about that axis. The difference is in the definition of the axis.
+
+The axis-and-angle axis is the axis of the single shortest rotation. It is not fixed in the world or the body; its arbitrary direction in space is decided by the difference between reference and required orientations. The angle is the magnitude of the single shortest rotation between the orientations.
+
+The twist and swing axis is a physical axis fixed in the body. Its direction is specified by a swing rotation about an axis in the perpendicular plane. The twist angle specifies a second, orthogonal, decoupled rotation about the axis.
+
+<h5>Twist and Swing Decomposition in Quaternion Components</h5>
+This section shows how the twist and swing decomposition is done with quaternion mathematics.
+
+The quaternion representing the general 3D orientation is written below, 
+
+Qxyz = (Qw, Qx, Qy, Qz)
+
+with 'w' indexing the scalar and 'x','y','z' indexing the components of the vector. 
+
+If the x-axis is the special axis in defining twist and swing, then the decomposition is computed in quaternion multiplication, Qxyz=Qswing Qtwist, with the following: 
+
+\image html  6dof_twistswingEq1.PNG
+
+The proof begins by writing the quaternion representing the twist rotation around the x-axis as,
+
+Qtwist = Qx = (Cx, Sx, 0, 0) 
+
+and the quaternion representing the swing rotation around an axis in the yz-plane with the following: 
+
+Qswing = Qyz = (Cyz, 0, Sy, Sz)
+
+Below, 'c' represents the scalar and 's' represents the vector components in relation to the cosine and sine of the half angles:
+
+\image html 6dof_twistswingEq2.PNG
+
+
+Remember that generally \image html 6dof_twistswingEq3.PNG 
+so we have
+
+\image html 6dof_twistswingEq4.PNG
+
+Using quaternion multiplication, the rotations compose right-to-left just like rotation matrices, shown below: 
+
+\image html  6dof_twistswingEq5.PNG
+
+
+The rotations are treated as active rotations around global fixed axes rather than the current local axes. Expanding the quaternion multiplication looks like this: 
+
+
+\image html 6dof_twistswingEq6.PNG
+
+Extracting the twist quaternion from this is straightforward once you see that Qw^2 + Qx^2 =  Cyz^2
+
+\image html 6dof_twistswingEq7.PNG
+
+Then the swing quaternion is extracted by inverting (conjugating) the twist quaternion and multiplying
+
+\image html 6dof_twistswingEq8.PNG
+
+
+Expanding the quaternion multiplication gives
+
+\image html 6dof_twistswingEq9.PNG
+
+which completes the proof.
+
+
+
+
+
+
+
+       
+    */ 

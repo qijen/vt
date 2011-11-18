@@ -1,0 +1,10 @@
+; DataRelay.def : Declares the module parameters for the DLL.
+
+LIBRARY "DataRelay"
+DESCRIPTION 'DataRelay Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+    CKGetPluginInfo
+    CKGetPluginInfoCount
+    RegisterBehaviorDeclarations

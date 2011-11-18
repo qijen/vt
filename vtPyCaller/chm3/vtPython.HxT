@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE HelpTOC SYSTEM "MS-Help://Hx/Resources/HelpTOC.DTD">
+<HelpTOC DTDVersion = "1.0"
+         LangId = "1033"
+         ParentNodeIcon = "Book">
+   <HelpTOCNode Title = "Python for Virtools"
+                Url = "vtPythonTOC.htm">
+      <HelpTOCNode Title = "Support"
+                   Url = "Support.htm"/>
+      <HelpTOCNode Title = "Registration"
+                   Url = "Registration.htm"/>
+   </HelpTOCNode>
+   <HelpTOCNode Title = "Python Reference"
+                Url = "Python%20Bindings.htm">
+      <HelpTOCNode Title = "Python Methods for Virtools"
+                   Url = "PythonBindings.htm"/>
+   </HelpTOCNode>
+   <HelpTOCNode Title = "Getting Started"
+                Url = "GettingStarted.htm">
+      <HelpTOCNode Title = "Installation"
+                   Url = "Installation.htm"/>
+      <HelpTOCNode Title = "Tutorial"
+                   Url = "Tutorial.htm"/>
+      <HelpTOCNode Title = "Python for Virtools"
+                   Url = "Welcome.htm"/>
+      <HelpTOCNode Title = "Copyright"
+                   Url = "Copyright.htm"/>
+   </HelpTOCNode>
+   <HelpTOCNode Title = "Building Blocks"
+                Url = "Building_Blocks.htm">
+      <HelpTOCNode Title = "CallPyFuncEx"
+                   Url = "CallPyFuncEx.htm"/>
+      <HelpTOCNode Title = "DestroyPython"
+                   Url = "DestroyPython.htm"/>
+      <HelpTOCNode Title = "LoadPython"
+                   Url = "LoadPython.htm"/>
+      <HelpTOCNode Title = "CallPythonEx"
+                   Url = "CallPyFunc.htm"/>
+   </HelpTOCNode>
+</HelpTOC>

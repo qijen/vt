@@ -1,0 +1,274 @@
+
+/*! \page GClothCreation Creation
+
+	<b>Cloth Creation</b>
+	
+	A cloth is defined using a mesh which specifies cloth particle positions (vertices) and the constraints between them (edges). Below is a simple uniform triangle mesh used to represent a curtain.
+	
+	\image html clothMesh1.PNG
+	
+	More complicated cloths, such as the mesh below used to define a T-Shirt shape, can also be created.
+	
+	\image html clothMesh2.PNG
+
+	
+	Clothes in Virtools can be created through 3 different ways : 
+	
+	- Using the building block \ref PCloth.
+	- Attaching the "Cloth" attribute from the "Physic" category.
+	- Using VSL : 
+	
+	<SPAN CLASS="NiceCode">
+	\include PClothCreate.vsl
+	</SPAN>
+
+	
+*/
+
+/*! \page GClothParameters Parameters
+
+
+Cloth parameters may be specified during cloth creation, using members of the pClothDesc, or after creation using members of pCloth.
+
+<b>Flags </b>
+
+   #pClothDesc::flags
+   
+   or 
+   
+   #pCloth::setFlags
+   
+   or \ref pCloth
+
+    The following flags may be used:
+
+    - PCF_Pressure - Enables internal pressure for closed cloth meshes. See cloth pressure. 
+    - PCF_Static - Disables integration/simulation of the cloth. For example, a piece of cloth can be created in an authoring tool and simulated for awhile to achieve the desired effect, then made static to avoid the simulation overhead of continually simulating the cloth. This could be useful in making a tablecloth seem real. Simulation for the cloth could be enabled again if the player comes into contact with the table.
+    - PCF_DisableCollision - Disables collision detection between the cloth and other objects.
+    - PCF_Gravity - Enables application of the scene gravity. To set the gravity, change the appropriate SDK parameter.
+    - PCF_Bending - Enables bending constraints. Must be set to enable ortho bending (in addition to PCF_BendingOrtho).
+    - PCF_BendingOrtho - Applies a more robust/realistic bending constraint. When ortho bending is not enabled, the SDK applies bending constraints based on the distance between the two points either side of an edge. When ortho bending is enabled, the constraint is computed based on the actual angle between the two triangles either side of the edge.
+    - PCF_Damping - Enables damping on individual cloth particles.
+    - PCF_Comdamping - Only effective if PCF_Damping is set. Excludes the center of mass of the cloth from damping, making the cloth damping local instead of global.
+    - PCF_CollisionTwoway - Applies the cloth's force on rigid bodies (e.g., a cloth could pull a rigid body).
+    - PCF_Tearable - Enables Cloth Tearing. 
+    - PCF_Hardware - Directs the cloth to be simulated in hardware (flag has no effect after creation). 
+    - PCF_SelfCollision - Enables self collision handling within a single piece of cloth. 
+    - PCF_Validbounds - Enables valid bounds for this cloth. 
+   
+   
+   <b>Bending Stiffness</b> 
+   
+   #pClothDesc::bendingStiffness or #pCloth::setBendingStiffness or \ref PCloth
+   
+   Bending stiffness defines the strength of the constraint that stops the triangles on either side of an edge from rotating. A value of one will produce a very stiff material, such as cardboard, while a value near zero will produce one which can bend very easily, like paper. 
+   
+   \image html clothConstraint.PNG
+   
+   
+   
+   <b>Stretching Stiffness</b>
+   
+   #pClothDesc::stretchingStiffness or #pCloth::setStretchingStiffness() or \ref PCloth
+   
+   Stretching stiffness defines the strength of the constraint along a triangle edge that maintains the distance between the edge end points. A value of one will produce a cloth that is very difficult to stretch, such as denim pants, while a value near zero will produce one that can stretch easily, like nylon stockings (a value too near zero is not recommended for a stable simulation; zero is not allowed).
+   
+   
+   
+   <b>Density</b>
+   
+   #pClothDesc::density or \ref PCloth
+   
+   NOTE: Density can only be specified when creating a cloth.
+
+    Density indirectly specifies the mass of the cloth particles. The mass of a particle is calculated as the sum of the following equation (for triangles sharing a point):
+
+    1/3 * triangleArea * density
+   
+   
+   <b>Thickness</b>
+   
+   #pClothDesc::thickness or #pCloth::setThickness() or \ref PCloth
+   
+   Thickness defines the triangle's level of thickness for collision detection, improving its robustness. Setting the thickness very low is not recommended as this will lead to poor collision handling.
+
+
+   \image html clothThickness.PNG
+   
+   <b>Damping</b>
+   
+   #pClothDesc::damping or #pCloth::setDampingCoefficient() or \ref PCloth
+   
+   Controls how much damping is applied to the motion of cloth particles.  Damping is always performed for the velocity of each individual particle.
+    If the PCF_ComDamping flag is specified, the global rigid body modes (translation and rotation) are exempted from damping. If not, the global translation and rotation of the cloth are damped, same as the internal movement of the cloth.
+   
+   
+   <b>Solver Iterations</b> 
+   
+   #pClothDesc::solverIterations or #pCloth::setSolverIterations() or \ref PCloth
+   
+   The solver iteration count controls how accurately the cloth is simulated. When simulating cloth, the SDK uses an iterative approach to enforce the cloth constraints - the higher the iteration, the better the result. However, more iterations are more expensive. Plus, there is a top-off point where applying more does not yield a noticeable gain in accuracy. A typical count for a cloth is 5 iterations.
+   
+   
+   <b>Attachment Response Coefficient</b>
+   
+   #pClothDesc::attachmentResponseCoefficient or #pCloth::setAttachmentResponseCoefficient() or \ref PCloth
+   
+   This coefficient controls the strength of the momentum transfer between a cloth and the shape(s) it is attached to. A large attachment response coefficient will cause the cloth to pull/push the body more easily and a lower value will mean the rigid body is more difficult to move.
+
+   See \ref GClothAttachments for details on how to attach a cloth to a rigid body.
+
+
+    <b>Collision Response Coefficient</b>
+   
+   #pClothDesc::collisionResponseCoefficint or #pCloth::setCollisionResponseCoefficint() or \ref PCloth 
+   
+    The collision response coefficient is similar to the attachment response coefficient, except instead of applying forces due to the attachment, it applies forces due to collision.
+
+    The collision response coefficient only has an affect if both collisions and two way interactions are enabled (i.e., the CVF_COLLISION flag and the PCF_CollisionTwoway are both set).
+   
+   
+   <b>Friction</b> 
+
+    #pClothDesc::friction or #pCloth::setFriction() or \ref PCloth
+   
+    The friction parameter controls the frictional response of cloth and rigid body contacts. A high friction parameter will cause more friction between a cloth and its rigid body contact, while a low friction parameter will result in a cloth that easily slides along a surface. 
+    
+    
+    <b>External Acceleration</b>
+   
+   #pClothDesc::externalAcceleration or #pCloth::setExternalAcceleration() or \ref PCloth 
+   
+    An external acceleration can be applied to a cloth to simulate different effects. The force is applied to each vertex that is not attached to an object. Interesting effects can be achieved at relatively little cost by varying the externalAcceleration over time. 
+   
+   
+   <b>WindAcceleration</b> 
+   
+   #pClothDesc::windAcceleration or #pCloth::setWindAcceleration() or \ref PCloth
+   
+   As with external acceleration this applies an acceleration on each vertex. However this acceleration is only applied in the vertex normal direction, i.e. only the component of the external force that lies in the direction of the vertex normal is applied to the vertex. This makes it easy to simulate effects such as wind.
+   
+   
+   <b>Valid Bounds</b>
+   
+   By using valid bounds, activated by the PCF_ValidBounds flag, you can specify an axis-aligned bounding volume to which the cloth is restricted. Any part of the cloth that leaves this volume (such as pieces torn off an otherwise attached flag) will be removed from the simulation. 
+   
+   
+   
+   @see pCloth
+   
+*/
+
+
+/*! \page GClothPressure Pressure 
+
+    \image html cloth_pressure.PNG
+   
+   
+   Closed cloth meshes may be made to simulate a constant enclosed volume of air, allowing the simulation of balloons or other soft deformable objects. To enable this for a mesh, set the PCF_pressure flag: 
+
+    desc.flags += PCF_Pressure;Note: The mesh must be closed for the above to be meaningful. 
+
+    The pressure of the enclosed volume of air is set in either of the following ways:
+
+    #pClothDesc.pressure = 2.0f; #pCloth.setPressure(2.0);This will fill the closed cloth with an equivalent of 2 atmospheres of pressure, at its nominal volume.
+    
+    <b>Tips</b>
+    
+    - If the pressure is set to a value less than 1.0 (the default), the pressure will be insufficient to preserve the initial shape of the cloth and it will collapse until it has been compressed enough to have an internal pressure of 1.0. 
+    - If the pressure is set to a value greater than 1.0, the cloth will expand beyond its initial size; how much will depend on the stretching stiffness of the cloth. 
+
+*/
+
+
+/*! \page GClothSleeping Sleeping
+
+    \image html cloth_sleep.png
+   
+   In a similar way to rigid bodies (see rigid body sleeping), cloths can go to sleep after a period of inactivity. The objective of sleeping is to improve performance by not simulating cloths which are not moving. 
+
+    Inactivity is defined as all of the cloth vertices being below a linear velocity threshold. When all vertices in a cloth are determined to be inactive a counter is decremented until it reaches zero at which point the cloth transitions into a sleeping state and all particle velocities are zeroed. 
+
+    The sleep state for cloth can be visualized using the NX_VISUALIZE_CLOTH_SLEEP SDK parameter. A white bounding box is drawn around cloths which are awake and a black one for sleeping cloths. 
+
+    The most important parameter for the user to be concerned with is the velocity threshold used for sleep determination. This is set and retrieved using the #pCloth members: 
+   
+    float pCloth::getSleepLinearVelocity();
+    void pCloth::setSleepLinearVelocity(float threshold);
+   
+   
+   The threshold should be set high enough so that the cloth actually goes to sleep when it is not being interacted with, but low enough that the cloth does not remain awake due to oscillations and insignificant interactions with the cloth. 
+
+   The user can query if a cloth is asleep using: 
+   
+   
+    bool pCloth::isSleeping() ;
+   
+    
+    Sometimes it will be necessary to put cloths to sleep, for example during level loading a user may wish to force all the cloths in the level to sleep, so as to prevent extremely high cpu/ppu load during the start of the level while the cloth settles and drops to sleep. When putting a cloth to sleep the SDK zeros the velocity of the cloth particles, so that when the cloth wakes up it is not instantly moving again. 
+
+    void pCloth::putToSleep();
+   
+    Inversely there are occasions when the user wishes to wake up a cloth. For example when a user enters the vicinity of a cloth which has been forced to sleep.
+   
+   
+    void pCloth::wakeUp(float wakeCounterValue = NX_SLEEP_INTERVAL  = 0.4f);   
+   
+    As well as simply waking up the cloth, wakeUp() can be used to set the amount of simulation time until the cloth next goes to sleep. Setting a very high value can be used to force the cloth to always stay awake. Useful for performance testing or tuning of the cloth behavior. 
+
+*/
+
+
+/*! \page GClothMetal Metal
+
+    \image html cloth_metal.PNG
+   
+
+    Cloth Metal is a cloth mode which allows cloth to be used to simulate plastic deformation. For example dents in barrels, car bodywork or metal doors can be displayed when there is a large impact on the surface.
+    
+    Cloth metal is created in a very similar way to other cloth types, first a cloth mesh is created (NxClothMesh) and instances of this cloth mesh are used in the form of pCloths.
+
+    Then to enable the feature a rigid body should be attached to the cloth. The cloth acts as a deformable surface for the rigid body. The cloth automatically becomes rigid when the body is attached. The rigid body is used for simulation until an object hits the cloth with a sufficiently large impulse to cause deformation, at this point the cloth deforms. Following the impact the object is simulated again using the rigid body. Collision is made against cloth vertices, so objects smaller than the distance between cloth vertices might not interact fully with the metal cloth.
+
+    To attach the rigid body to the cloth use: 
+   
+     void pCloth::attachToCore (CK3dEntity *bodyReference, float impulseThreshold, float penetrationDepth=0.0f, float maxDeformationDistance = 0.0f);
+     
+     or the building block \ref PClothAttachToCore .
+     
+     
+     - body - The body to attach to the cloth. The actor should be dynamic. In version 2.6 only sphere shapes, box shapes, capsule shapes or compounds of spheres are supported for collision geometry. 
+     - impulseThreshold - Threshold for when deformation is allowed. 
+     - penetrationDepth - Can be used to increase the amount of deformation due to impacts. 
+     - maxDeformationDistance - Maximum deviation of cloth particles from initial position. 
+
+*/
+
+
+/*! \page GClothOtherFeatures Other Features
+
+
+    <b>Adding a Force at a Vertex</b>
+   
+   void addForceAtVertex(const VxVector& force, int vertexId, ForceMode mode = PFM_Force);
+    
+   or   \ref PClothAddForceAtVertex .
+   
+
+    <b>Adding a Force at a certain position</b>
+   
+   Instead of choosing a vertex in the cloth you may want to apply a force in and around a certain position in space. This may be done using the following methods: 
+   
+   void pCloth::addForceAtPos(VxVector position, float magnitude, float radius, ForceMode mode = PFM_Force); or \ref PClothAddForceAtPos
+   
+   void NxCloth::addDirectedForceAtPos(VxVector position, VxVector force, float radius, ForceMode = PFM_Force); or \ref PClothAddDirectedForceAtPos
+   
+   The first of these applies a radial force in the vicinity of position, with a quadratic magnitude falloff up to the maximum radius. The second applies a force in an arbitrary direction, with the same quadratic magnitude falloff. The mode parameter is the same as described above.
+   
+       
+
+*/
+
+
+
+

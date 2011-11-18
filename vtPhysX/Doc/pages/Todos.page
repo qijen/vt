@@ -1,0 +1,66 @@
+/*! \page Todos 
+
+	
+	<h1>Todos for April</h1>
+	
+	<h2>Rigid Body</h2>
+		
+		-	Replacment for building block \ref PBPhysicalize according new SDK features ( custom structures changed )
+		-   Interface plug-in for pBCustom	<b>PostPoned(about CCD Requests)</b>	
+		
+	
+	<h2>Documentation</h2>
+		-	Removing or/and fixing obselete cmo files.
+		-	Vehicle and Wheel related documentation is missing. Please use cmos Scenes/WheelChair/ for illustration meanwhile.
+		-	Tutorial scenes and videos
+		
+	<h2>Joints</h2>
+		-	Complete for this quartal. We are adding a few more constraints.
+		
+	<h2>Clothes</h2>
+		-	the tearable feature
+		
+	<h2>Sensors</h2>
+		-	Gyroscope
+		-	Accelerometer
+		-	Inclinometer
+		
+	<h2>Rigid Body : New Types</h2>
+		-	Liquid Drag
+		-	Hydrofoil
+		-	Buoyancy
+		
+	
+	<br>
+	<br>
+	<br>
+	
+	<h1>Todos for March</h1>
+
+	<h2>Joints</h2>
+	
+	-	Missing types : 
+		-	Prismatic			( Can be articulated by \ref PJD6 )	<b>Done</b>
+		-	Point in Plane	( Can be articulated by \ref PJD6 )	<b>Done</b>
+		-	Point on Line	( Can be articulated by \ref PJD6 )	<b>Done</b>
+		
+	-	Joint creating by using attributes, missing support for :
+		-	\ref PJPulley			<b>Rejected</b>
+		-	\ref PJCylindrical		<b>Done</b>
+		-	\ref PJD6				<b>Rejected</b>
+		-	\ref PJPointInPlane	<b>Done</b>
+		-	"Point on Line"			<b>Done</b>
+		
+	-	User created attribute types for creating multi - link joints is buggy	<b>Done</b>
+		
+	<h2>Rigid Body</h2>
+		
+		-	Replacment for building block \ref PBPhysicalize according new SDK features ( custom structures changed )
+		-   Interface plug-in for pBCustom	<b>PostPoned</b>
+	
+	<h2>Documentation</h2>
+	
+		-	Removing or/and fixing obselete cmo files.<b>Particular</b>		
+		-	Vehicle and Wheel related documentation is missing. Please use cmos Scenes/WheelChair/ for illustration meanwhile.<b>PostPoned</b>
+	
+*/

@@ -1,0 +1,68 @@
+
+                            
+#include "funcs.h"
+        
+             
+function GetVPath( version,result )
+
+	
+	STRING cPath,versionString;
+	NUMBER nResult, nvSize, nvType, is64;
+	NUMBER regType; 
+	STRING errorText;  
+	STRING platformRegString;
+	
+begin
+
+	RegDBSetDefaultRoot ( HKEY_LOCAL_MACHINE );
+	nResult = 0;   
+	regType = HKEY_LOCAL_MACHINE;       
+	nvType = REGDB_STRING;
+	
+	
+	              
+	                               
+	if(version = 35) then
+	 versionString  = "3.5";
+	endif;
+	
+	if(version = 40) then
+	 versionString  = "4.0";
+	endif;                  
+	
+	if(version = 41) then
+	 versionString  = "4.1";
+	endif;             
+	
+	             
+	RegDBSetDefaultRoot(HKEY_LOCAL_MACHINE);
+	
+	REGDB_OPTIONS = REGDB_OPTIONS & ~REGDB_OPTION_WOW64_64KEY ;
+	
+	cPath = "SOFTWARE\\" +"Virtools\\Dev\\" + versionString + "\\"; 
+	if (RegDBKeyExist (cPath) < 0) then
+
+		nResult = -1;     
+	else
+		
+		nvSize = 1024;
+		nResult = RegDBGetKeyValueEx (cPath, "InstallPath", nvType, resultPath, nvSize);
+		MessageBox (resultPath, SEVERE);
+		if ( nResult = 0) then
+			nResult = 1;
+		else    
+		 	nResult = -1;
+		endif;
+	endif;
+	
+  	return nResult;
+  end;
+
+
+
+
+
+
+
+
+

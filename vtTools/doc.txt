@@ -1,0 +1,73 @@
+Hi there,
+
+Here a few scripts to generate vs-project files via premake4. This works quit pretty cool with usual Virtools scenario!
+Say some 3th-party libs, desired as static libs, and an interface or custom reader plugin upon your core (as it does in premake4Splitted.lua )
+
+The proposed directory will be then :
+
+Bin
++Release
++ VT-Version
+	…default target for libs and dlls(for the case you are shipping and make debuggig, its copying to dev via post-command)
+
+Build4
+	+ModuleConfig.lua  - Module,Path Variables
+	+ModuleHelper.lua – help functions
+	+premake4.lua – default input for premake4.exe;
+	+VTPaths.lua – contains the paths to your Virtools directories, can be modified by hand or findDevDirectories.bat(needs CMake);
+	+vs200xDevXX - your project files
+	+Scripts – some batchs to find by CMake the Virtools directories by sdk or other path hints
+
+Dependencies
+ + ftpw32 – “just” dropped 3th party sources
+ + tcp4u ..
+ + vt – sometime I store the vt stuff together with module
+
+SDK
+ + Include
+	+ Core (managers,misc)
+	+ Behaviors … if oop is an obligation by boss, here you go
+ + Lib
+	+Platform
+		+ConfigName
+ 		  …if you ship sdk distributions, let it here !
++ Src
+	+Core
+	+Behaviors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Possible you need to install “vs2005 redist” – dlls for the premake4.exe(patched!). And, install CMake to update “VTPaths.lua“ file for the case you are too lazy as mine.. ?
+
+Ahjo and,  the package will enjoy good maintenance.  Notifications about updates will be posted here.
+
+www.vtmod.com/public/tools/vtPremake4VT.zip
+
+
+Happy new year !!! …fully forgotten and thanks for the greets Dom.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MidiManager - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "G:\DOKUME~1\MASTER~1.HEU\LOKALE~1\Temp\RSP30.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "E:\SDK\dev3\SDK\Includes" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"\TempDebug\MidiManager\Release/MidiManager.pch" /Yu"CKAll.h" /Fo"\TempDebug\MidiManager\Release/" /Fd"\TempDebug\MidiManager\Release/" /FD /c 
+"E:\public\vt midi\MidiManager.cpp"
+]
+Creating command line "cl.exe @G:\DOKUME~1\MASTER~1.HEU\LOKALE~1\Temp\RSP30.tmp" 
+Creating temporary file "G:\DOKUME~1\MASTER~1.HEU\LOKALE~1\Temp\RSP31.tmp" with contents
+[
+ck2.lib vxmath.lib winmm.lib user32.lib /nologo /dll /incremental:no /pdb:"\TempDebug\MidiManager\Release/MidiManager.pdb" /machine:I386 /def:".\MidiBehaviors.def" /out:"E:\SDK\dev3\BuildingBlocks\MidiManager.dll" /implib:"\TempDebug\MidiManager\Release/MidiManager.lib" /libpath:"E:\SDK\dev3\SDK\Lib" 
+"\TempDebug\MidiManager\Release\MidiEvent.obj"
+"\TempDebug\MidiManager\Release\midiplayer.obj"
+"\TempDebug\MidiManager\Release\Read Midi Signal.obj"
+"\TempDebug\MidiManager\Release\SetInMidiPort.obj"
+"\TempDebug\MidiManager\Release\SwicthOnMidi.obj"
+"\TempDebug\MidiManager\Release\midisound.obj"
+"\TempDebug\MidiManager\Release\smf.obj"
+"\TempDebug\MidiManager\Release\smfread.obj"
+"\TempDebug\MidiManager\Release\MidiBehaviors.obj"
+"\TempDebug\MidiManager\Release\MidiManager.obj"
+"\TempDebug\MidiManager\Release\MidiManager.res"
+"\TempDebug\MidiManager\Release\GetMidiINDevices.obj"
+"\TempDebug\MidiManager\Release\GetMidiOutDevices.obj"
+"\TempDebug\MidiManager\Release\Send Midi Signal.obj"
+"\TempDebug\MidiManager\Release\SetMidiOutPort.obj"
+]
+Creating command line "link.exe @G:\DOKUME~1\MASTER~1.HEU\LOKALE~1\Temp\RSP31.tmp"
+<h3>Output Window</h3>
+Compiling...
+MidiManager.cpp
+Linking...
+   Creating library \TempDebug\MidiManager\Release/MidiManager.lib and object \TempDebug\MidiManager\Release/MidiManager.exp
+
+
+
+<h3>Results</h3>
+MidiManager.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

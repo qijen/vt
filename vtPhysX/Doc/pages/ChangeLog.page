@@ -1,0 +1,100 @@
+/*! \page ChangeLog Change Log
+
+	<h2>  [27/2/2010 mc007]</h2>
+	
+	- Material - Attribute was not applied when XML-Node was set to "None"
+	- VSL - Body Flags "BF_Sleep" added
+	- VSL Method for pRigidBody added : setSkinWidth. 
+	- Collision settings in pBSetup attribute were not parsed properly	
+	- Collision attribute : skin width default set to 0.025
+	
+	<h2>  [12/5/2009 master]</h2>
+
+	<h3>RigidBody</h3>
+		-	Building block \ref PBPhysicalizeEx added. See <A HREF="PBPhysicalizeExSamples.cmo">PBPhysicalizeEx.cmo</A> for example.
+		-	Building block \ref PBAddShapeEx added. See <A HREF="PBPhysicalizeExSamples.cmo">PBPhysicalizeEx.cmo</A> for example.
+		-	Attribute type "pBSetup" added. The the old attribute type "Object" will be migrated automatically.
+
+	<h3>Vehicle</h3>
+		-	Building block \ref PVSetBreakSettings added. See <A HREF="pSimpleVehicle3Wheel.cmo">pSimpleVehicle3Wheel.cmo</A> for example.
+	
+	<h3>Variable Manager</h3>
+		-	Variable "Physic Console Logger/Console" added. Enable to open an external console output.
+	
+	<h3>Remote Debugger</h3>
+		-	RemoteDebugger in distribution added. Enable in Variable Manager "Physic Debugger\Enabled" and start "Tools/RemoteDebugger.exe"
+		
+	<h3>User Enumerations </h3>
+		-	pBCollisionsGroup as part of collisions settings can be managed in the "Flag and enum Manager" of Virtools
+		
+
+	<h2>  [4/3/2009 master]</h2>
+	
+	<h3>Joints</h3>
+		-	Types added 
+			-	#pJointPointInPlane		|	See building block \ref PJPointInPlane	|	See Attribute "PhysicConstraints/pJPointInPlane"
+			-	#pJointPointOnLine		|	See building block \ref PJPointOnLine	|	See Attribute "PhysicConstraints/pJPointOnLine"
+			
+		-	Multi-Link attributes fixed. That means, creation of user attributes with the parameter types listed below can be used to create joints of the same type on one object. Please open <A HREF="PJMultiLinkAttribute.cmo">PJMultiLinkAttribute.cmo</A> for example.
+			-		pJDistance	:	For instance a rope. One element has two joints. One with the upper body, one with the lower.
+			-		pJFixed
+			-		pJBall
+			-		pJPrismatic
+			-		pJCylindrical
+			-		pJRevolute
+			-		pJPointInPlane
+			-		pJPointOnLine
+			
+			
+					
+			
+		-	Joint creation of joint type distance by attribute "PhysicConstraints/pJPointInPlane" fixed(Local Anchor Reference didnt transform the vector correct).
+		
+		-	#PhysicManager::getJoint() added.
+		
+		-	SDK : Joint types splitted in seperated cpp files
+		
+		-	VSL enumeration item "JT_ANY" renamed to "JT_Any"
+		
+		-	#pJoint::setBreakForces() only makes the joint beakable if its arguments are not zero. In joint attributes you need to set a higher value, otherwise the joints has been broken already at scene start.
+		
+		-	\ref PJAddLimitPlane always called set #pJoint::setLimitPoint(). Please keep the final square magnitude under 0.01f.
+		
+		-	VSL - Binding for pJoint::setLimitPoint() added
+		
+		-	Building block "Physic/Manager/RegisterAttributeType" regarding user attributes added. 
+		
+		
+	<h3>Documentation</h3>
+	
+		-	Modules (groups) "RigidBody" and "Body" merged to "RigidBody"
+		
+	
+	<h2>[3/19/2009 master]</h2>
+	
+	<h3>Dll output files renamed</h3>
+		-	BuildingBlocks/vtAgeia.dll -> BuildingBlocks/vtPhysX.dll
+		-	vtAgeiaLib.dll -> vtPhysXLib.dll
+		
+	<h3>Joint Building Blocks documentation added </h3>
+		-	\ref PJAddLimitPlane
+		-	\ref PJDestroy
+		-	\ref PJCylindrical
+		-	\ref PJIsBroken
+		-	\ref PJSetBreakForces
+		-	\ref PJFixed
+		-	\ref PJPulley
+		-	\ref PJBall
+		
+	The SDK Documentation has been updated as well.
+		
+	<h3>Building Blocks Bug fixes </h3>
+		-	\ref PBSetPar : created an error whilst everything was ok
+		
+	<h3>SDK Fixes </h3>
+		-	Just tiny code optimization regarding readability and flexibility
+		
+	<h3> Installation page updated !</h3> \ref Installation
+	
+
+*/

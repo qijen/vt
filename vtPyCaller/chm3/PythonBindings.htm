@@ -1,0 +1,315 @@
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+	<HEAD>
+		<TITLE>Document Title</TITLE>
+		<meta name="vs_snapToGrid" content="True">
+		<meta name="vs_showGrid" content="True">
+		<meta name="vs_targetSchema" content="HTML 4.0">
+	<LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css"><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+	<BODY>
+		<H1>Python Bindings Reference
+		</H1>
+		<H1>&nbsp;</H1>
+		<H1>
+			<TABLE id="Table2" cellSpacing="1" cellPadding="1" width="75%" border="0">
+				<TR>
+					<TD bgColor="#004000">
+						<P><STRONG><FONT face="Tahoma" color="#ffffff">Technical Information</FONT></STRONG></P>
+					</TD>
+				</TR>
+			</TABLE>
+		</H1>
+		<H1><FONT face="Tahoma"><FONT size="2">In this chapter we introduce to the communication
+					ways between a Python script and virtools.</FONT></FONT></H1>
+		<H1><FONT face="Tahoma" size="2"><FONT size="3"></FONT></FONT>&nbsp;</H1>
+		<H1><FONT face="Tahoma" size="2"><FONT size="3">Building block related functions :</FONT>
+			</FONT>
+		</H1>
+		<P>&nbsp;</P>
+		<H1><FONT face="Tahoma" size="2"><FONT color="#004000"><FONT color="#800000" size="3">GetInVal</FONT>(<FONT color="#ff8000">BuildingBlockID</FONT>,IndexOfParameterInput)</FONT></FONT></H1>
+		<P><FONT face="Tahoma" color="#003300" size="2"><STRONG>Description : "<FONT face="Tahoma" size="2"><FONT color="#004000"><FONT color="#800000">GetInVal<FONT face="Tahoma" color="#003300" size="2"><STRONG>"
+										retrieves an input parameter value from a building block. </STRONG></FONT>
+							</FONT></FONT></FONT></STRONG></FONT>
+		</P>
+		<P>
+			<TABLE id="Table1" cellSpacing="1" cellPadding="1" width="1080" border="1" height="107"
+				align="left">
+				<TR>
+					<TD bgColor="#003300" vAlign="top" align="left" height="29"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Parameter</FONT></STRONG></TD>
+					<TD bgColor="#003300" width="66" height="29"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Access</FONT></STRONG></TD>
+					<TD bgColor="#003300" colSpan="1" rowSpan="1" width="53" height="29"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Type</FONT></STRONG></TD>
+					<TD bgColor="#003300" colSpan="1" rowSpan="1" height="29"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Description</FONT></STRONG></TD>
+				</TR>
+				<TR>
+					<TD><FONT face="Tahoma" color="#ff8000" size="2"><STRONG>BuildingBlockID</STRONG></FONT></TD>
+					<TD width="66"><FONT face="Tahoma" size="2">read only</FONT></FONT></TD>
+					<TD width="53"><FONT face="Tahoma" size="2">Integer</FONT></TD>
+					<TD>
+						<P><FONT face="Tahoma" size="2">Specifies the unique identifier of the building block
+								used to&nbsp;run this python script. In your script you just have to
+								write&nbsp; : <FONT face="Tahoma" color="#ff8000" size="2"><STRONG>bid </STRONG></FONT>
+							</FONT>
+						</P>
+					</TD>
+				</TR>
+				<TR>
+					<TD><FONT face="Tahoma" size="2"><FONT face="Tahoma" color="#ff8000" size="2"><STRONG>IndexOfParameterInput&nbsp;</STRONG></FONT></FONT></TD>
+					<TD width="66"><FONT face="Tahoma" size="2">read only</FONT></TD>
+					<TD width="53"><FONT face="Tahoma" size="2">Integer</FONT></TD>
+					<TD><FONT face="Tahoma" size="2">This is the index of building blocks parameter input.
+							The type can only be a String, Integer, Float or Boolean.</FONT></TD>
+				</TR>
+			</TABLE>
+		</P>
+		<P><FONT face="Tahoma" color="#003300" size="2"><FONT color="#000099"></FONT></FONT>&nbsp;</P>
+		<P><FONT face="Tahoma" color="#003300" size="2"><FONT color="#000099"></FONT></FONT>&nbsp;</P>
+		<P><FONT face="Tahoma" color="#003300" size="2"><FONT color="#000099"></FONT></FONT>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>
+			<HR>
+		</P>
+		<P>
+		</P>
+		<FONT face="Tahoma" color="#000099" size="2">
+			<H1><FONT face="Tahoma" size="2"><FONT color="#004000"><FONT color="#800000" size="3"></FONT></FONT></FONT>&nbsp;</H1>
+			<H1><FONT face="Tahoma" size="2"><FONT color="#004000"><FONT color="#800000" size="3">SetOutVal</FONT>(<FONT color="#ff8000">BuildingBlockID</FONT>,IndexOfParameterInput)</FONT></FONT></H1>
+			<P><FONT face="Tahoma" color="#003300" size="2"><STRONG>Description : "<FONT face="Tahoma" size="2"><FONT color="#004000"><FONT color="#800000">SetOutVal<FONT face="Tahoma" color="#003300" size="2"><STRONG>"
+											sets an&nbsp;output parameter value of a building block. </STRONG></FONT>
+								</FONT></FONT></FONT></STRONG></FONT>
+			</P>
+			<P>
+				<TABLE id="Table3" height="139" cellSpacing="1" cellPadding="1" width="1080" align="left"
+					border="1">
+					<TBODY>
+						<TR>
+							<TD vAlign="top" align="left" bgColor="#003300" height="29"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Parameter</FONT></STRONG></TD>
+							<TD width="66" bgColor="#003300" height="29"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Access</FONT></STRONG></TD>
+							<TD width="53" bgColor="#003300" colSpan="1" height="29" rowSpan="1"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Type</FONT></STRONG></TD>
+							<TD bgColor="#003300" colSpan="1" height="29" rowSpan="1"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Description</FONT></STRONG></TD>
+						</TR>
+						<TR>
+							<TD><FONT face="Tahoma" color="#ff8000" size="2"><STRONG>BuildingBlockID</STRONG></FONT></TD>
+							<TD width="66"><FONT face="Tahoma" size="2">read only</FONT>
+		</FONT></TD>
+		<TD width="53"><FONT face="Tahoma" size="2">Integer</FONT></TD>
+		<TD>
+			<P><FONT face="Tahoma" size="2">Specifies the unique identifier of the building block
+					used to&nbsp;run this python script. In your script you just have to
+					write&nbsp; : <FONT face="Tahoma" color="#ff8000" size="2"><STRONG>bid </STRONG></FONT>
+				</FONT>
+			</P>
+		</TD>
+		</TR>
+		<TR>
+			<TD><FONT face="Tahoma" size="2"><FONT face="Tahoma" color="#ff8000" size="2"><STRONG>IndexOfParameterInput&nbsp;</STRONG></FONT></FONT></TD>
+			<TD width="66"><FONT face="Tahoma" size="2">read only</FONT></TD>
+			<TD width="53"><FONT face="Tahoma" size="2">Integer</FONT></TD>
+			<TD><FONT face="Tahoma" size="2">This is the index of building blocks parameter output.
+					The type can only be a String, Integer, Float or Boolean. For the case a Python
+					function returns an array then it's converted to a string where the values are
+					seperated by a comma.&nbsp;</FONT></TD>
+		</TR>
+		</TBODY></TABLE></P>
+		<P><FONT face="Tahoma" color="#003300" size="2"><FONT color="#000099"></FONT></FONT>&nbsp;</P>
+		<P><FONT face="Tahoma" color="#003300" size="2"><FONT color="#000099"></FONT></FONT>&nbsp;</P>
+		<P><FONT face="Tahoma" color="#003300" size="2"><FONT color="#000099"></FONT></FONT>&nbsp;</P>
+		</FONT>
+		<H1><SPAN class="pin"><SPAN class="pin"><SPAN class="pin"><SPAN class="pin"></SPAN>
+						<SPAN class="pin"></SPAN>
+						<SPAN class="pin">
+							<FONT face="Tahoma" color="#000099" size="2"></FONT>
+						</SPAN>
+					</SPAN>
+				</SPAN>
+			</SPAN>&nbsp;</H1>
+		<H1><SPAN class="pin"><SPAN class="pin"><SPAN class="pin"><SPAN class="pin"><FONT face="Tahoma" color="#000099" size="2"></FONT></SPAN>
+					</SPAN>
+				</SPAN>
+			</SPAN>&nbsp;</H1>
+		<SPAN class="pin">
+			<SPAN class="pin">
+				<SPAN class="pin">
+					<SPAN class="pin">
+<H1>
+							<HR>
+						</H1><FONT color="#000099" size="2">
+							<H1><FONT size="2"><FONT color="#004000"><FONT face="Tahoma"><FONT color="#800000" size="3"><FONT color="#800000"></FONT></FONT></FONT></FONT></FONT>&nbsp;</H1>
+							<H1><FONT size="2"><FONT color="#004000"><FONT face="Tahoma"><FONT color="#800000" size="3"><FONT color="#800000">ActivateOut</FONT></FONT>(<FONT color="#ff8000">BuildingBlockID</FONT>,IndexOfParameterInput,State)</FONT></FONT></FONT></H1>
+							<P><FONT color="#003300" size="2"><STRONG><FONT face="Tahoma">Description : "<FONT size="2"><FONT color="#004000"><FONT color="#800000">SetOutVal<FONT color="#003300" size="2"><STRONG>"
+																sets an&nbsp;output parameter value of a building block. </STRONG></FONT>
+													</FONT></FONT></FONT></FONT></STRONG></FONT>
+							</P>
+							<P>
+								<TABLE id="Table5" height="160" cellSpacing="1" cellPadding="1" width="1072" align="left"
+									border="1">
+									<TBODY>
+										<TR>
+											<TD vAlign="top" align="left" bgColor="#003300" height="29"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Parameter</FONT></STRONG></TD>
+											<TD width="66" bgColor="#003300" height="29"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Access</FONT></STRONG></TD>
+											<TD width="53" bgColor="#003300" colSpan="1" height="29" rowSpan="1"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Type</FONT></STRONG></TD>
+											<TD bgColor="#003300" colSpan="1" height="29" rowSpan="1"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Description</FONT></STRONG></TD>
+										</TR>
+										<TR>
+											<TD><FONT face="Tahoma" color="#ff8000" size="2"><STRONG>BuildingBlockID</STRONG></FONT></TD>
+											<TD width="66"><FONT face="Tahoma" size="2">read only</FONT>
+						</FONT></TD>
+    <TD width="53"><FONT face="Tahoma" size="2">Integer</FONT></TD>
+    <TD>
+							<P><FONT size="2"><FONT face="Tahoma">Specifies the unique identifier of the building block
+										used to&nbsp;run this python script. In your script you just have to
+										write&nbsp; : <FONT color="#ff8000" size="2"><STRONG>bid </STRONG></FONT></FONT>
+								</FONT>
+							</P>
+						</TD></TR>
+  <TR>
+							<TD><FONT size="2"><FONT face="Tahoma" color="#ff8000" size="2"><STRONG><FONT color="#003300">IndexOfParameterInput</FONT>&nbsp;</STRONG></FONT></FONT></TD>
+							<TD width="66"><FONT face="Tahoma" size="2">read only</FONT></TD>
+							<TD width="53"><FONT face="Tahoma" size="2">Integer</FONT></TD>
+							<TD><FONT face="Tahoma" size="2">This is the index of building blocks parameter output.
+									The type can only be a String, Integer, Float or Boolean. For the case a Python
+									function returns an array then it's converted to a string where the values are
+									seperated by a comma.&nbsp;</FONT></TD>
+						</TR>
+  <TR>
+							<TD><STRONG><FONT face="Tahoma" color="#003300" size="2">State</FONT></STRONG></TD>
+							<TD width="66"><FONT face="Tahoma"><FONT face="Tahoma" size="2">read only</FONT></FONT></TD>
+							<TD width="53"><FONT face="Tahoma"><FONT face="Tahoma" size="2">Integer</FONT></FONT></TD>
+							<TD><FONT face="Tahoma" size="2">The output triggers state.</FONT></TD>
+						</TR></TBODY></TABLE></P>
+<P><FONT color="#003300" size="2"><FONT face="Tahoma" color="#000099"></FONT></FONT>&nbsp;</P>
+<P><FONT color="#003300" size="2"><FONT face="Tahoma" color="#000099"></FONT></FONT>&nbsp;</P>
+<P><FONT color="#003300" size="2"><FONT face="Tahoma" color="#000099"></FONT></FONT>&nbsp;</P>
+<P></FONT>&nbsp;</P>
+<H1><SPAN class="pin"><SPAN class="pin"><SPAN class="pin"><SPAN class="pin"></SPAN>
+										<SPAN class="pin"></SPAN>
+										<SPAN class="pin">
+											<FONT face="Tahoma" color="#000099" size="2"></FONT>
+										</SPAN>
+									</SPAN>
+								</SPAN>
+							</SPAN>&nbsp;</H1><SPAN class="pin">
+							<SPAN class="pin">
+								<SPAN class="pin">
+									<SPAN class="pin">
+										<H1>
+											<HR>
+										</H1>
+										<H1>
+									</SPAN>
+								</SPAN>
+							</SPAN>
+						</SPAN><FONT color="#000099" size="2"><FONT size="2"><FONT color="#004000"><FONT face="Tahoma"><FONT color="#800000" size="3">
+											<FONT color="#800000"></FONT></FONT></FONT></FONT></FONT></FONT>&nbsp;</H1>
+<H1><FONT color="#000099" size="2"><FONT size="2"><FONT color="#004000"><FONT face="Tahoma"><FONT color="#800000" size="3"><FONT color="#800000">IsInputActive</FONT></FONT>(<FONT color="#ff8000">BuildingBlockID</FONT>,IndexOfInput)</FONT></FONT></FONT></H1>
+<P><FONT color="#003300"><STRONG><FONT face="Tahoma">Description : "<FONT color="#004000"><FONT color="#800000"><FONT color="#000099"><FONT color="#004000"><FONT face="Tahoma"><FONT color="#800000"><FONT color="#800000">IsInputActive</FONT></FONT></FONT></FONT></FONT><FONT color="#003300"><STRONG>"
+														return the state of an building block input trigger.</STRONG></FONT></FONT></FONT></FONT></STRONG></FONT></P>
+<P>
+							<TABLE id="Table6" height="96" cellSpacing="1" cellPadding="1" width="1072" align="left"
+								border="1">
+								<TR>
+									<TD vAlign="top" align="left" bgColor="#003300" height="29"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Parameter</FONT></STRONG></TD>
+									<TD width="66" bgColor="#003300" height="29"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Access</FONT></STRONG></TD>
+									<TD width="53" bgColor="#003300" colSpan="1" height="29" rowSpan="1"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Type</FONT></STRONG></TD>
+									<TD bgColor="#003300" colSpan="1" height="29" rowSpan="1"><STRONG><FONT face="Tahoma" color="#ffffff" size="2">Description</FONT></STRONG></TD>
+								</TR>
+								<TR>
+									<TD><FONT face="Tahoma" color="#ff8000" size="2"><STRONG>BuildingBlockID</STRONG></FONT></TD>
+									<TD width="66"><FONT face="Tahoma" size="2">read only</FONT> </FONT></TD>
+									<TD width="53"><FONT face="Tahoma" size="2">Integer</FONT></TD>
+									<TD>
+										<P><FONT size="2"><FONT face="Tahoma">Specifies the unique identifier of the building block
+													used to&nbsp;run this python script. In your script you just have to
+													write&nbsp; : <FONT color="#ff8000" size="2"><STRONG>bid </STRONG></FONT></FONT>
+											</FONT>
+										</P>
+									</TD>
+								</TR>
+								<TR>
+									<TD><FONT size="2"><FONT face="Tahoma" color="#ff8000" size="2"><STRONG><FONT color="#003300">IndexOfInput</FONT>&nbsp;</STRONG></FONT></FONT></TD>
+									<TD width="66"><FONT face="Tahoma" size="2">read only</FONT></TD>
+									<TD width="53"><FONT face="Tahoma" size="2">Integer</FONT></TD>
+									<TD><FONT face="Tahoma" size="2">This is the index of building blocks trigger input.</FONT></TD>
+								</TR>
+							</TABLE>
+						</P>
+<P><FONT color="#003300" size="2"><FONT face="Tahoma" color="#000099"></FONT></FONT>&nbsp;</P>
+<P><FONT color="#003300" size="2"><FONT face="Tahoma" color="#000099"></FONT></FONT>&nbsp;</P>
+<P><FONT color="#003300" size="2"><FONT face="Tahoma" color="#000099"></FONT></FONT>&nbsp;</P>
+<P></FONT><SPAN class="pin"><SPAN class="pin"><SPAN class="pin"><SPAN class="pin"></SPAN>
+									</SPAN>
+								</SPAN>
+							</SPAN>&nbsp;</P>
+<P><SPAN class="pin"><SPAN class="pin"><SPAN class="pin"><SPAN class="pin">&nbsp;</P>
+<P>
+							<HR>
+						</P>
+<P>&nbsp;</SPAN>
+				</SPAN>
+			</SPAN>
+		</SPAN>&nbsp;</P>
+		<H1>
+			<TABLE id="Table4" height="730" cellSpacing="1" cellPadding="1" width="1072" border="1">
+				<TR>
+					<TD bgColor="#004000" vAlign="top" align="left" width="190" colSpan="" rowSpan=""><FONT style="BACKGROUND-COLOR: #004000" face="Tahoma" color="#ffffff"><STRONG>The
+								CallPython Version :</STRONG></FONT></TD>
+					<TD bgColor="#004000"><STRONG><FONT face="Tahoma" color="#ffffff">The CallPython-Ex Version
+								:</FONT></STRONG></TD>
+				</TR>
+				<TR>
+					<TD width="190"><STRONG><FONT face="Consolas" color="#000080" size="2">def multiply(a,b):<BR>
+								&nbsp;&nbsp;&nbsp; c = 0<BR>
+								&nbsp;&nbsp;&nbsp; for i in range(0, a):<BR>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = c + b<BR>
+								&nbsp;&nbsp;&nbsp; return c</FONT></STRONG></TD>
+					<TD>
+						<P><STRONG><FONT face="Consolas" color="#004000" size="2">#&nbsp;The building block
+									doesn't&nbsp;pass arguments to a function,</FONT></STRONG><STRONG><FONT face="Consolas"><FONT size="2"><FONT color="#000080"><FONT size="+0"><FONT color="#004000"><FONT size="2">therefore
+														we use our special&nbsp;Python functions to communicate with </FONT></FONT>
+											</FONT></FONT></FONT></FONT></STRONG>
+						</P>
+						<P><STRONG><FONT face="Consolas"><FONT size="2"><FONT color="#000080"><FONT size="+0"><FONT color="#004000"><FONT size="2">#&nbsp;Python.</FONT></FONT></FONT></FONT></FONT></FONT></STRONG></P>
+						<P><STRONG><FONT face="Consolas" color="#004000" size="2"></FONT></STRONG>&nbsp;</P>
+						<P><STRONG><FONT face="Consolas" color="#004000" size="2"># import&nbsp;the virtools module
+									: </FONT></STRONG>&nbsp;</P>
+						<P><STRONG><FONT face="Consolas" color="#000080" size="2">import vt</FONT></STRONG></P>
+						<STRONG><FONT face="Consolas" color="#000080" size="2">
+								<P>def multiply():<BR>
+								</P>
+								<P>&nbsp;&nbsp; <FONT color="#004000">#We retrieve our variable "a" from the building
+										block and we assume the type of the parameter input is set to Integer.<BR>
+									</FONT>&nbsp;&nbsp; <FONT color="#004000">#This can be done with vt.<FONT color="#800000">GetInVal</FONT>(<FONT color="#ff8000">bid</FONT>,IndexOfParameterInput).
+										"<FONT color="#ff8000" size="3">bid</FONT>" is an automatically created
+										variable when the&nbsp;<BR>
+									</FONT><FONT color="#004000">&nbsp;&nbsp; #building blocks starts. It is&nbsp;an
+										unique identifier for the building block for intern processing.</FONT><FONT color="#004000">Just
+										write "<FONT color="#ff8000">bid</FONT>"&nbsp;!</FONT><BR>
+									&nbsp;&nbsp; a&nbsp; = vt.<FONT color="#800000">GetInVal</FONT>(<FONT color="#ff8000">bid</FONT>,3)<BR>
+								</P>
+								<P>&nbsp;&nbsp; <FONT color="#004000"># Now we retrieve variable "b" :</FONT>&nbsp;<BR>
+									&nbsp;&nbsp; b&nbsp; = vt.<FONT color="#800000">GetInVal</FONT>(<FONT color="#ff8000">bid</FONT>,4)&nbsp;</P>
+								<P><BR>
+									&nbsp;&nbsp; c = 0<BR>
+									&nbsp;&nbsp; for i in range(0, a):<BR>
+									&nbsp;&nbsp;&nbsp;&nbsp; c = c + b<BR>
+								</P>
+								<FONT color="#004000"></FONT>
+								<P><FONT color="#004000">&nbsp;&nbsp; #When the loop is finish, we store the result in
+										the building blocks parameter output :</FONT>&nbsp;<BR>
+									&nbsp;&nbsp; vt.<FONT color="#ff0000">SetOutVal</FONT>(<FONT color="#ff8000">bid</FONT>,0,c)</P>
+								<P><FONT color="#004000">&nbsp;&nbsp; #And we trigger an output we created on the
+										building block : </FONT>
+								</P>
+								<P><FONT color="#004000">&nbsp;&nbsp; vt.<FONT color="#800000">ActivateOut</FONT>(<FONT color="#ff8000">bid</FONT>,0,1)</FONT><BR>
+								</P>
+								<P>&nbsp;&nbsp; <FONT color="#004000">#vt.<FONT color="#800000">ActivateOut</FONT>(<FONT color="#ff8000">bid</FONT>,2,1)
+										means : activate output trigger number 2 wherer&nbsp;the last "1" sets&nbsp;the
+										state to true !&nbsp;</FONT></P>
+								<P>
+							</FONT></STRONG>&nbsp;</P></TD>
+				</TR>
+			</TABLE>
+		</H1>
+		</SPAN></SPAN></SPAN></SPAN>
+		<P>
+			<!-- Insert HTML here --></P>
+	</BODY>
+</HTML>

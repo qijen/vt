@@ -1,0 +1,939 @@
+# depslib dependency file v1.0
+1212691285 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\linux\xconsole2\xconsole\main.cpp
+	"xNetInterface.h"
+	"vtConnection.h"
+	<tnlAsymmetricKey.h>
+
+1212605408 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\idistributedclasses.cpp
+	"IDistributedClasses.h"
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+	"xDistributedPropertyInfo.h"
+	"xNetInterface.h"
+	"vtConnection.h"
+
+1212605352 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\idistributedclasses.h
+	"xNetTypes.h"
+
+1212606865 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xnettypes.h
+	"tnlTypes.h"
+	"xNetEnumerations.h"
+	"tnlNetBase.h"
+	"tnlString.h"
+	"tnlBitStream.h"
+	<stdlib.h>
+	<map>
+	<vector>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnltypes.h
+	<stdlib.h>
+	<new>
+
+1212655257 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xnetenumerations.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetbase.h
+	"tnlTypes.h"
+	"tnlPlatform.h"
+	"tnlAssert.h"
+	"tnlBitSet.h"
+	"tnlVector.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlplatform.h
+	"tnlTypes.h"
+	<string.h>
+	<stdlib.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlassert.h
+	"tnlTypes.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlbitset.h
+	"tnlTypes.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlvector.h
+	"tnlTypes.h"
+	"tnlPlatform.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlstring.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlbitstream.h
+	"tnlByteBuffer.h"
+	"tnlConnectionStringTable.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlbytebuffer.h
+	"tnl.h"
+	"tnlNetBase.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnl.h
+	"tnlTypes.h"
+	"tnlAssert.h"
+	"tnlEndian.h"
+	"tnlPlatform.h"
+	"tnlUDP.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlendian.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnludp.h
+	"tnlTypes.h"
+	"tnlVector.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlconnectionstringtable.h
+	"tnlNetStringTable.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetstringtable.h
+	"tnlTypes.h"
+
+1212605799 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedbaseclass.h
+	"xNetTypes.h"
+
+1212604951 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributed3dobjectclass.h
+	"xDistributedBaseClass.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedpropertyinfo.h
+	"xNetTypes.h"
+
+1212606680 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xnetinterface.h
+	"xNetTypes.h"
+	"tnl.h"
+	"tnlNetInterface.h"
+	"Prereqs.h"
+	"precomp.h"
+	"tnl.h"
+	"tnlNetBase.h"
+	"tnlNetInterface.h"
+	"tnlNetObject.h"
+	"tnlVector.h"
+	"tnlLog.h"
+	"tnlRPC.h"
+	"tnlString.h"
+	"tnlGhostConnection.h"
+	"xNetworkTypes.h"
+	"vtConnection.h"
+	"vtNetTypes.h"
+	"vtNetStructs.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetinterface.h
+	"tnlVector.h"
+	"tnlNetBase.h"
+	"tnlClientPuzzle.h"
+	"tnlNetObject.h"
+	"tnlNetConnection.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlclientpuzzle.h
+	"tnlDataChunker.h"
+	"tnlNonce.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnldatachunker.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnonce.h
+	"tnlBitStream.h"
+	"tnlRandom.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlrandom.h
+	"tnl.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetobject.h
+	"tnlNetBase.h"
+	"tnlBitStream.h"
+	"tnlRPC.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlrpc.h
+	"tnlNetEvent.h"
+	"tnlMethodDispatch.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetevent.h
+	"tnlNetBase.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlmethoddispatch.h
+	"tnlTypes.h"
+	"tnlVector.h"
+	"tnlBitStream.h"
+	"tnlNetStringTable.h"
+	"tnlString.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetconnection.h
+	"tnlNetBase.h"
+	"tnlLog.h"
+	"tnlNonce.h"
+	"tnlSymmetricCipher.h"
+	"tnlConnectionStringTable.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnllog.h
+	"tnlBitSet.h"
+	"tnl.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlsymmetriccipher.h
+	"tnlNetBase.h"
+
+1212431226 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\prereqs.h
+	"tnlNetBase.h"
+	<tnlString.h>
+	"stdlib.h"
+	"map"
+	<vector>
+	<deque>
+
+1212061469 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\precomp.h
+	"CKAll.h"
+	"vtNetworkManager.h"
+	"tnl.h"
+
+1212606170 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\vtnetworkmanager.h
+	"CKBaseManager.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlghostconnection.h
+	"tnlEventConnection.h"
+	"tnlRPC.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnleventconnection.h
+	"tnlNetConnection.h"
+	"tnlNetEvent.h"
+	"tnlDataChunker.h"
+
+1212061469 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xnetworktypes.h
+	<Prereqs.h>
+	"tnl.h"
+	"tnlTypes.h"
+	"tnlVector.h"
+
+1212669723 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\vtconnection.h
+	"xNetTypes.h"
+	"tnl.h"
+	"tnlGhostConnection.h"
+	"Prereqs.h"
+	"tnl.h"
+	"tnlNetBase.h"
+	"tnlNetInterface.h"
+	"tnlNetObject.h"
+	"tnlLog.h"
+	"tnlRPC.h"
+	"tnlString.h"
+	"tnlNetInterface.h"
+	"tnlGhostConnection.h"
+	<xNetInterface.h>
+
+1212606503 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\vtnettypes.h
+	<Prereqs.h>
+	<vtNetStructs.h>
+	<vtNetEnums.h>
+	<stdlib.h>
+	<map>
+	<vector>
+
+1212606854 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\vtnetstructs.h
+	"xNetTypes.h"
+
+1212431226 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\vtnetenums.h
+
+1212669723 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\idistributedobjectsinterface.cpp
+	"IDistributedObjectsInterface.h"
+	"IDistributedClasses.h"
+	"xDistributedBaseClass.h"
+	"xDistributedObject.h"
+	"xNetInterface.h"
+	"vtConnection.h"
+	<assert.h>
+
+1212605493 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\idistributedobjectsinterface.h
+	"xNetTypes.h"
+
+1212669374 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedobject.h
+	"xNetObject.h"
+	"xNetTypes.h"
+
+1212665507 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xnetobject.h
+	"tnl.h"
+	"tnlNetObject.h"
+	"xNetTypes.h"
+
+1212606722 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\imessages.cpp
+	"IMessages.h"
+	"xNetInterface.h"
+	"vtConnection.h"
+	"xMessageTypes.h"
+	"IMessages.h"
+	"xTNLInternAll.h"
+	"xNetInterface.h"
+	"vtNetStructs.h"
+	"vtNetTypes.h"
+	"xMessageTypes.h"
+
+1212606568 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\imessages.h
+	"xNetTypes.h"
+
+1212573674 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xmessagetypes.h
+	"xPoint.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xpoint.h
+	"xNetTypes.h"
+	"xMathFnc2.h"
+
+1212534012 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xmathfnc2.h
+	"xConstants.h"
+	<math.h>
+	"tnlTypes.h"
+	"xPoint.h"
+
+1161820866 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xconstants.h
+
+1212566896 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xtnlinternall.h
+	<xpoint.h>
+	<xQuat.h>
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xquat.h
+	"math/mMath.h"
+	"xMathFnc2.h"
+
+1212674213 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\vtconnection.cpp
+	"vtConnection.h"
+	"xNetInterface.h"
+	"xDistributed3DObject.h"
+	"xDistributedClient.h"
+	"xDistributedProperty.h"
+	"xDistributedPropertyInfo.h"
+	"IDistributedObjectsInterface.h"
+	"IDistributedClasses.h"
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+
+1212671026 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributed3dobject.h
+	"xDistributedObject.h"
+
+1212605178 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedclient.h
+	"xDistributedObject.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedproperty.h
+	"xNetTypes.h"
+
+1212669724 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\vtconnectionmessages.cpp
+	"vtConnection.h"
+	"xNetInterface.h"
+	"xDistributed3DObject.h"
+	"xDistributedClient.h"
+	"xDistributedProperty.h"
+	"xDistributedPropertyInfo.h"
+	"IDistributedObjectsInterface.h"
+	"IDistributedClasses.h"
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+	"IMessages.h"
+
+1212606000 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdisttools.cpp
+	"xNetEnumerations.h"
+	"xDistTools.h"
+
+1212606000 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdisttools.h
+	"xNetTypes.h"
+
+1212671177 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributed3dobject.cpp
+	"xDistributed3DObject.h"
+	"xDistributedProperty.h"
+	"xDistributedPropertyInfo.h"
+	"xNetInterface.h"
+	"vtConnection.h"
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+	"IDistributedClasses.h"
+	"xDOStructs.h"
+	"IDistributedObjectsInterface.h"
+	"xDistributedPoint4F.h"
+	"xDistributedPoint3F.h"
+	"xDistributedPoint2F.h"
+	"xDistributedPoint1F.h"
+	"xDistributedString.h"
+	"xDistributedInteger.h"
+
+1212605868 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdostructs.h
+	"xNetTypes.h"
+	"xPoint.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedpoint4f.h
+	"xDistributedProperty.h"
+	"xQuat.h"
+
+1212603321 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedpoint3f.h
+	"xDistributedProperty.h"
+	"xPoint.h"
+
+1212573613 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedpoint2f.h
+	"xPoint.h"
+	"xDistributedProperty.h"
+	"xTNLInternAll.h"
+	<xNetworkTypes.h>
+
+1212603561 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedpoint1f.h
+	"xDistributedProperty.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedstring.h
+	"xDistributedProperty.h"
+
+1212603625 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedinteger.h
+	"xDistributedProperty.h"
+
+1212690365 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributed3dobjectclass.cpp
+	"xDistributed3DObjectClass.h"
+	"xDistributedPropertyInfo.h"
+	"xDistTools.h"
+
+1212604852 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedbaseclass.cpp
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+	"xDistributedPropertyInfo.h"
+
+1212669724 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedclient.cpp
+	"xDistributedClient.h"
+	"xDistributedBaseClass.h"
+	"xNetInterface.h"
+	"vtConnection.h"
+	"IDistributedClasses.h"
+
+1212603630 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedinteger.cpp
+	"xDistributedInteger.h"
+	"xPredictionSetting.h"
+	"xMathFnc2.h"
+
+1212237758 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xpredictionsetting.h
+
+1212673806 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedobject.cpp
+	"xDistributedObject.h"
+	"xDistributed3DObject.h"
+	"xDistributedBaseClass.h"
+	"xNetInterface.h"
+
+1212603586 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedpoint1f.cpp
+	"xDistributedPoint1F.h"
+	"xPredictionSetting.h"
+	"xMathFnc2.h"
+
+1212603527 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedpoint2f.cpp
+	"xDistributedPoint2F.h"
+	"xMathStream.h"
+	"xPredictionSetting.h"
+
+1212606059 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xmathstream.h
+	"xNetTypes.h"
+	"xPoint.h"
+	"xQuat.h"
+
+1212603427 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedpoint3f.cpp
+	"xDistributedPoint3F.h"
+	"xMathStream.h"
+	"xPredictionSetting.h"
+
+1212603772 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedpoint4f.cpp
+	"xDistributedPoint4F.h"
+	"xMathStream.h"
+	"xPredictionSetting.h"
+
+1212606059 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedproperty.cpp
+	"xDistributedProperty.h"
+	"xPredictionSetting.h"
+
+1212603260 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedpropertyinfo.cpp
+	"xDistributedPropertyInfo.h"
+
+1212603260 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedrect.cpp
+	"xDistributedRect.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedrect.h
+	"xDistributedProperty.h"
+	"xNetMath.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xnetmath.h
+	"xNetTypes.h"
+	"xPoint.h"
+	"xQuat.h"
+
+1212603260 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xdistributedstring.cpp
+	"xDistributedString.h"
+
+1212670430 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xnetinterface.cpp
+	"xNetInterface.h"
+	"vtConnection.h"
+	"IDistributedClasses.h"
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+	"xDistributed3DObject.h"
+	"xDistributedClient.h"
+	"IDistributedObjectsInterface.h"
+	"IMessages.h"
+	"xDistributedProperty.h"
+	"xDistributedPropertyInfo.h"
+
+1212606884 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xnetinterfacemessages.cpp
+
+1212652851 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\manager\xnetobject.cpp
+	"xNetObject.h"
+	<xNetInterface.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlasymmetrickey.h
+	"tnlBitStream.h"
+
+1212607351 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\idistributedclasses.cpp
+	"IDistributedClasses.h"
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+	"xDistributedPropertyInfo.h"
+	"xNetInterface.h"
+	"vtConnection.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\idistributedclasses.h
+	"xNetTypes.h"
+
+1212744477 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xnettypes.h
+	"tnlTypes.h"
+	"xNetEnumerations.h"
+	"tnlNetBase.h"
+	"tnlString.h"
+	"tnlBitStream.h"
+	<stdlib.h>
+	<map>
+	<vector>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnltypes.h
+	<stdlib.h>
+	<new>
+
+1212670769 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xnetenumerations.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlnetbase.h
+	"tnlTypes.h"
+	"tnlPlatform.h"
+	"tnlAssert.h"
+	"tnlBitSet.h"
+	"tnlVector.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlplatform.h
+	"tnlTypes.h"
+	<string.h>
+	<stdlib.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlassert.h
+	"tnlTypes.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlbitset.h
+	"tnlTypes.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlvector.h
+	"tnlTypes.h"
+	"tnlPlatform.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlstring.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlbitstream.h
+	"tnlByteBuffer.h"
+	"tnlConnectionStringTable.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlbytebuffer.h
+	"tnl.h"
+	"tnlNetBase.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnl.h
+	"tnlTypes.h"
+	"tnlAssert.h"
+	"tnlEndian.h"
+	"tnlPlatform.h"
+	"tnlUDP.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlendian.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnludp.h
+	"tnlTypes.h"
+	"tnlVector.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlconnectionstringtable.h
+	"tnlNetStringTable.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlnetstringtable.h
+	"tnlTypes.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedbaseclass.h
+	"xNetTypes.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributed3dobjectclass.h
+	"xDistributedBaseClass.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedpropertyinfo.h
+	"xNetTypes.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xnetinterface.h
+	"xNetTypes.h"
+	"tnl.h"
+	"tnlNetInterface.h"
+	"Prereqs.h"
+	"precomp.h"
+	"tnl.h"
+	"tnlNetBase.h"
+	"tnlNetInterface.h"
+	"tnlNetObject.h"
+	"tnlVector.h"
+	"tnlLog.h"
+	"tnlRPC.h"
+	"tnlString.h"
+	"tnlGhostConnection.h"
+	"xNetworkTypes.h"
+	"vtConnection.h"
+	"vtNetTypes.h"
+	"vtNetStructs.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlnetinterface.h
+	"tnlVector.h"
+	"tnlNetBase.h"
+	"tnlClientPuzzle.h"
+	"tnlNetObject.h"
+	"tnlNetConnection.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlclientpuzzle.h
+	"tnlDataChunker.h"
+	"tnlNonce.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnldatachunker.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlnonce.h
+	"tnlBitStream.h"
+	"tnlRandom.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlrandom.h
+	"tnl.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlnetobject.h
+	"tnlNetBase.h"
+	"tnlBitStream.h"
+	"tnlRPC.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlrpc.h
+	"tnlNetEvent.h"
+	"tnlMethodDispatch.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlnetevent.h
+	"tnlNetBase.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlmethoddispatch.h
+	"tnlTypes.h"
+	"tnlVector.h"
+	"tnlBitStream.h"
+	"tnlNetStringTable.h"
+	"tnlString.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlnetconnection.h
+	"tnlNetBase.h"
+	"tnlLog.h"
+	"tnlNonce.h"
+	"tnlSymmetricCipher.h"
+	"tnlConnectionStringTable.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnllog.h
+	"tnlBitSet.h"
+	"tnl.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlsymmetriccipher.h
+	"tnlNetBase.h"
+
+1212431226 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\prereqs.h
+	"tnlNetBase.h"
+	<tnlString.h>
+	"stdlib.h"
+	"map"
+	<vector>
+	<deque>
+
+1212061469 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\precomp.h
+	"CKAll.h"
+	"vtNetworkManager.h"
+	"tnl.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\vtnetworkmanager.h
+	"CKBaseManager.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlghostconnection.h
+	"tnlEventConnection.h"
+	"tnlRPC.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnleventconnection.h
+	"tnlNetConnection.h"
+	"tnlNetEvent.h"
+	"tnlDataChunker.h"
+
+1212061469 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xnetworktypes.h
+	<Prereqs.h>
+	"tnl.h"
+	"tnlTypes.h"
+	"tnlVector.h"
+
+1212670769 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\vtconnection.h
+	"xNetTypes.h"
+	"tnl.h"
+	"tnlGhostConnection.h"
+	"Prereqs.h"
+	"tnl.h"
+	"tnlNetBase.h"
+	"tnlNetInterface.h"
+	"tnlNetObject.h"
+	"tnlLog.h"
+	"tnlRPC.h"
+	"tnlString.h"
+	"tnlNetInterface.h"
+	"tnlGhostConnection.h"
+	<xNetInterface.h>
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\vtnettypes.h
+	<Prereqs.h>
+	<vtNetStructs.h>
+	<vtNetEnums.h>
+	<stdlib.h>
+	<map>
+	<vector>
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\vtnetstructs.h
+	"xNetTypes.h"
+
+1212431226 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\vtnetenums.h
+
+1212670769 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\idistributedobjectsinterface.cpp
+	"IDistributedObjectsInterface.h"
+	"IDistributedClasses.h"
+	"xDistributedBaseClass.h"
+	"xDistributedObject.h"
+	"xNetInterface.h"
+	"vtConnection.h"
+	<assert.h>
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\idistributedobjectsinterface.h
+	"xNetTypes.h"
+
+1212670769 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedobject.h
+	"xNetObject.h"
+	"xNetTypes.h"
+
+1212670769 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xnetobject.h
+	"tnl.h"
+	"tnlNetObject.h"
+	"xNetTypes.h"
+
+1212607351 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\imessages.cpp
+	"IMessages.h"
+	"xNetInterface.h"
+	"vtConnection.h"
+	"xMessageTypes.h"
+	"IMessages.h"
+	"xTNLInternAll.h"
+	"xNetInterface.h"
+	"vtNetStructs.h"
+	"vtNetTypes.h"
+	"xMessageTypes.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\imessages.h
+	"xNetTypes.h"
+
+1212580514 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xmessagetypes.h
+	"xPoint.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xpoint.h
+	"xNetTypes.h"
+	"xMathFnc2.h"
+
+1212534012 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xmathfnc2.h
+	"xConstants.h"
+	<math.h>
+	"tnlTypes.h"
+	"xPoint.h"
+
+1212566434 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xconstants.h
+
+1212567004 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xtnlinternall.h
+	<xpoint.h>
+	<xQuat.h>
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xquat.h
+	"math/mMath.h"
+	"xMathFnc2.h"
+
+1212744615 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\vtconnection.cpp
+	"vtConnection.h"
+	"xNetInterface.h"
+	"xDistributed3DObject.h"
+	"xDistributedClient.h"
+	"xDistributedProperty.h"
+	"xDistributedPropertyInfo.h"
+	"IDistributedObjectsInterface.h"
+	"IDistributedClasses.h"
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+
+1212744477 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributed3dobject.h
+	"xDistributedObject.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedclient.h
+	"xDistributedObject.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedproperty.h
+	"xNetTypes.h"
+
+1212670769 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\vtconnectionmessages.cpp
+	"vtConnection.h"
+	"xNetInterface.h"
+	"xDistributed3DObject.h"
+	"xDistributedClient.h"
+	"xDistributedProperty.h"
+	"xDistributedPropertyInfo.h"
+	"IDistributedObjectsInterface.h"
+	"IDistributedClasses.h"
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+	"IMessages.h"
+
+1212607351 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdisttools.cpp
+	"xNetEnumerations.h"
+	"xDistTools.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdisttools.h
+	"xNetTypes.h"
+
+1212673814 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributed3dobject.cpp
+	"xDistributed3DObject.h"
+	"xDistributedProperty.h"
+	"xDistributedPropertyInfo.h"
+	"xNetInterface.h"
+	"vtConnection.h"
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+	"IDistributedClasses.h"
+	"xDOStructs.h"
+	"IDistributedObjectsInterface.h"
+	"xDistributedPoint4F.h"
+	"xDistributedPoint3F.h"
+	"xDistributedPoint2F.h"
+	"xDistributedPoint1F.h"
+	"xDistributedString.h"
+	"xDistributedInteger.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdostructs.h
+	"xNetTypes.h"
+	"xPoint.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedpoint4f.h
+	"xDistributedProperty.h"
+	"xQuat.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedpoint3f.h
+	"xDistributedProperty.h"
+	"xPoint.h"
+
+1212580514 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedpoint2f.h
+	"xPoint.h"
+	"xDistributedProperty.h"
+	"xTNLInternAll.h"
+	<xNetworkTypes.h>
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedpoint1f.h
+	"xDistributedProperty.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedstring.h
+	"xDistributedProperty.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedinteger.h
+	"xDistributedProperty.h"
+
+1212744477 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributed3dobjectclass.cpp
+	"xDistributed3DObjectClass.h"
+	"xDistributedPropertyInfo.h"
+	"xDistTools.h"
+
+1212607351 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedbaseclass.cpp
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+	"xDistributedPropertyInfo.h"
+
+1212670769 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedclient.cpp
+	"xDistributedClient.h"
+	"xDistributedBaseClass.h"
+	"xNetInterface.h"
+	"vtConnection.h"
+	"IDistributedClasses.h"
+
+1212607351 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedinteger.cpp
+	"xDistributedInteger.h"
+	"xPredictionSetting.h"
+	"xMathFnc2.h"
+
+1212237758 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xpredictionsetting.h
+
+1212673814 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedobject.cpp
+	"xDistributedObject.h"
+	"xDistributed3DObject.h"
+	"xDistributedBaseClass.h"
+	"xNetInterface.h"
+
+1212607351 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedpoint1f.cpp
+	"xDistributedPoint1F.h"
+	"xPredictionSetting.h"
+	"xMathFnc2.h"
+
+1212607351 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedpoint2f.cpp
+	"xDistributedPoint2F.h"
+	"xMathStream.h"
+	"xPredictionSetting.h"
+
+1212607351 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xmathstream.h
+	"xNetTypes.h"
+	"xPoint.h"
+	"xQuat.h"
+
+1212607351 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedpoint3f.cpp
+	"xDistributedPoint3F.h"
+	"xMathStream.h"
+	"xPredictionSetting.h"
+
+1212607351 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedpoint4f.cpp
+	"xDistributedPoint4F.h"
+	"xMathStream.h"
+	"xPredictionSetting.h"
+
+1212607351 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedproperty.cpp
+	"xDistributedProperty.h"
+	"xPredictionSetting.h"
+
+1212603260 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedpropertyinfo.cpp
+	"xDistributedPropertyInfo.h"
+
+1212603260 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedrect.cpp
+	"xDistributedRect.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedrect.h
+	"xDistributedProperty.h"
+	"xNetMath.h"
+
+1212603260 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xnetmath.h
+	"xNetTypes.h"
+	"xPoint.h"
+	"xQuat.h"
+
+1212603260 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xdistributedstring.cpp
+	"xDistributedString.h"
+
+1212744477 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xnetinterface.cpp
+	"xNetInterface.h"
+	"vtConnection.h"
+	"IDistributedClasses.h"
+	"xDistributedBaseClass.h"
+	"xDistributed3DObjectClass.h"
+	"xDistributed3DObject.h"
+	"xDistributedClient.h"
+	"IDistributedObjectsInterface.h"
+	"IMessages.h"
+	"xDistributedProperty.h"
+	"xDistributedPropertyInfo.h"
+
+1212673814 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xnetinterfacemessages.cpp
+
+1212670769 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\manager\xnetobject.cpp
+	"xNetObject.h"
+	<xNetInterface.h>
+
+1212744532 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\linux\xconsole3\xconsole3\xservermain.cpp
+	"xNetInterface.h"
+	"vtConnection.h"
+	<tnlAsymmetricKey.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnl\subs\tnl\tnlasymmetrickey.h
+	"tnlBitStream.h"
+

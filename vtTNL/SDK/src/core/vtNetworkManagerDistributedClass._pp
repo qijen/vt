@@ -1,0 +1,236 @@
+#include <vtNetAll.h>
+
+/////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+void
+vtConnection::s2c_DOCreateDistObject(TNL::Int<16>userSrcID,String  objectName,String className)
+{
+	s2c_DOCreateDistObjectRPC(userSrcID,objectName,className);
+}
+//////////////////////////////////////////////////////////////////////////
+TNL_IMPLEMENT_RPC(vtConnection,s2c_DOCreateDistObjectRPC, 
+				  (	TNL::Int<16>userSrcID,
+				  String objectName,
+				  String className),
+				  (userSrcID,
+				  objectName,
+				  className),
+				  NetClassGroupGameMask, RPCGuaranteedOrdered, RPCDirServerToClient, 0)
+{
+	xNetInterface nInterface = static_cast<xNetInterface >(getInterface());
+	if (!nInterface)
+	{
+		return;
+	}
+	//the dist class : 
+	xDistributedClassesArrayType _classes = nInterface->GetDistrutedClassesPtr();
+
+
+	vtDistributedClass classTemplate = NULL;
+	//look it exist : 
+	xDistClassIt it  = _classes->Find(className.getString ());
+	if (it == _classes->End())
+	{
+		classTemplate = nInterface->dcCreateClass(className,0);
+	}else
+	{
+		classTemplate = it;
+	}
+	int size = nInterface->GetDistributedObjects()->Size();
+	//////////////////////////////////////////////////////////////////////////
+	//the distObject :
+	vtDistributedObjectsInterface doInterface  = nInterface->GetDistObjectInterface();
+	vtDistributedObject distObject = doInterface->get( objectName.getString () );
+	if ( distObject==NULL &classTemplate->GetEnitityType() == E_DC_BTYPE_3D  _ENTITY )
+	{
+		distObject  = new vtDistributedObject();
+		distObject->SetDistributedClass(classTemplate);
+		distObject->SetObjectFlags(E_DO_CREATION_COMPLETE);
+		distObject->SetEntityID(-1);
+		nInterface->DOSetDistObjectCounter(nInterface->DOGetDistObjectCounter()+1);
+		distObject->SetServerID(nInterface->DOGetDistObjectCounter());
+		distObject->SetName(objectName.getString ());
+		distObject->SetNetInterface(nInterface);
+		distObject->SetUserID(userSrcID);
+
+
+		//distObject->mNetFlags.set(Ghostable);
+
+
+		nInterface->GetDistributedObjects()->PushBack(distObject);
+		setScopeObject(distObject);
+
+		/*TNL::Vector<TNL::NetConnection > con_list = doInterface->GetNetworkInterface()->getConnectionList();
+		for(int i = 0; i < con_list.size(); i++)
+		{
+		vtConnection con = (vtConnection )con_list[i];
+		int index2  =  con->getGhostIndex((NetObject*)distObject);
+
+		}*/
+
+
+
+
+		//////////////////////////////////////////////////////////////////////////
+		//send id back : 
+		/*TNL::PacketStream writeStream;
+		writeStream.write(TNL::U8(DOObjectIDResponse));
+		writeStream.writeString (distObject->GetName().getString (),strlen(distObject->GetName().getString ()));
+		writeStream.writeSignedInt(DOGetDistObjectCounter(),16);
+		writeStream.sendto(mSocket, address);*/
+
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+void
+vtConnection::c2s_DOCreateDistObject(TNL::Int<16>userSrcID,String  objectName,String className)
+{
+	c2s_DOCreateDistObjectRPC(userSrcID,objectName,className);
+}
+//////////////////////////////////////////////////////////////////////////
+TNL_IMPLEMENT_RPC(vtConnection,c2s_DOCreateDistObjectRPC, 
+				  (	TNL::Int<16>userSrcID,
+				  String objectName,
+				  String className),
+				  (userSrcID,
+				  objectName,
+				  className),
+				  NetClassGroupGameMask, RPCGuaranteedOrdered, RPCDirClientToServer, 1)
+{
+	xNetInterface nInterface = static_cast<xNetInterface >(getInterface());
+	if (!nInterface)
+	{
+		return;
+	}
+	//the dist class : 
+	xDistributedClassesArrayType _classes = nInterface->GetDistrutedClassesPtr();
+
+	
+	vtDistributedClass classTemplate = NULL;
+	//look it exist : 
+	xDistClassIt it  = _classes->Find(className.getString ());
+	if (it == _classes->End())
+	{
+		classTemplate = nInterface->dcCreateClass(className,0);
+	}else
+	{
+		classTemplate = it;
+	}
+	int size = nInterface->GetDistributedObjects()->Size();
+	//////////////////////////////////////////////////////////////////////////
+	//the distObject :
+	vtDistributedObjectsInterface doInterface  = nInterface->GetDistObjectInterface();
+	vtDistributedObject distObject = doInterface->get( objectName.getString () );
+	if ( distObject==NULL &classTemplate->GetEnitityType() == E_DC_BTYPE_3D  _ENTITY )
+	{
+		distObject  = new vtDistributedObject();
+		distObject->SetDistributedClass(classTemplate);
+		distObject->SetObjectFlags(E_DO_CREATION_COMPLETE);
+		distObject->SetEntityID(-1);
+		nInterface->DOSetDistObjectCounter(nInterface->DOGetDistObjectCounter()+1);
+		distObject->SetServerID(nInterface->DOGetDistObjectCounter());
+		distObject->SetName(objectName.getString ());
+		distObject->SetNetInterface(nInterface);
+		distObject->SetUserID(userSrcID);
+
+		
+		//distObject->mNetFlags.set(Ghostable);
+		
+
+		nInterface->GetDistributedObjects()->PushBack(distObject);
+		setScopeObject(distObject);
+		
+
+		/*TNL::Vector<TNL::NetConnection > con_list = doInterface->GetNetworkInterface()->getConnectionList();
+		for(int i = 0; i < con_list.size(); i++)
+		{
+			vtConnection con = (vtConnection )con_list[i];
+			int index2  =  con->getGhostIndex((NetObject*)distObject);
+
+		}*/
+
+
+
+
+		//////////////////////////////////////////////////////////////////////////
+		//send id back : 
+		/*TNL::PacketStream writeStream;
+		writeStream.write(TNL::U8(DOObjectIDResponse));
+		writeStream.writeString (distObject->GetName().getString (),strlen(distObject->GetName().getString ()));
+		writeStream.writeSignedInt(DOGetDistObjectCounter(),16);
+		writeStream.sendto(mSocket, address);*/
+
+	}
+
+
+
+
+}
+
+
+
+////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+void vtConnection::s2c_DO_Response_ID(String  objectName,String className,int objectID)
+{
+
+}
+
+////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+TNL_IMPLEMENT_RPC(vtConnection,s2c_DO_ResponseID_RPC, 
+				  (String objectName,
+				  String className,	
+				  TNL::Int<16>objectID),
+				  (objectName,
+				  className,
+				  objectID),
+				  NetClassGroupGameMask, RPCGuaranteedOrdered, RPCDirServerToClient, 0)
+{
+	//s2c_DO_Response_ID(String(objectName),String(className),objectID);
+}
+////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+void
+vtConnection::c2s_DO_RequestID(int userSrcID, String  objectName, String  className)
+{
+
+
+	c2s_DO_RequestID_RPC(GetUserID(),String(objectName),String(className));
+	
+}
+////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+TNL_IMPLEMENT_RPC(vtConnection,c2s_DO_RequestID_RPC, 
+				  (	TNL::Int<16>userSrcID,
+				  String objectName,
+				  String className),
+				  (userSrcID,
+				  objectName,
+				  className),
+				  NetClassGroupGameMask, RPCGuaranteedOrdered, RPCDirClientToServer, 1)
+{
+	
+	XString  oName(objectName);
+	XString  cName(className);
+	logprintf("client %i requests dist object id for %s for dist class %s",userSrcID,oName.CStr(),cName.CStr());
+	TNL::Vector<TNL::NetConnection > con_list = getInterface()->getConnectionList();
+	for(int i = 0; i < con_list.size(); i++)
+	{
+		vtConnection con = (vtConnection )con_list[i];
+		if (con->GetUserID()  != userSrcID )
+		{
+		//con->s2cBCMesgStr_RPC(userSrcID,targetID,type,numSubs,messageName,msgID,msgSubID,msgValue);
+		}
+	}
+	
+}

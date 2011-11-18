@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE HelpIndex SYSTEM "MS-Help://hx/resources/HelpIndex.DTD">
+<HelpIndex
+   Name="C"
+   Visible="Yes"
+   DTDVersion="1.0"
+   FileVersion="1.0"
+   LangId="1033">
+
+   <Keyword Term="CallPython">
+      <Jump Url="CallPyFunc.htm"/>
+   </Keyword>
+   <Keyword Term="CallPyFuncEx">
+      <Jump Url="CallPyFuncEx.htm"/>
+   </Keyword>
+</HelpIndex>

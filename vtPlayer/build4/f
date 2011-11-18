@@ -1,0 +1,16 @@
+/D "WIN32" /D "_WINDOWS" /D "DEBUG" /D "_DEBUG" /D "_WINDLL" /D "_MBCS" /D "_AFXDLL"
+/Gm /EHsc /RTC1 /MDd /Gy /GR /YX"stdafx.h"
+/Fp"..\..\TEMP\vs2003\xSplash\Debug/xSplash.pch"
+/Fo"..\..\TEMP\vs2003\xSplash\Debug/"
+/Fd"..\..\Bin\Debug\Dev40\xSplash.pdb"
+/W3
+/nologo
+/c
+/Wp64
+/ZI
+/TP
+
+/INCREMENTAL /NOLOGO /DLL /DEBUG /PDB:"..\..\Bin\Debug\Dev40\xSplash.pdb"
+/SUBSYSTEM:WINDOWS /IMPLIB:"..\..\Bin\Debug\Dev40\xSplash.lib" /MACHINE:X86
+
+/I "../../../usr/include/virtools" /D "WIN32" /D "_WINDOWS" /D "DEBUG" /D "_DEBUG" /D "_WINDLL" /D "_MBCS" /Gm /EHsc /RTC1 /MDd /Gy /GR /YX"stdafx.h" /Fp"..\..\TEMP\vs2003\xSplash\Debug/xSplash.pch" /Fo"..\..\TEMP\vs2003\xSplash\Debug/" /Fd"..\..\Bin\Debug\Dev40\xSplash.pdb" /W3 /nologo /c /Wp64 /ZI /TP

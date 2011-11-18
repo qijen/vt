@@ -1,0 +1,8 @@
+; Editor.def : Declares the module parameters for the DLL.
+
+LIBRARY      "DistributedNetworkClassDialog"
+; DESCRIPTION  'DistributedNetworkClassDialog Windows Dynamic Link Library'
+
+EXPORTS
+	GetVirtoolsPluginInfoCount
+	GetVirtoolsPluginInfo

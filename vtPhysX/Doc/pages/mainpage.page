@@ -1,0 +1,21 @@
+/*! \mainpage PhysX for Virtools 
+
+This manual is divided in the following sections:
+
+-	\subpage Installation 
+-	\subpage InstallationSDK
+
+-   \subpage Overview
+-   \subpage Interface
+
+-   \subpage Guide 
+-   \subpage BuildingBlocks
+-   \subpage ParameterOperations
+
+-	\subpage ChangeLog
+-	\subpage Todos
+
+
+*/
+
+

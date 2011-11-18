@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>premake4.lua</title>
+<meta name="Generator" content="SciTE - www.Scintilla.org" />
+<style type="text/css">
+.S0 {
+	color: #000000;
+}
+.S2 {
+	font-family: 'Lucida Console';
+	color: #00FF00;
+	background: #FFFFFF;
+	text-decoration: inherit;
+	font-size: 10pt;
+}
+.S5 {
+	color: #BBEEFF;
+	background: #FFFFFF;
+	text-decoration: inherit;
+}
+.S6 {
+	color: #FFBBBB;
+	background: #FFFFFF;
+	text-decoration: inherit;
+}
+.S10 {
+	color: #BBBBBB;
+	background: #FFFFFF;
+	text-decoration: inherit;
+}
+.S11 {
+	font-family: 'Lucida Console';
+	color: #BBBBBB;
+	font-size: 10pt;
+}
+.S13 {
+	color: #FFAAFF;
+	background: #FFFFFF;
+	text-decoration: inherit;
+}
+span {
+	font-family: 'Lucida Console';
+	color: #BBBBBB;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#000040">
+<span><span class="S13">dofile</span><span class="S10">(</span><span class="S6">"ModuleConfig.lua"</span><span class="S10">)</span><br />
+<span class="S13">dofile</span><span class="S10">(</span><span class="S6">"ModuleHelper.lua"</span><span class="S10">)</span><br />
+<br />
+<br />
+<span class="S11">solution</span><span class="S0"> </span><span class="S6">"vtAgeia"</span><br />
+<br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">configurations</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S6">"Debug"</span><span class="S10">,</span><span class="S0"> </span><span class="S6">"Release"</span><span class="S0"> </span><span class="S10">,</span><span class="S0"> </span><span class="S6">"ReleaseDebug"</span><span class="S0"> </span><span class="S10">}</span><br />
+<br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">setfields</span><span class="S10">(</span><span class="S6">"location"</span><span class="S10">,</span><span class="S6">"./"</span><span class="S10">..</span><span class="S11">_ACTION</span><span class="S10">..</span><span class="S11">_OPTIONS</span><span class="S10">[</span><span class="S6">"Dev"</span><span class="S10">])</span><br />
+<br />
+<br />
+<span class="S11">packageConfig_Stream</span><span class="S0"> </span><span class="S10">=</span><br />
+<span class="S10">{</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Name</span><span class="S0"> &nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> &nbsp; </span><span class="S6">"NxuStream2"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Type</span><span class="S0">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0">&nbsp; &nbsp;</span><span class="S6">"StaticLib"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Defines</span><span class="S0"> &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">DEF_STD_DIRECTIVES</span><span class="S0"> &nbsp;</span><span class="S10">;</span><span class="S0"> &nbsp; </span><span class="S11">DEF_PHYSX_DIRECTIVES</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Files</span><span class="S0">&nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_NXSTREAM</span><span class="S10">..</span><span class="S6">"*.cpp"</span><span class="S0">&nbsp;</span><span class="S10">;</span><span class="S0">&nbsp; &nbsp;</span><span class="S11">D_NXSTREAM</span><span class="S10">..</span><span class="S6">"*.h"</span><span class="S0">&nbsp; &nbsp;</span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Includes</span><span class="S0"> &nbsp;&nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_PHYSX_INCLUDES</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Options</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S6">"/W0"</span><span class="S10">}</span><br />
+<br />
+<span class="S10">}</span><br />
+<br />
+<br />
+<span class="S11">packageConfig_Common</span><span class="S0"> </span><span class="S10">=</span><br />
+<span class="S10">{</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Name</span><span class="S0"> &nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> &nbsp; </span><span class="S6">"NxCommon"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Type</span><span class="S0">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0">&nbsp; &nbsp;</span><span class="S6">"StaticLib"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Defines</span><span class="S0"> &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">DEF_STD_DIRECTIVES</span><span class="S0"> &nbsp;</span><span class="S10">;</span><span class="S0"> &nbsp; </span><span class="S11">DEF_PHYSX_DIRECTIVES</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Files</span><span class="S0">&nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_NXCOMMON</span><span class="S10">..</span><span class="S6">"*.cpp"</span><span class="S0">&nbsp;</span><span class="S10">;</span><span class="S0">&nbsp; &nbsp;</span><span class="S11">D_NXCOMMON</span><span class="S10">..</span><span class="S6">"*.h"</span><span class="S0">&nbsp; &nbsp;</span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Includes</span><span class="S0"> &nbsp;&nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_PHYSX_INCLUDES</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Options</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S6">"/W0"</span><span class="S10">}</span><br />
+<span class="S10">}</span><br />
+<br />
+<span class="S11">packageConfig_Character</span><span class="S0"> </span><span class="S10">=</span><br />
+<span class="S10">{</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Name</span><span class="S0"> &nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> &nbsp; </span><span class="S6">"NxCharacter"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Type</span><span class="S0">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0">&nbsp; &nbsp;</span><span class="S6">"StaticLib"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Defines</span><span class="S0"> &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">DEF_STD_DIRECTIVES</span><span class="S0"> &nbsp;</span><span class="S10">;</span><span class="S0"> &nbsp; </span><span class="S11">DEF_PHYSX_DIRECTIVES</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"NX_USE_SDK_STATICLIBS"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"NXCHARACTER_EXPORTS"</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Files</span><span class="S0">&nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_NXCHARACTER</span><span class="S10">..</span><span class="S6">"**.cpp"</span><span class="S0">&nbsp;</span><span class="S10">;</span><span class="S0">&nbsp; &nbsp;</span><span class="S11">D_NXCHARACTER</span><span class="S10">..</span><span class="S6">"**.h"</span><span class="S0">&nbsp; &nbsp;</span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Includes</span><span class="S0"> &nbsp;&nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_PHYSX_INCLUDES</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Options</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S6">"/W0"</span><span class="S10">}</span><br />
+<span class="S10">}</span><br />
+<br />
+<span class="S11">packageConfig_TinyXML</span><span class="S0"> </span><span class="S10">=</span><br />
+<span class="S10">{</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Name</span><span class="S0"> &nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> &nbsp; </span><span class="S6">"TinyXML"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Type</span><span class="S0">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0">&nbsp; &nbsp;</span><span class="S6">"StaticLib"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Defines</span><span class="S0"> &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">DEF_STD_DIRECTIVES</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Files</span><span class="S0">&nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_TINYXML</span><span class="S10">..</span><span class="S6">"*.cpp"</span><span class="S0">&nbsp; </span><span class="S10">;</span><span class="S0">&nbsp; &nbsp;</span><span class="S11">D_TINYXML</span><span class="S10">..</span><span class="S6">"*.h"</span><span class="S0">&nbsp; &nbsp; </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Includes</span><span class="S0"> &nbsp;&nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_PHYSX_INCLUDES</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Options</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S6">"/W0"</span><span class="S10">}</span><br />
+<span class="S10">}</span><br />
+<br />
+<span class="S11">packageConfig_vtAgeiaLib</span><span class="S0"> </span><span class="S10">=</span><br />
+<span class="S10">{</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Name</span><span class="S0"> &nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> &nbsp; </span><span class="S6">"vtAgeiaLib"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Type</span><span class="S0">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0">&nbsp; &nbsp;</span><span class="S6">"SharedLib"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Defines</span><span class="S0"> &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">DEF_STD_DIRECTIVES</span><span class="S0"> &nbsp;</span><span class="S10">;</span><span class="S0"> &nbsp; </span><span class="S11">DEF_PHYSX_DIRECTIVES</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"NX_USE_SDK_STATICLIBS"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"NXCHARACTER_EXPORTS"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"VIRTOOLS_USER_SDK"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"MODULE_BASE_EXPORTS"</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Files</span><span class="S0">&nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">DROOT</span><span class="S10">..</span><span class="S6">"SDK/src/core/**.cpp"</span><span class="S0">&nbsp; &nbsp; </span><span class="S10">;</span><span class="S0">&nbsp; &nbsp;</span><span class="S11">DROOT</span><span class="S10">..</span><span class="S6">"SDK/include/core/**.h"</span><span class="S0"> &nbsp;</span><span class="S10">;</span><span class="S0"> </span><span class="S6">"../../usr/src/xlogger.cpp"</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Includes</span><span class="S0"> &nbsp;&nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_PHYSX_INCLUDES</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S11">D_STD_INCLUDES</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S11">D_CORE_INCLUDES</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S11">DDEPS</span><span class="S10">..</span><span class="S6">"TinyXML"</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Libs</span><span class="S0">&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0">&nbsp;</span><span class="S6">"TinyXML"</span><span class="S0"> </span><span class="S10">,</span><span class="S0"> </span><span class="S6">"NxCharacter"</span><span class="S0"> </span><span class="S10">,</span><span class="S0"> </span><span class="S6">"NxCommon"</span><span class="S0"> </span><span class="S10">,</span><span class="S0"> </span><span class="S6">"NxuStream2"</span><span class="S10">;</span><span class="S0"> </span><span class="S6">"ck2"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"vxmath"</span><span class="S0"> &nbsp;</span><span class="S10">;</span><span class="S0"> </span><span class="S6">"user32"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> &nbsp;</span><span class="S6">"kernel32"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"PhysXLoader"</span><span class="S0">&nbsp; &nbsp;</span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">LibDirectories</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_PHYSX</span><span class="S10">..</span><span class="S6">"SDKs/lib/Win32"</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Options</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S6">"/W0"</span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">PostCommand</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> &nbsp; </span><span class="S6">"copy $(TargetDir)$(TargetFileName) "</span><span class="S10">..</span><span class="S11">getVTBinDirectory</span><span class="S10">()..</span><span class="S6">"\n"</span><span class="S10">..</span><span class="S6">"copy $(TargetDir)$(InputName).pdb "</span><span class="S10">..</span><span class="S11">getVTBinDirectory</span><span class="S10">()</span><br />
+<span class="S10">}</span><br />
+<br />
+<span class="S11">packageConfig_vtAgeiaBeh</span><span class="S0"> </span><span class="S10">=</span><br />
+<span class="S10">{</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Name</span><span class="S0"> &nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> &nbsp; </span><span class="S6">"vtAgeiaBehaviours"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Type</span><span class="S0">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0">&nbsp; &nbsp;</span><span class="S6">"SharedLib"</span><span class="S10">,</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Defines</span><span class="S0"> &nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">DEF_STD_DIRECTIVES</span><span class="S0"> &nbsp;</span><span class="S10">;</span><span class="S0"> &nbsp; </span><span class="S11">DEF_PHYSX_DIRECTIVES</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"NX_USE_SDK_STATICLIBS"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"NXCHARACTER_EXPORTS"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"VIRTOOLS_USER_SDK"</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Files</span><span class="S0">&nbsp; &nbsp;&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">DROOT</span><span class="S10">..</span><span class="S6">"SDK/src/Behaviors/**.cpp"</span><span class="S0">&nbsp; &nbsp;</span><span class="S10">;</span><span class="S0"> </span><span class="S11">DROOT</span><span class="S10">..</span><span class="S6">"SDK/src/Behaviors/*.def"</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Includes</span><span class="S0"> &nbsp;&nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_PHYSX_INCLUDES</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S11">D_STD_INCLUDES</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S11">D_CORE_INCLUDES</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S11">DDEPS</span><span class="S10">..</span><span class="S6">"TinyXML"</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Libs</span><span class="S0">&nbsp; &nbsp; </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0">&nbsp;</span><span class="S6">"ck2"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"vxmath"</span><span class="S0"> &nbsp;</span><span class="S10">;</span><span class="S0"> </span><span class="S6">"user32"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> &nbsp;</span><span class="S6">"kernel32"</span><span class="S0"> </span><span class="S10">;</span><span class="S0"> </span><span class="S6">"vtAgeiaLib"</span><span class="S0">&nbsp; &nbsp;</span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">LibDirectories</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S11">D_PHYSX</span><span class="S10">..</span><span class="S6">"SDKs/lib/Win32"</span><span class="S0"> </span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">Options</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S10">{</span><span class="S0"> </span><span class="S6">"/W0"</span><span class="S10">},</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">PostCommand</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S6">"copy $(TargetDir)$(TargetFileName) "</span><span class="S10">..</span><span class="S11">getVTBinDirectory</span><span class="S10">()..</span><span class="S6">"\\BuildingBlocks"</span><span class="S0"> </span><span class="S10">..</span><span class="S6">"\n"</span><span class="S10">..</span><span class="S6">"copy $(TargetDir)$(InputName).pdb "</span><span class="S10">..</span><span class="S11">getVTBinDirectory</span><span class="S10">()..</span><span class="S6">"\\BuildingBlocks"</span><br />
+<br />
+<span class="S10">}</span><br />
+<br />
+<span class="S11">createStaticPackage</span><span class="S10">(</span><span class="S11">packageConfig_Common</span><span class="S10">)</span><br />
+<span class="S11">createStaticPackage</span><span class="S10">(</span><span class="S11">packageConfig_Stream</span><span class="S10">)</span><br />
+<span class="S11">createStaticPackage</span><span class="S10">(</span><span class="S11">packageConfig_Character</span><span class="S10">)</span><br />
+<span class="S11">createStaticPackage</span><span class="S10">(</span><span class="S11">packageConfig_TinyXML</span><span class="S10">)</span><br />
+<span class="S11">createStaticPackage</span><span class="S10">(</span><span class="S11">packageConfig_vtAgeiaLib</span><span class="S10">)</span><br />
+<span class="S11">createStaticPackage</span><span class="S10">(</span><span class="S11">packageConfig_vtAgeiaBeh</span><span class="S10">)</span><br />
+<br />
+<br />
+<span class="S2">--include "CppConsoleApp"</span><br />
+<br />
+<span class="S5">function</span><span class="S0"> </span><span class="S11">onclean</span><span class="S10">()</span><br />
+<span class="S0">&nbsp; &nbsp; </span><span class="S11">os.rmdir</span><span class="S10">(</span><span class="S6">"vs**"</span><span class="S10">)</span><br />
+<span class="S5">end</span><br />
+<span class="S0"></span></span>
+</body>
+</html>

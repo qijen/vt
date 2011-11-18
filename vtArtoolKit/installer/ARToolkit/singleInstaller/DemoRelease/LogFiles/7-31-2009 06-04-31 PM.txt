@@ -1,0 +1,179 @@
+================= Logging started at 7/31/2009 06:04:31 PM ==================
+Created release folders
+InstallShield Script Compiler
+Version 15.0.0.498
+Copyright 1997-2008 Acresso Software Inc. and/or InstallShield Co. Inc. All Rights Reserved.
+
+Compiling...
+Setup.Rul
+Linking...
+Setup.inx - 0 error(s), 0 warning(s)
+AdminExecuteSequence table successfully built
+AdminUISequence table successfully built
+AdvtExecuteSequence table successfully built
+AdvtUISequence table successfully built
+InstallExecuteSequence table successfully built
+InstallUISequence table successfully built
+Directory table successfully built
+ISDEV : warning -6135: The Feature "ARToolkit" is not associated with any Setup Type.
+Feature table successfully built
+FeatureComponents table successfully built
+Component table successfully built
+Loading File table
+Building File table
+File table successfully built
+Class table successfully built
+Extension table successfully built
+ODBCDataSource table successfully built
+ODBCDriver table successfully built
+ISSQLScriptFile table successfully built
+ISSQLScriptReplace table successfully built
+ISSQLConnectionScript table successfully built
+ISSQLConnection table successfully built
+ISSQLConnectionDBServer table successfully built
+ISSQLRequirement table successfully built
+ISPalmApp table successfully built
+ISPalmAppFile table successfully built
+ISComPlusProxy table successfully built
+ISComPlusApplication table successfully built
+ISComCatalogCollection table successfully built
+ISComCatalogCollectionObjects table successfully built
+ISComCatalogObject table successfully built
+ISComCatalogAttribute table successfully built
+ISComPlusApplicationDLL table successfully built
+ISComPlusServerFile table successfully built
+ISComPlusProxyFile table successfully built
+ISComPlusServerDepFile table successfully built
+ISComPlusProxyDepFile table successfully built
+ISXmlFile table successfully built
+ISXmlElement table successfully built
+ISXmlElementAttrib table successfully built
+ActionText table successfully built
+AppSearch table successfully built
+BindImage table successfully built
+CCPSearch table successfully built
+Condition table successfully built
+AppId table successfully built
+Started signing 116.tmp ...
+Property table successfully built
+BBControl table successfully built
+Billboard table successfully built
+Binary table successfully built
+CompLocator table successfully built
+Complus table successfully built
+ControlCondition table successfully built
+ControlEvent table successfully built
+CreateFolder table successfully built
+CustomAction table successfully built
+DrLocator table successfully built
+DuplicateFile table successfully built
+Environment table successfully built
+Error table successfully built
+EventMapping table successfully built
+FileSFPCatalog table successfully built
+Font table successfully built
+ISAlias table successfully built
+ISCEApp table successfully built
+ISCEDir table successfully built
+ISCEFileExt table successfully built
+ISCEInstall table successfully built
+ISCEOtherAppCABs table successfully built
+ISCERegistry table successfully built
+ISCESetupFile table successfully built
+ISCEShtCut table successfully built
+ISChainPackage table successfully built
+ISChainPackageData table successfully built
+ProgId table successfully built
+ISComponentExtended table successfully built
+ISCustomActionReference table successfully built
+ISDRMFile table successfully built
+ISFeatureExtended table successfully built
+ISFileManifests table successfully built
+ISIISAppPool table successfully built
+ISIISCommon table successfully built
+ISIISMetaData table successfully built
+ISIISWebServiceExtension table successfully built
+ISObjectProperty table successfully built
+ISRequiredFeature table successfully built
+ISSQLDBMetaData table successfully built
+ISSQLScriptError table successfully built
+ISSelfReg table successfully built
+ISSetupType table successfully built
+ISSetupTypeFeatures table successfully built
+ISVRoot table successfully built
+ISVRootAppMaps table successfully built
+Verb table successfully built
+ISVirtualDirectory table successfully built
+ISVirtualFile table successfully built
+ISVirtualPackage table successfully built
+ISVirtualRegistry table successfully built
+ISVirtualRelease table successfully built
+ISVirtualShortcut table successfully built
+ISWebSite table successfully built
+ISXmlLocator table successfully built
+IniFile table successfully built
+IniLocator table successfully built
+IsolatedComponent table successfully built
+LaunchCondition table successfully built
+LockPermissions table successfully built
+MIME table successfully built
+MoveFile table successfully built
+MsiAssembly table successfully built
+MsiAssemblyName table successfully built
+MsiDigitalCertificate table successfully built
+MsiDigitalSignature table successfully built
+MsiDriverPackages table successfully built
+MsiEmbeddedChainer table successfully built
+MsiEmbeddedUI table successfully built
+MsiPackageCertificate table successfully built
+MsiPatchCertificate table successfully built
+ODBCAttribute table successfully built
+ODBCSourceAttribute table successfully built
+ODBCTranslator table successfully built
+PatchPackage table successfully built
+PublishComponent table successfully built
+RegLocator table successfully built
+Registry table successfully built
+RemoveFile table successfully built
+RemoveIniFile table successfully built
+RemoveRegistry table successfully built
+ReserveCost table successfully built
+SFPCatalog table successfully built
+SelfReg table successfully built
+ServiceControl table successfully built
+ServiceInstall table successfully built
+Shortcut table successfully built
+Signature table successfully built
+TextStyle table successfully built
+TypeLib table successfully built
+UIText table successfully built
+Upgrade table successfully built
+_Validation table successfully built
+Searching project for extract-at-build components...
+Validating Custom Action sequencing
+Embedding manifest SetupExe.Highest.manifest into setup.exe
+Checking string table references...
+Generating RC file: _ISUser1033.rc
+Building dialog 12059
+Built 1 dialogs into resource file: _ISUser1033.rc
+Building RES file: _ISUser1033.res
+Compiling resource DLL: _isuser1033.dll
+Resolving strings...
+Language English (United States) built
+Embedding manifest SetupExe.Highest.manifest into setup.exe
+Building CAB files...
+Data1.cab built
+Files built
+Media table successfully built
+Performing Upgrading and Patching Validation
+Setup.exe created
+---------------------------------------------------------------------------------------------------------------------------------
+Windows validation is disabled. To enable Windows validation: on the Tools menu, click Options and select the Validation tab.
+You can use the Certified for Windows(R) Vista Validation Suite (plus InstallShield ICEs) to determine whether your product meets Certified for Windows(R) Vista Program installation standards.
+For more information, see KB article <file:http://support.installshield.com/kb/view.asp?articleid=Q112118>.
+---------------------------------------------------------------------------------------------------------------------------------
+Automatic update notification disabled
+singleInstaller\DemoRelease - 0 error(s), 1 warning(s)
+================= Logging stopped at 7/31/2009 06:04:37 PM ==================
+Log file has been created: <file:X:\ProjectRoot\vtArtoolKit\installer\ARToolkit\singleInstaller\DemoRelease\LogFiles\7-31-2009 06-04-31 PM.txt>
+

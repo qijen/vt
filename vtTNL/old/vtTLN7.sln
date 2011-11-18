@@ -1,0 +1,143 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vtTNL", "vtTLN7.vcproj", "{1BCC380D-900F-4476-B4E0-FD7687A28782}"
+	ProjectSection(ProjectDependencies) = postProject
+		{566BE7B3-F965-40E2-8344-69B9615433AE} = {566BE7B3-F965-40E2-8344-69B9615433AE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tnl", "subs\tnl\tnl7.vcproj", "{566BE7B3-F965-40E2-8344-69B9615433AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A} = {3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtomcrypt", "subs\libtomcrypt\libtomcrypt7.vcproj", "{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xConsoleServer", "xConsoleServer7.vcproj", "{1130B059-A99A-4BFF-8ABA-42FC686CE831}"
+	ProjectSection(ProjectDependencies) = postProject
+		{566BE7B3-F965-40E2-8344-69B9615433AE} = {566BE7B3-F965-40E2-8344-69B9615433AE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xConsoleClient", "xConsoleClient.vcproj", "{1130B059-A99A-4BFF-7ABA-42FC686CE831}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug Psp = Debug Psp
+		Debug Psp Emu = Debug Psp Emu
+		DebugConsoleClient = DebugConsoleClient
+		DebugStatic = DebugStatic
+		Release = Release
+		Release Psp = Release Psp
+		Release Psp Emu = Release Psp Emu
+		ReleaseDebug = ReleaseDebug
+		ReleaseStatic = ReleaseStatic
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Debug.ActiveCfg = Debug|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Debug.Build.0 = Debug|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Debug Psp.ActiveCfg = Debug Psp|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Debug Psp.Build.0 = Debug Psp|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Debug Psp Emu.ActiveCfg = Debug Psp Emu|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Debug Psp Emu.Build.0 = Debug Psp Emu|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.DebugConsoleClient.ActiveCfg = DebugConsoleClient|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.DebugConsoleClient.Build.0 = DebugConsoleClient|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.DebugStatic.ActiveCfg = DebugStatic|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.DebugStatic.Build.0 = DebugStatic|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Release.ActiveCfg = Release|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Release.Build.0 = Release|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Release Psp.ActiveCfg = Release Psp|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Release Psp.Build.0 = Release Psp|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Release Psp Emu.ActiveCfg = Release Psp Emu|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.Release Psp Emu.Build.0 = Release Psp Emu|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.ReleaseDebug.ActiveCfg = ReleaseDebug|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.ReleaseDebug.Build.0 = ReleaseDebug|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.ReleaseStatic.ActiveCfg = ReleaseStatic|Win32
+		{1BCC380D-900F-4476-B4E0-FD7687A28782}.ReleaseStatic.Build.0 = ReleaseStatic|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Debug.ActiveCfg = Debug|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Debug.Build.0 = Debug|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Debug Psp.ActiveCfg = Debug|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Debug Psp.Build.0 = Debug|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Debug Psp Emu.ActiveCfg = Debug|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Debug Psp Emu.Build.0 = Debug|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.DebugConsoleClient.ActiveCfg = Debug|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.DebugConsoleClient.Build.0 = Debug|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.DebugStatic.ActiveCfg = Debug|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.DebugStatic.Build.0 = Debug|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Release.ActiveCfg = Release|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Release.Build.0 = Release|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Release Psp.ActiveCfg = Release|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Release Psp.Build.0 = Release|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Release Psp Emu.ActiveCfg = Release|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.Release Psp Emu.Build.0 = Release|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.ReleaseDebug.ActiveCfg = Release|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.ReleaseDebug.Build.0 = Release|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.ReleaseStatic.ActiveCfg = Release|Win32
+		{566BE7B3-F965-40E2-8344-69B9615433AE}.ReleaseStatic.Build.0 = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Debug.ActiveCfg = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Debug.Build.0 = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Debug Psp.ActiveCfg = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Debug Psp.Build.0 = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Debug Psp Emu.ActiveCfg = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Debug Psp Emu.Build.0 = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.DebugConsoleClient.ActiveCfg = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.DebugConsoleClient.Build.0 = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.DebugStatic.ActiveCfg = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.DebugStatic.Build.0 = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Release.ActiveCfg = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Release.Build.0 = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Release Psp.ActiveCfg = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Release Psp.Build.0 = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Release Psp Emu.ActiveCfg = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Release Psp Emu.Build.0 = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.ReleaseDebug.ActiveCfg = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.ReleaseDebug.Build.0 = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.ReleaseStatic.ActiveCfg = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.ReleaseStatic.Build.0 = Release|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.Debug.ActiveCfg = Debug|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.Debug Psp.ActiveCfg = Debug|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.Debug Psp.Build.0 = Debug|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.Debug Psp Emu.ActiveCfg = Debug|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.Debug Psp Emu.Build.0 = Debug|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.DebugConsoleClient.ActiveCfg = Debug|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.DebugConsoleClient.Build.0 = Debug|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.DebugStatic.ActiveCfg = Debug|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.DebugStatic.Build.0 = Debug|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.Release.ActiveCfg = Release|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.Release Psp.ActiveCfg = Release|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.Release Psp.Build.0 = Release|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.Release Psp Emu.ActiveCfg = Release|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.Release Psp Emu.Build.0 = Release|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.ReleaseDebug.ActiveCfg = Release|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.ReleaseDebug.Build.0 = Release|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.ReleaseStatic.ActiveCfg = Release|Win32
+		{1130B059-A99A-4BFF-8ABA-42FC686CE831}.ReleaseStatic.Build.0 = Release|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Debug.ActiveCfg = Debug|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Debug Psp.ActiveCfg = Debug|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Debug Psp.Build.0 = Debug|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Debug Psp Emu.ActiveCfg = Debug|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Debug Psp Emu.Build.0 = Debug|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.DebugConsoleClient.ActiveCfg = Debug|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.DebugConsoleClient.Build.0 = Debug|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.DebugStatic.ActiveCfg = Debug|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.DebugStatic.Build.0 = Debug|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Release.ActiveCfg = Release|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Release.Build.0 = Release|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Release Psp.ActiveCfg = Release|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Release Psp.Build.0 = Release|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Release Psp Emu.ActiveCfg = Release|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.Release Psp Emu.Build.0 = Release|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.ReleaseDebug.ActiveCfg = Release|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.ReleaseDebug.Build.0 = Release|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.ReleaseStatic.ActiveCfg = Release|Win32
+		{1130B059-A99A-4BFF-7ABA-42FC686CE831}.ReleaseStatic.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

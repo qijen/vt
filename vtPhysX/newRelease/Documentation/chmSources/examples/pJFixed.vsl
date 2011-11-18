@@ -1,0 +1,32 @@
+PhysicManager pm = GetPhysicManager();
+pFactory pf  = getPFactory();
+
+
+pRigidBody bodyA = pm.getBody(bodyARef);
+pRigidBody bodyB = pm.getBody(bodyBRef);
+
+//sanity check :
+if(!bodyA && !bodyB )
+	return;
+
+pWorld w  = null;
+
+//bodyARef or bodyBRef can be zero because a joint constraint can be created between an object an the world too.
+if(bodyA)
+{
+	w = bodyA.getWorld();
+}
+
+if(bodyB)
+{
+	w = bodyB.getWorld();
+}
+
+
+// Try to get the joint object , identified by the type "fixed":
+pJoint joint  = w.getJoint(bodyARef,bodyBRef,JT_Fixed);
+
+
+// No one ? Create it !
+if(!joint)
+	joint = pf.createFixedJoint(bodyARef,bodyBRef);

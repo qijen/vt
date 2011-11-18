@@ -1,0 +1,59 @@
+PhysicManager pm = GetPhysicManager();
+pFactory pf  = getPFactory();
+
+
+pRigidBody bodyA = pm.getBody(bodyARef);
+pRigidBody bodyB = pm.getBody(bodyBRef);
+
+//sanity check :
+if(!bodyA && !bodyB )
+	return;
+
+pWorld w  = null;
+
+//bodyARef or bodyBRef can be zero. This creates a cylinder constraint with the environment then.
+//However, we need a valid world object :
+if(bodyA)
+{
+	w = bodyA.getWorld();
+}
+
+if(bodyB)
+{
+	w = bodyB.getWorld();
+}
+
+
+//we ask the world whether a cylinder joint  exists already amongst the both bodies :
+pJoint joint  = w.getJoint(bodyARef,bodyBRef,JT_Cylindrical);
+
+pJointCylindrical cylJoint = null;
+
+
+//pickup and adjust data
+Vector globalAnchor  = anchor;
+if(anchorReference)
+	anchorReference.Transform(globalAnchor,anchor);
+
+Vector globalAxis  = axis;
+if (axisReference)
+{
+	Vector dir;
+	Vector up;
+	Vector right;
+	axisReference.GetOrientation(dir,up,right);
+	axisReference.TransformVector(globalAxis,up);
+
+}
+
+
+
+if(!joint)
+	cylJoint= pf.createCylindricalJoint(bodyARef,bodyBRef,globalAnchor,globalAxis);
+
+
+if(cylJoint){
+	cylJoint.enableCollision(collision);
+	cylJoint.setGlobalAnchor(globalAnchor);
+	cylJoint.setGlobalAxis(globalAnchor);
+}

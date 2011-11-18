@@ -1,0 +1,15 @@
+/*! \page DataRelations VSL Object Relations
+
+
+     <h5>Relation between physical objects: </h5>
+
+    \image html DataRelations.png
+   <br >
+
+   <h5>Relation between Virtools and PhysX objects: </h5>
+
+    \image html NxVtRemapping.png
+
+   See also #PhysicManager #pWorld #pRigidBody #pJoint #pFactory
+
+*/

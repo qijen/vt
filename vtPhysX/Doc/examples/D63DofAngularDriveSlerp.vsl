@@ -1,0 +1,22 @@
+pJoint joint  = w.getJoint(a,b,JT_D6);
+if(joint)
+{
+	
+	pJointD6 d6 = joint.castD6Joint();
+	
+	
+	pJD6Drive slerpDrive;
+	slerpDrive.driveType 	= D6DT_Position;
+	slerpDrive.forceLimit 	= 0.0f;
+	slerpDrive.spring		= 250.0f;
+	slerpDrive.damping		= 0.01f;
+	
+	d6.setTwistDrive(slerpDrive);
+	
+	Quaternion animTarget;
+	
+	//...
+	d6.setDriveRotation(animTarget);
+	
+}
+		

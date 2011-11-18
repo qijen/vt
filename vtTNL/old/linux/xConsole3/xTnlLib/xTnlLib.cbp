@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="xTnlLib" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="libxTnlLib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Debug\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-fpermissive" />
+					<Add directory="..\..\..\subs\libtomcrypt" />
+					<Add directory="..\..\..\subs\tnl" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="..\libtomcrypt\libtomcrypt.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="libxTnlLib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-O3" />
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-Wall" />
+					<Add directory="..\..\..\subs\libtomcrypt" />
+					<Add directory="..\..\..\subs\tnl" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="..\libtomcrypt\libtomcrypt.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Os" />
+			<Add option="-pedantic" />
+		</Compiler>
+		<Linker>
+			<Add option="-s" />
+		</Linker>
+		<Unit filename="..\..\..\subs\tnl\assert.cpp" />
+		<Unit filename="..\..\..\subs\tnl\asymmetricKey.cpp" />
+		<Unit filename="..\..\..\subs\tnl\bitStream.cpp" />
+		<Unit filename="..\..\..\subs\tnl\byteBuffer.cpp" />
+		<Unit filename="..\..\..\subs\tnl\certificate.cpp" />
+		<Unit filename="..\..\..\subs\tnl\clientPuzzle.cpp" />
+		<Unit filename="..\..\..\subs\tnl\connectionStringTable.cpp" />
+		<Unit filename="..\..\..\subs\tnl\dataChunker.cpp" />
+		<Unit filename="..\..\..\subs\tnl\eventConnection.cpp" />
+		<Unit filename="..\..\..\subs\tnl\ghostConnection.cpp" />
+		<Unit filename="..\..\..\subs\tnl\huffmanStringProcessor.cpp" />
+		<Unit filename="..\..\..\subs\tnl\journal.cpp" />
+		<Unit filename="..\..\..\subs\tnl\log.cpp" />
+		<Unit filename="..\..\..\subs\tnl\netBase.cpp" />
+		<Unit filename="..\..\..\subs\tnl\netConnection.cpp" />
+		<Unit filename="..\..\..\subs\tnl\netInterface.cpp" />
+		<Unit filename="..\..\..\subs\tnl\netObject.cpp" />
+		<Unit filename="..\..\..\subs\tnl\netStringTable.cpp" />
+		<Unit filename="..\..\..\subs\tnl\platform.cpp" />
+		<Unit filename="..\..\..\subs\tnl\random.cpp" />
+		<Unit filename="..\..\..\subs\tnl\rpc.cpp" />
+		<Unit filename="..\..\..\subs\tnl\symmetricCipher.cpp" />
+		<Unit filename="..\..\..\subs\tnl\thread.cpp" />
+		<Unit filename="..\..\..\subs\tnl\tnl.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlAssert.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlAsymmetricKey.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlBitSet.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlBitStream.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlByteBuffer.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlCertificate.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlClientPuzzle.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlConnectionStringTable.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlDataChunker.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlEndian.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlEventConnection.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlGhostConnection.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlHuffmanStringProcessor.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlJournal.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlLog.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlMethodDispatch.cpp" />
+		<Unit filename="..\..\..\subs\tnl\tnlMethodDispatch.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlNetBase.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlNetConnection.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlNetEvent.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlNetInterface.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlNetObject.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlNetStringTable.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlNonce.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlPlatform.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlRPC.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlRandom.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlString.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlSymmetricCipher.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlThread.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlTypes.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlUDP.h" />
+		<Unit filename="..\..\..\subs\tnl\tnlVector.h" />
+		<Unit filename="..\..\..\subs\tnl\udp.cpp" />
+		<Unit filename="..\..\..\subs\tnl\vector.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

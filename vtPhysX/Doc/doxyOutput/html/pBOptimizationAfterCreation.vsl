@@ -1,0 +1,20 @@
+//----------------------------------------------------------------
+//
+// fill optimization settings and update
+//
+pOptimization optimization;
+
+optimization.transformationFlags  +=BF_LRY; 			//lock rotation around Y
+optimization.transformationFlags  +=BF_LPY; 			//lock moving along Y
+
+
+body.updateOptimization(optimization)
+
+//----------------------------------------------------------------
+//
+// or specify values directly
+//
+
+body.lockTransformation( BF_LRY + BF_LRY );
+body.setLinearDamping(linDamping);
+body.setAngularDamping(angDamping);

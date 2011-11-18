@@ -1,0 +1,10 @@
+Ftp4w (v3.01) - A complete FTP Client in DLL
+The Ftp4w Library provides a client side
+interface for FTP. As a client, it logs into
+the server, looks for files, downloads or 
+uploads, logs out and much more.
+The APIs can be called by any development 
+system that allows access to external DLLs.
+This package contains both 16 bits and 32 
+bits DLLs.
+Freeware By Philippe Jounin (ph.jounin@computer.org)

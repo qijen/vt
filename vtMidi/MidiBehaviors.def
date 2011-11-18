@@ -1,0 +1,10 @@
+; BeauxArts.def : Declares the module parameters for the DLL.
+
+ 
+DESCRIPTION  'BeauxArts Windows Dynamic Link Library'
+
+EXPORTS
+	CKGetPluginInfo
+	CKGetPluginInfoCount
+	RegisterBehaviorDeclarations
+	

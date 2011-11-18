@@ -1,0 +1,189 @@
+/*!\page D6LinearDrivesGuide Linear Drives
+
+<h3>Linear Drives</h3>
+
+	A joint with a single linear DOF, i.e. a slider or prismatic joint, has an obvious coordinate to drive; its linear extension is represented by a single Cartesian coordinate - x, y or z. Each linear DOF that is not locked can be driven by its Cartesian coordinate so multi-DOF linear joints are easily understood as multiple 1DOF joints. Drive velocities are the rate of change of the Cartesian coordinates. NOTE: Angular Drive is more involved, 
+	so be sure to understand the linear drive model before progressing to angular drive.
+
+	<b>Linear Drive Model</b><br>
+
+	The linear drive model for the d6joint consists of the following parameters:
+
+	Drive targets are specified in relation to the parent actor's (body[0]) frame using the following members of a D6:
+
+	- drivePosition - a vector representing a target position. 
+	- driveLinearVelocity - a vector representing the target velocity.
+
+	Separate drive descriptors for x (xDrive), y (yDrive) and z (zDrive) can be specified using these D6 members :
+
+	- driveType - used to apply a type of drive with the following flags:
+	  - D6DT_Position - Enable drive to a positional goal.
+	  - D6DT_Velocity - Enable drive to a velocity goal.
+	
+	- spring - amount of force needed to move the joint to its target position proportional to the distance from the target (not used for a velocity drive).
+	- damping - applied to the drive spring (used to smooth out oscillations about the drive target).
+	- forceLimit - maximum force applied when driving towards a velocity target (not used for a positional drive).
+
+	Position drive attempts to follow the desired position input with the configured stiffness and damping properties. A physical lag due to the inertia of the driven body acting through the drive spring will occur; therefore, sudden step changes will result over a number of time steps.
+
+	Physical lag can be reduced by stiffening the spring. Another way to control the lag is to apply a velocity target in addition to a positional target.
+
+	With a fixed position input, a position drive will spring about that drive position with the specified springing/damping characteristics. Adding a velocity drive in this case will deflect the drive from the desired position, just as an external force stretches the spring.
+
+	In addition to specifying drive targets through the joint descriptor, the d6joint provides methods to update the targets only, as shown below:
+
+	- #pJointD6::setDrivePosition()     
+	- #pJointD6::setDriveRotation();    
+	- #pJointD6::setDriveLinearVelocity();    
+	- #pJointD6::setDriveAngularVelocity();
+
+
+	<I><b>Example</b></I>
+
+	<SPAN CLASS="NiceCode">
+	\include D6LinearDrive.vsl
+	</SPAN>
+	<br>
+	
+	<b>Why Not Just Drive with Forces?</b>
+	One way to drive a joint is to apply a force. While this can be effective for modeling soft, springy effects, it quickly becomes unstable for stiff springs and forces, due to a limitation of the numerical integration used to advance time from one time step to the next. The use of forces for direct drive should be avoided unless you are fully aware of the technical meaning of stiff, and therefore understand the potential pitfalls of simulation using a first order method.
+
+	The d6joint uses a drive constraint in which the springs are implicitly integrated within the solver, as this is the best way to model stiff behavior for stable simulation. Use of drive constraints are also convenient for modeling soft behavior so there is little reason to use direct force.
+
+	If you do use forces, be careful to apply equal and opposite forces to the parent and child actors or the result will be physically incorrect.
+
+	
+	<hr>
+
+*/
+
+
+/*!\page D6AngularDrivesGuide Angular Drives
+
+
+<h3>Angular Drives</h3>
+
+	Angular drive differs from linear drive in a fundamental way: it does not have a simple and intuitive representation free from singularities. For this reason, the d6joint provides two angular drive models - twist and swing and SLERP (Spherical Linear Interpolation).
+
+	Twist and swing is intuitive in many situations; however, there is a singularity when driven to 180 degrees swing. In addition, the drive will not follow the shortest arc between two orientations. 
+
+	On the other hand, SLERP drive will follow the shortest arc between a pair of angular configurations, but may cause un-intuitive changes in the joint's twist and swing.
+
+	The d6joint angular drive takes a quaternion as a target orientation. In a SLERP drive, the quaternion is used directly. In a twist and swing drive, it is decomposed into separate twist and swing components and each component is interpolated separately.
+
+	<b>Angular Drive Model</b><br>
+
+
+	The angular drive model for the d6joint consists of the following parameters:
+
+	Velocity targets are specified in relation to the parent actor's (body[0]) frame using the following members of a D6:
+
+	- driveType - used to apply a type of drive with the following flags:
+	  - D6DT_Position - Enable drive to a positional goal.
+	  - D6DT_Velocity - Enable drive to a velocity goal.
+
+    Separate drive descriptors for SLERP (slerpDrive), swing (swingDrive) and twist (twistDrive) can be specified using these D6 members: 
+	- driveType - used to apply a type of drive with the following flags:
+	  - D6DT_Position - Enable drive to a positional goal.
+	  - D6DT_Velocity - Enable drive to a velocity goal.
+     
+	 
+	 
+	 Angular orientation drive will attempt to follow the desired orientation input with the configured stiffness and damping properties, while the joint constraints are enforced by the solver. Ideally, the inputs should be consistent with the joint constraints, requiring more effort compared to the linear case.
+
+	 The default drive behavior for the angular DOFs interpolates between orientations with decoupled twist and swing freedoms, using separate drive properties for twist and swing (both swing DOFs use the same drive properties). In fact, twist and swing is the only drive method for 1DOF or 2DOF angular joints when one or two angular DOFs are locked.
+
+	 Instead of using the default twist and swing drive, 3DOF angular joints (i.e., no angular DOFs locked) with orientation drive can utilize the SLERP option that interpolates between orientations via a SLERP/shortest arc rotation.
+
+
+	 <hr>
+
+	 <b>1DOF Angular Drive</b><br>
+
+	 A joint with a single angular DOF, i.e. a hinge or rotary joint, is similar to the equivalent linear 1DOF joint. The obvious coordinate in this case is the joint angle but here it must be input in quaternion form. The velocity input is the single angular velocity component for the selected DOF.
+
+	 It is recommended that revolute joints are implemented as twist hinges because the d6joint is optimized for this case and provides slightly more flexible limit functionality. In other words, the user can specify a low and high angle separately, similar to the dedicated revolute joint.
+
+	 <SPAN CLASS="NiceCode">
+		 \include D61DofAngularDrive.vsl
+	 </SPAN>
+	 <br>
+
+	 <hr>
+
+	<b>2DOF Angular Drive</b><br>
+
+	There are two types of joints with two angular DOFs: the zero-twist joint and the zero-swing joint.
+
+	<I>zero-twist joint drive (aka Iso-Universal)</I> :
+
+	The two swing DOFs remain to be actuated.
+
+	The swing orientation is extracted from the input quaternion by decomposing it into twist and swing as shown at the end of this document, or it can be computed and input directly as shown here:
+
+	Qswing = Qyz = (Cyz, 0, Sy, Sz)Velocity inputs, if required, can be derived using the cross product to find the axis of rotation from the current twist-axis swing direction to its desired swing direction, as demonstrated below:
+
+
+	<SPAN CLASS="NiceCode">
+	\include D62DofAngularDrive.vsl
+	</SPAN>
+	<br>
+	
+
+	<I>zero-swing joint drive (aka Universal)</I> :
+
+	The 2DOFs are a pair of sequential rotations about orthogonal axes:
+
+	- The zero-swing1 joint DOFs are rotations about the child x-axis and the parent z-axis. 
+	- The zero-swing2 joint DOFs are rotations about the child x-axis and the parent y-axis. 
+	
+	The joint constraint keeps the two rotation axes orthogonal.
+
+	The input quaternion is computed by composing the two rotations (e.g., for the zero-swing2 joint):
+
+	QyQx = (Cy, 0, Sy, 0)(Cx, Sx, 0, 0) = (CyCx, CySx, SyCx, -SySx)The angular velocity input vector is found by adding two rotation-axis-aligned angular velocity vectors as shown below: 
+
+	<SPAN CLASS="NiceCode">
+	\include D62DofAngularDrive2.vsl
+	</SPAN>
+	<br>
+	
+
+
+	<hr>
+
+	<b>3DOF Angular Drive</b><br>
+	
+	The non-integrable ('nonholonomic') behavior manifests itself in joints with 3DOF (i.e., none of the angular DOFs are locked).
+
+	Pure angular velocity drive is useless for actuating the orientation of a body in the full 3DOFs as the orientation will quickly drift away from what might be expected.
+
+	For an orientation drive, there is a choice between the default twist and swing drive or the optional SLERP drive.
+
+	<b>twist and swing drive</b><br>
+	
+	Internally, the angular drive defaults to using twist and swing coordinates. This is the preferred choice for all joints within a skeletal character because it gives the expected interpolation behavior, decoupling twist and swing freedoms. However, many animation systems deal with quaternions and perform SLERPs or LERPs between the quaternions representing individual key frames. In these systems, the SLERP drive may be the preferred system as it most closely mimics the interpolation used in the key framing system.
+
+	Another case where the twist and swing drive may prove useful is with AI controlled objects, such as gun turrents, where the natural parameterization of the joint is a twist and a swing.
+
+	The twist and swing drive acts on the absolute coordinates between parent frame and child frame, attempting to bring these coordinates to the desired values between parent frame and drive frame.
+
+	Because it acts on absolute coordinates, the child frame should not be driven near the twist and swing singularity at a full 180 degree swing.
+
+
+	<b>SLERP drive</b><br>
+
+	The d6joint angular drive has a SLERP option to replace the default drive. The SLERP option decouples twist and swing coordinates with an isotropic drive of all three angular DOFs. This uses rotation vector coordinates in which a rotation vector lies in the single shortest rotation axis so the 3D rotation isn't being decomposed into a sequence of rotations as with twist and swing.
+
+	The SLERP drive acts locally between the drive frame and the child frame. The parent frame is not directly involved in the drive behavior; it only acts as a root from which to specify the drive frame offset.
+
+	Because it acts locally, the SLERP option is useful when the child object can rotate to any arbitrary orientation relative to the parent without limit.
+
+	There is a singularity that could cause the child to get stuck if its frame is 180 degrees away from the drive frame, but this is unlikely to occur (and will correct itself with any small disturbance). 
+
+
+	<SPAN CLASS="NiceCode">
+	\include D63DofAngularDriveSlerp.vsl
+	</SPAN>
+	<br>
+*/

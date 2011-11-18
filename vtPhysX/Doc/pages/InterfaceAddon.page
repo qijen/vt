@@ -1,0 +1,45 @@
+/*! \page Interface
+
+   
+   <br>
+   
+   <b>Interfaces to PhysX in Virtools Dev </b>
+   <br>
+
+
+   
+   <h5>General Access: </h5>
+
+   The most functionality is accesible through 3 ways : 
+
+   -    \ref BuildingBlocks
+   -    VSL ( See \ref DataRelations )
+   -    Attributes
+   -    \ref ParameterOperations
+
+   
+   For instance you want to register a simple box in the physic engine you can use : 
+   
+   -    the building block \ref PBPhysicalize
+   -    VSL : #pFactory::createBody()
+   -    Attributes : Category "Physics" : Attribute "Object"
+   
+   -    Dragging a NxStream - XML - File from the resource database on the object. See \ref vtSerialisation for more information. (NOT Impl. yet)
+   -    Open the vtAgeiaInterface plug-in.
+   
+   
+   <h5>PhysX SDK Parameters: </h5> 
+   
+   The PhysX SDK provides many parameters to adjust default values and specific behaviours.
+   
+   See #PhysicManager::setParameter()  which parameters can be modified. <b>vtAgeia</b> allows modifications 
+   through the Virtools "Variable Manager" too. All parameters can be saved in the cmo. <br >
+   
+   Open "Variable Manager" in Virtools Dev. There are two new Sections : 
+   -    Physic
+   -    Physic Debugger
+   
+   <br>
+      
+
+*/

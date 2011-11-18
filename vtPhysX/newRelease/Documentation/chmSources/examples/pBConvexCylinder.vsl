@@ -1,0 +1,49 @@
+pObjectDescr oDescr;
+
+oDescr.flags 	 					= BF_Moving + BF_Collision + BF_Gravity;
+
+oDescr.hullType 					= HT_ConvexCylinder;	//	set hull type
+
+
+pConvexCylinderSettings cylinder;
+
+cylinder.height.referenceAxis	= DIR_X;	//  capsule longest side is along local Y Axis
+cylinder.height.reference		= ref;		//	measure length from input entity
+
+cylinder.radius.referenceAxis	= DIR_Z;	//
+cylinder.radius.reference		= ref;		//
+
+cylinder.forwardAxis.Set(0,0,-1); 			// Magic numbers
+cylinder.downAxis.Set(0,-1,0);
+cylinder.rightAxis.Set(1,0,0);
+
+cylinder.buildLowerHalfOnly 	= false;
+cylinder.approximation			= 64;		//at least 4 segments !
+
+oDescr.setConvexCylinder(cylinder);
+
+
+
+//	tell manager, there are convex cylinder settings being used, otherwise,
+//	it looks for cylinder settings in the objects attributes, lookup order :
+//		- 	3D-entity
+//		- 	current mesh
+//		-	materials
+//
+//	If there is no such attribute, convex cylinder is set to default :
+//
+//		height 				= BoxSize[Y]
+//		radius 				= BoxSize[X] * 0.5f
+//
+//		approximation 		= 4
+//
+//		buildLowerHalfOnly 	= false
+//
+//		convexFlags 		= CF_ComputeConvex;
+//
+//		downAxis 			= 0,-1,0
+//		rightAxis 			= 1,0,0
+//		forwardAxis			= 0,0,1
+
+oDescr.mask 						+=OD_ConvexCylinder;
+

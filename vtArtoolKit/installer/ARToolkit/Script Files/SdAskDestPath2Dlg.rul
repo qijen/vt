@@ -1,0 +1,170 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  File Name:    SdAskDestPath2Dlg.rul
+//
+//  Description:  This file contains the InstallShield script for the SdAskDestPath2
+//                dialog function.
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+#ifndef _SDADPATH2_RUL_
+#define _SDADPATH2_RUL_
+
+#include "Dialogs.h"
+#include "CustomDlg.h"
+#include "Winapi.h"
+#include "ISRTDefs.h"
+#include "Silent.h"
+#include "sdrc.h"
+#include "sdint.h"
+#include "DialogsPriv.h"   
+
+#include "funcs.h"
+
+
+#define LABEL_ID 1201          
+#define BTN_ID 1202
+#define STATIC_DIR 1203      
+#define BTN_NEXT 1114
+#define BTN_BACK 1115  
+
+
+//////////////////////////////////////////////////////////////////////////
+#define EDT_35 3505
+#define EBT_35 3502
+
+#define EDTR_35 3507
+#define EBTR_35 3506
+
+
+#define EDT_40 4014
+#define EBT_40 4013
+
+#define EDTR_40 4012
+#define EBTR_40 4011
+             
+//////////////////////////////////////             
+#define EDT_41 4021
+#define EBT_41 4020
+
+#define EDTR_41 4019
+#define EBTR_41 4018  
+
+#define DIRG1 1207
+#define DIRG2 1210
+#define DIRG3 1217
+                
+                    
+
+#define SD_STA_CHANGEDIRMSG_2 "Change"
+
+                          
+/*
+	  a1 = SD_STA_DESTDIR;  //715
+ 		  a2 =   DATA_NUMBER;    //2
+ 		  data2 =  szSdProduct;   
+ 		  a0  =SD_STA_CHANGEDIRMSG;
+// 		  data2 = nSdAskDestPath;
+
+SD_STA_DESTDIR
+ 		  
+ 		  //button : 1202 
+ 		  //behschriftung : 1201
+ 		  //pfad : 1203
+ 		  */                          
+function  SdAskDestPath22( szTitle, szMsg, svDir )
+          STRING  szDlg, svDirLoc, szTemp,data2;
+          INT     nId, nTemp, nSdDialog, nStyle,hItem;
+          HWND    hwndDlg;
+          BOOL    bDone;
+          number a0,a1,a2; 
+
+          
+          begin
+
+          szDlg     = "SdAskDestPath22";//SD_DLG_ASKDESTPATH2;//SdAskDestPath2
+          nSdDialog = 11111;//SD_NDLG_ASKDESTPATH2;//12067
+ 	
+          svDirLoc = svDir;  
+
+          // record data produced by this dialog
+          if (MODE=SILENTMODE) then
+            SdMakeName( szAppKey, szDlg, szTitle, nSdAskDestPath2 );
+            SilentReadData( szAppKey, "Result", DATA_NUMBER, szTemp, nId );
+            if ((nId != BACK) && (nId != CANCEL)) then
+               SilentReadData( szAppKey, "szDir", DATA_STRING, svDir, nTemp );
+            endif;
+
+            return nId;
+          endif;
+
+          // ensure general initialization is complete
+          if (!bSdInit) then
+             SdInit();
+          endif;
+
+          if (EzDefineDialog( szDlg, "", "", nSdDialog ) = DLG_ERR) then
+            return -1;
+          endif;
+
+          // Loop in dialog until the user selects a standard button
+          bDone = FALSE;
+
+          while (!bDone)
+
+             nId = WaitOnDialog( szDlg );
+                              
+                              
+             switch (nId)
+             case DLG_INIT:
+                
+              
+             SdGeneralInit( szDlg, hwndDlg, nStyle, szSdProduct );
+                  /*
+                  SdSetDlgTitle(szDlg, hwndDlg, szTitle);*/
+
+             case BTN_NEXT:
+                  svDir = svDirLoc;
+                  nId   = NEXT;
+                  bDone = TRUE;
+
+             case BACK:
+                  nId    = BACK;
+                  bDone  = TRUE;
+
+             case DLG_ERR:
+                  SdError( -1, "SdAskDestPath2" );
+                  nId   = -1;
+                  bDone = TRUE;
+
+             case DLG_CLOSE:
+                  SdCloseDlg( hwndDlg, nId, bDone );
+
+             default:
+                  // check standard handling
+                  if (SdIsStdButton( nId ) && SdDoStdButton( nId )) then
+                      bDone = TRUE;
+                  endif;
+             endswitch;
+
+          endwhile;
+
+          EndDialog( szDlg );
+          ReleaseDialog( szDlg );
+
+          SdUnInit( );
+
+          // record data produced by this dialog
+          if (MODE=RECORDMODE) then
+              SdMakeName( szAppKey, szDlg, szTitle, nSdAskDestPath2 );
+              SilentWriteData( szAppKey, "szDir", DATA_STRING, svDir, 0 );
+              SilentWriteData( szAppKey, "Result", DATA_NUMBER, "", nId );
+          endif;
+
+          return nId;
+        
+          end;
+
+#endif
+
+

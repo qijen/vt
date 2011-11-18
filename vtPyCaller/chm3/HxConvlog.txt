@@ -1,0 +1,53 @@
+Input File: X:\junctions\ProjectRoot\current\vt_plugins\vt_PyCaller\chm\vtPython.chm
+Output Directory: X:\junctions\ProjectRoot\current\vt_plugins\vt_PyCaller\chm3\
+
+Topic: vtPython.chm -> vtPython.HxC ... OK
+Collection: Building_Blocks.htm -> Building_Blocks.htm ... 
+   Warning  HXCONV1411: Building_Blocks.htm (1): The HTML tag 'html' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: CallPyFunc.htm -> CallPyFunc.htm ... OK
+Collection: CallPyFuncEx.htm -> CallPyFuncEx.htm ... OK
+Collection: CallPythonEx.htm -> CallPythonEx.htm ... 
+   Warning  HXCONV1411: CallPythonEx.htm (1): The HTML tag 'HTML' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Copy: CallPythonFunc.png -> CallPythonFunc.png ... OK
+Copy: CallPythonFuncEx.png -> CallPythonFuncEx.png ... OK
+Collection: Copyright.htm -> Copyright.htm ... 
+   Warning  HXCONV1411: Copyright.htm (1): The HTML tag 'html' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: DestroyPython.htm -> DestroyPython.htm ... OK
+Copy: DestroyPython.png -> DestroyPython.png ... OK
+Collection: Dialogs.htm -> Dialogs.htm ... 
+   Warning  HXCONV1411: Dialogs.htm (1): The HTML tag 'html' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: GettingStarted.htm -> GettingStarted.htm ... 
+   Warning  HXCONV1411: GettingStarted.htm (1): The HTML tag 'html' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: Installation.htm -> Installation.htm ... 
+   Warning  HXCONV1411: Installation.htm (1): The HTML tag 'HTML' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: LoadPython.htm -> LoadPython.htm ... OK
+Copy: LoadPython.png -> LoadPython.png ... OK
+Copy: Office11.css -> Office11.css ... OK
+Copy: pyMul.jpg -> pyMul.jpg ... OK
+Collection: Python Bindings.htm -> Python Bindings.htm ... 
+   Warning  HXCONV1411: Python Bindings.htm (1): The HTML tag 'html' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: Python.htm -> Python.htm ... 
+   Warning  HXCONV1411: Python.htm (1): The HTML tag 'html' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: PythonBindings.htm -> PythonBindings.htm ... 
+   Warning  HXCONV1411: PythonBindings.htm (1): The HTML tag 'HTML' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: Registration.htm -> Registration.htm ... 
+   Warning  HXCONV1411: Registration.htm (1): The HTML tag 'html' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: Support.htm -> Support.htm ... 
+   Warning  HXCONV1411: Support.htm (1): The HTML tag 'html' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: teset.htm -> teset.htm ... 
+   Warning  HXCONV1411: teset.htm (1): The HTML tag 'HTML' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: Tutorial.htm -> Tutorial.htm ... 
+   Warning  HXCONV1411: Tutorial.htm (1): The HTML tag 'html' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Copy: vsl.bmp -> vsl.bmp ... OK
+TOC: vtPython.hhc -> vtPython.HxT ... 
+   Warning  HXCONV1201: vtPython.chm::\vtPython.hhc (9): Window definitions will not be converted.
+Index: vtPython.hhk -> vtPython.HxK ... OK
+Collection: vtPythonTOC.htm -> vtPythonTOC.htm ... 
+   Warning  HXCONV1411: vtPythonTOC.htm (1): The HTML tag 'html' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Collection: Welcome.htm -> Welcome.htm ... 
+   Warning  HXCONV1411: Welcome.htm (1): The HTML tag 'HTML' has invalid characters appearing before the closing angle bracket: :MSHelp="http://msdn.microsoft.com/mshelp".
+Unknown: -> NamedURLIndex.HxK ... OK
+File List: -> vtPython.HxF ... OK
+
+Total Warnings: 16
+Total Errors: 0

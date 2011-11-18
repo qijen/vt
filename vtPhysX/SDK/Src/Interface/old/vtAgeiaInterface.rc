@@ -1,0 +1,233 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PBCOMMON DIALOGEX 0, 0, 365, 141
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 7, "Tahoma", 400, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_HULLTYPE,43,1,67,70,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Hull Type",IDC_LBL_HTYPE,3,3,38,11
+    CONTROL         "Moving",IDC_BFLAGS_MOVING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,170,15,40,10,WS_EX_TRANSPARENT
+    CONTROL         "Deformable",IDC_BFLAGS_DEFORMABLE,"Button",
+                    BS_AUTOCHECKBOX,288,15,58,9,WS_EX_TRANSPARENT
+    CONTROL         "Gravity",IDC_BFLAGS_GRAV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,170,27,42,13,WS_EX_TRANSPARENT
+    CONTROL         "Kinematic",IDC_BFLAGS_KINEMATIC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,170,40,48,13,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Collision",IDC_BFLAGS_COLL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,218,15,44,10,WS_EX_TRANSPARENT
+    CONTROL         "Collision Notify",IDC_BFLAGS_COLL_NOTIFY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,218,27,65,13,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Trigger Shape",IDC_BFLAGS_TRIGGER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,218,40,61,13,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Sub Shape",IDC_BFLAGS_SSHAPE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,218,55,52,13,WS_EX_TRANSPARENT
+    CONTROL         "Hierarchy",IDC_BFLAGS_HIERARCHY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,170,55,50,13,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Sleep",IDC_BFLAGS_SLEEP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,288,52,44,13,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_FLAGS_BG,"Static",SS_BLACKFRAME | WS_TABSTOP,170,
+                    71,182,66
+    LTEXT           "Flags",IDC_LBL_FLAGS,120,7,42,11,0,WS_EX_TRANSPARENT
+    LTEXT           "StaticPlaceHolder",IDC_FLEX_FRAME,2,23,161,109
+END
+
+IDD_PBCOMMON_DEFORMABLE DIALOGEX 0, 0, 160, 83
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_NOPARENTNOTIFY | WS_EX_CONTROLPARENT
+FONT 7, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_MAINTAB,"SysTabControl32",TCS_RAGGEDRIGHT,3,2,150,
+                    22
+END
+
+IDD_EDITOR DIALOG  0, 0, 186, 97
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_TOOLBAR DIALOG  0, 0, 186, 97
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 177, 19
+STYLE DS_SETFONT | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,90
+ PRODUCTVERSION 4,0,0,90
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Virtools SA"
+            VALUE "FileDescription", "Editor DLL"
+            VALUE "FileVersion", "4.0.0.90"
+            VALUE "InternalName", "Editor"
+            VALUE "LegalCopyright", "© 1998-2007 Virtools SA"
+            VALUE "LegalTrademarks", "© 1998-2007 Virtools"
+            VALUE "OriginalFilename", "Editor.DLL"
+            VALUE "ProductName", "Virtools"
+            VALUE "ProductVersion", "4.0.0.90"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_EDITORICON          ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PBCOMMON, DIALOG
+    BEGIN
+        RIGHTMARGIN, 335
+        VERTGUIDE, 170
+        VERTGUIDE, 218
+        VERTGUIDE, 288
+        HORZGUIDE, 15
+        HORZGUIDE, 40
+        HORZGUIDE, 65
+    END
+
+    IDD_PBCOMMON_DEFORMABLE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

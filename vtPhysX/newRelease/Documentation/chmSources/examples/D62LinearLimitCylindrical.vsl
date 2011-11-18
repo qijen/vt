@@ -1,0 +1,23 @@
+//we retrieve a joint object : 
+pJoint joint  = w.getJoint(bodyARef,bodyBRef,JT_Revolute);
+if(!joint)
+return;
+
+//Virtools is not providing simple downcasts : 
+pJointD6 d6  = joint.castD6Joint();
+if(!d6)
+return;
+
+//Cylindrical linear limit. The axis of the cylinder is the x axis.
+d6.setXMotionMode(D6MM_Free);
+d6.setYMotionMode(D6MM_Limited);
+d6.setZMotionMode(D6MM_Limited);
+
+pJD6SoftLimit lLimit;
+lLimit.value 	= limitRadius;
+lLimit.damping 	= 0.0f;		//0 is default anyway
+lLimit.restitution = 0.0f;	//0 is default anyway
+
+d6.setLinearLimit(lLimit);
+
+

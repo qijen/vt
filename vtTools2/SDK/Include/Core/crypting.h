@@ -1,0 +1,1 @@
+int EncryptPassword(char* pcPassword);

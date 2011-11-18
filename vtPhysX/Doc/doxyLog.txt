@@ -1,0 +1,280 @@
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pCloth/PCAttachToCore.cpp:16: Warning: included file pCloth.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pCloth/PCAttachToShape.cpp:261: Warning: included file pCloth.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pCloth/PCAttachVertexToShape.cpp:317: Warning: included file pCloth.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pClothFlags.h:197: Warning: explicit link request to 'attachToCollidingShapes()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/D6/JD6.cpp:913: Warning: explicit link request to 'pFactory::createD6Joint()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:612: Warning: explicit link request to 'pJD6DriveAxis' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:597: Warning: explicit link request to 'pJD6LimitAxis' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:83: Warning: explicit link request to 'pJD6SLimit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJAddLimitPlane.cpp:121: Warning: Illegal </br> tag found
+
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJAddLimitPlane.cpp:125: Warning: Illegal </br> tag found
+
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJAddLimitPlane.cpp:128: Warning: Illegal </br> tag found
+
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJAddLimitPlane.cpp:130: Warning: Illegal </br> tag found
+
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJAddLimitPlane.cpp:132: Warning: Illegal </br> tag found
+
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJAddLimitPlane.cpp:135: Warning: Illegal </br> tag found
+
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJAddLimitPlane.cpp:137: Warning: Illegal </br> tag found
+
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJAddLimitPlane.cpp:140: Warning: Illegal </br> tag found
+
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJAddLimitPlane.cpp:147: Warning: explicit link request to 'joint::setLimitPoint()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJAddLimitPlane.cpp:147: Warning: explicit link request to 'joint::addLimitPlane()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJCreateDistanceJoint.cpp:1010: Warning: explicit link request to 'pFactory::createDistanceJoint()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/pTypes.h:27: Warning: explicit link request to 'pJSpring' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJCylindrical.cpp:106: Warning: explicit link request to 'pFactory::createJointCylindrical()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJDestroy.cpp:76: Warning: explicit link request to 'pWorld::deleteJoint()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJPointInPlane.cpp:331: Warning: explicit link request to 'pFactory::createPointInPlaneJoint()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJPointOnLine.cpp:106: Warning: explicit link request to 'pFactory::createPointOnLineJoint()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJPulley.cpp:663: Warning: Found unknown command `\Note'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJPulley.cpp:710: Warning: explicit link request to 'pFactory::createJointPulley()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJRevolute.cpp:514: Warning: explicit link request to 'pFactory::createJointRevolute()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:41: Warning: explicit link request to 'pJLimit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJSetBall.cpp:1125: Warning: explicit link request to 'pFactory::createJointBall()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJSetBreakForces.cpp:90: Warning: unable to resolve reference to `PJPrismatic' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJSetBreakForces.cpp:114: Warning: Found unknown command `\Note'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pJoint/PJSetFixed.cpp:87: Warning: explicit link request to 'pFactory::createJointFixed()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBAddShapeEx.cpp:103: Warning: explicit link request to 'pRigidBody::updateFlags()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBAddShapeEx.cpp:111: Warning: explicit link request to 'pFactory::createRigidBody()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBAddShapeEx.cpp:24: Warning: target pMassSettings::totalDensity of \copydoc command not found
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBAddShapeEx.cpp:335: Warning: explicit link request to 'pRigidBody::updateMaterialSettings()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBAddShapeEx.cpp:306: Warning: explicit link request to 'pWheelDescr' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBGetPar2.cpp:736: Warning: included file PBGetEx.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBPhysicalizeEx.cpp:107: Warning: explicit link request to 'pRigidBody::updateFlags()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBPhysicalizeEx.cpp:124: Warning: explicit link request to 'pFactory::createRigidBody()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBPhysicalizeEx.cpp:181: Warning: target pMassSettings::totalDensity of \copydoc command not found
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBPhysicalizeEx.cpp:309: Warning: explicit link request to 'pRigidBody::updateMaterialSettings()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBPhysicalizeEx.cpp:216: Warning: explicit link request to 'pRigidBody::lockTransformation' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBPhysicalizeEx.cpp:1148: Warning: explicit link request to 'pWorld::setDominanceGroupPair()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBPhysicalizeEx.cpp:978: Warning: explicit link request to 'pRigidBody::updateOptimizationSettings()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/pTypes.h:226: Warning: explicit link request to 'pRigidBody::lockTransformation' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBSetCallback.cpp:1209: Warning: included file PBSetEx.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBSetHard.cpp:394: Warning: included file PBSet.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBSetPar.cpp:137: Warning: included file PBSetEx.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pRigidBody/PBSetTriggerMask.cpp:94: Warning: included file PCSetTriggerMask.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pVehicle/PVWGet.cpp:1190: Warning: included file PBGetEx.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Src/Behaviors/pVehicle/PVWSet.cpp:122: Warning: included file PBSetEx.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/BuildingBlocks.page:19: Warning: unable to resolve reference to `PBGetPar' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/BuildingBlocks.page:104: Warning: unable to resolve reference to `PVWForce' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ChangeLog.page:9: Warning: unable to resolve reference to `PVSetBreakSettings' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/Clothes.page:3: Warning: unable to resolve reference to `GClothAttachments' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/Clothes.page:4: Warning: unable to resolve reference to `GClothRendering' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/Clothes.page:5: Warning: unable to resolve reference to `GClothTearing' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/Clothes.page:10: Warning: unable to resolve reference to `GClothFluidInteraction' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/GClothCreation.page:28: Warning: explicit link request to 'pClothDesc::damping' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/GClothCreation.page:139: Warning: unable to resolve reference to `GClothAttachments' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/GClothCreation.page:143: Warning: explicit link request to 'pClothDesc::collisionResponseCoefficint' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/GClothCreation.page:143: Warning: explicit link request to 'pCloth::setCollisionResponseCoefficint()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/GCollision.page:3: Warning: explicit link request to 'pWorld::setGroupCollisionFlag()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/GCollision.page:3: Warning: unable to resolve reference to `PWSetCollisionGroupFlag' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/Installation.page:50: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/Installation.page:53: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/Installation.page:58: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/Installation.page:59: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/InterfaceAddon.page:17: Warning: unable to resolve reference to `PBPhysicalize' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/InterfaceAddon.page:18: Warning: explicit link request to 'pFactory::createBody()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/InterfaceAddon.page:21: Warning: unable to resolve reference to `vtSerialisation' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:6: Warning: unable to resolve reference to `MiscOps' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:27: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:85: Warning: explicit link request to 'pJD6DriveType' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:139: Warning: explicit link request to 'pJD6DriveType' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:164: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:851: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:881: Warning: explicit link request to 'pRayCast' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:912: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:913: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:946: Warning: explicit link request to 'pRayCast' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:977: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:978: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/ParameterOps.page:979: Warning: HTML tags may not use the 'empty tag' XHTML syntax.
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/Todos.page:5: Warning: unable to resolve reference to `PBPhysicalize' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/Doc/pages/Todos.page:53: Warning: unable to resolve reference to `PBPhysicalize' for \ref command
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:108: Warning: explicit link request to 'NxRaycastHit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:109: Warning: explicit link request to 'NxRaycastHit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:110: Warning: explicit link request to 'NxRaycastHit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:111: Warning: explicit link request to 'NxRaycastHit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:112: Warning: explicit link request to 'NxRaycastHit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:113: Warning: explicit link request to 'NxRaycastHit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:115: Warning: explicit link request to 'NxRaycastHit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:41: Warning: explicit link request to 'pJLimit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:83: Warning: explicit link request to 'pJD6SLimit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:233: Warning: explicit link request to 'pJointType' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:245: Warning: explicit link request to 'pJointFixed' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:268: Warning: explicit link request to 'pRigidBody::addSubShape()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:270: Warning: explicit link request to 'pBFlags' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:397: Warning: explicit link request to 'pBHullType' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:495: Warning: explicit link request to 'pBForceMode' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:581: Warning: explicit link request to 'pJD6Axis' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:597: Warning: explicit link request to 'pJD6LimitAxis' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:612: Warning: explicit link request to 'pJD6DriveAxis' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:550: Warning: explicit link request to 'pJD6MotionMode' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:564: Warning: explicit link request to 'pJD6DriveType' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:581: Warning: explicit link request to 'pJD6Axis' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:597: Warning: explicit link request to 'pJD6LimitAxis' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:612: Warning: explicit link request to 'pJD6DriveAxis' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:655: Warning: explicit link request to 'pWheel::setShapeFlags' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:657: Warning: Invalid list item found
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:658: Warning: explicit link request to 'pWheel::setWheelFlags' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:691: Warning: explicit link request to 'pVWheelFunction' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:697: Warning: explicit link request to 'pVWheelFunction' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:704: Warning: explicit link request to 'pWheel::setWheelFlags' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/vtInterfaceEnumeration.h:712: Warning: explicit link request to 'pVWheelFunction' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pClothFlags.h:189: Warning: explicit link request to 'attachToShape()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pClothFlags.h:197: Warning: explicit link request to 'attachToCollidingShapes()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pClothFlags.h:201: Warning: explicit link request to 'attachToCore()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:83: Warning: explicit link request to 'pJD6SLimit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:41: Warning: explicit link request to 'pJLimit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/pTypes.h:27: Warning: explicit link request to 'pJSpring' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pCloth.h:367: Warning: argument 'actor' of command @param is not found in the argument list of pCloth::attachToCore(CK3dEntity *body, float impulseThreshold, float penetrationDepth, float maxDeformationDistance)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pCloth.h:367: Warning: The following parameters of pCloth::attachToCore(CK3dEntity *body, float impulseThreshold, float penetrationDepth, float maxDeformationDistance) are not documented:
+  parameter 'body'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pCloth.h:443: Warning: argument 'worldRay' of command @param is not found in the argument list of pCloth::setGroup(int collisionGroup)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pCloth.h:443: Warning: argument 'hit' of command @param is not found in the argument list of pCloth::setGroup(int collisionGroup)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pCloth.h:443: Warning: argument 'vertexId' of command @param is not found in the argument list of pCloth::setGroup(int collisionGroup)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pCloth.h:541: Warning: argument 'position' of command @param is not found in the argument list of pCloth::setVelocity(const VxVector &velocity, int vertexId)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pCloth.h:541: Warning: The following parameters of pCloth::setVelocity(const VxVector &velocity, int vertexId) are not documented:
+  parameter 'velocity'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pCloth.h:757: Warning: explicit link request to 'NxClothFlag' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pCloth.h:840: Warning: explicit link request to 'NxBounds3' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pCloth/pCloth.h:843: Warning: explicit link request to 'NxMeshData' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/pTypes.h:163: Warning: explicit link request to 'pRigidBody::updateCollisionSettings()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pFluid/pFluid.h:365: Warning: explicit link request to 'pFluidDescType' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pFluid/pFluidEmitter.h:282: Warning: argument 'new' of command @param is not found in the argument list of pFluidEmitter::resetEmission(int maxParticles)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pFluid/pFluidEmitter.h:282: Warning: The following parameters of pFluidEmitter::resetEmission(int maxParticles) are not documented:
+  parameter 'maxParticles'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:342: Warning: argument 'CK3dEntity' of command @param is not found in the argument list of PhysicManager::getJoint(CK3dEntity *referenceA, CK3dEntity *referenceB=NULL, JType type=JT_Any)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:342: Warning: argument 'CK3dEntity' of command @param is not found in the argument list of PhysicManager::getJoint(CK3dEntity *referenceA, CK3dEntity *referenceB=NULL, JType type=JT_Any)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:342: Warning: argument 'JType' of command @param is not found in the argument list of PhysicManager::getJoint(CK3dEntity *referenceA, CK3dEntity *referenceB=NULL, JType type=JT_Any)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:342: Warning: The following parameters of PhysicManager::getJoint(CK3dEntity *referenceA, CK3dEntity *referenceB=NULL, JType type=JT_Any) are not documented:
+  parameter 'referenceA'
+  parameter 'referenceB'
+  parameter 'type'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:413: Warning: argument 'CK3dEntity' of command @param is not found in the argument list of PhysicManager::isSubShape(CK3dEntity *ent)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:413: Warning: The following parameters of PhysicManager::isSubShape(CK3dEntity *ent) are not documented:
+  parameter 'ent'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:443: Warning: argument 'paramEnum' of command @param is not found in the argument list of PhysicManager::setParameter(pSDKParameter parm, float value)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:443: Warning: argument 'paramValue' of command @param is not found in the argument list of PhysicManager::setParameter(pSDKParameter parm, float value)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:443: Warning: The following parameters of PhysicManager::setParameter(pSDKParameter parm, float value) are not documented:
+  parameter 'parm'
+  parameter 'value'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:462: Warning: argument 'paramEnum' of command @param is not found in the argument list of PhysicManager::getParameter(pSDKParameter parm, float value)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Manager/PhysicManager.h:462: Warning: The following parameters of PhysicManager::getParameter(pSDKParameter parm, float value) are not documented:
+  parameter 'parm'
+  parameter 'value'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:83: Warning: explicit link request to 'pJD6SLimit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:83: Warning: explicit link request to 'pJD6SLimit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:82: Warning: explicit link request to 'PJD6' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:99: Warning: explicit link request to 'setBreakable()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:99: Warning: explicit link request to 'setBreakable()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:1028: Warning: argument 'worldLimitPoint' of command @param is not found in the argument list of pJointBall::setAnchor(const VxVector &anchor)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:1028: Warning: The following parameters of pJointBall::setAnchor(const VxVector &anchor) are not documented:
+  parameter 'anchor'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:884: Warning: argument 'Collide' of command @param is not found in the argument list of pJointD6::enableCollision(bool value)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:884: Warning: The following parameters of pJointD6::enableCollision(bool value) are not documented:
+  parameter 'value'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:985: Warning: argument 'Collide' of command @param is not found in the argument list of pJointDistance::enableCollision(int collision)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:985: Warning: The following parameters of pJointDistance::enableCollision(int collision) are not documented:
+  parameter 'collision'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:41: Warning: explicit link request to 'pJLimit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJointTypes.h:41: Warning: explicit link request to 'pJLimit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:251: Warning: included file NxPrismaticJoint_Create.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:514: Warning: argument 'VxVector' of command @param is not found in the argument list of pJointPulley::setLocalAnchorA(VxVector anchor)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:514: Warning: The following parameters of pJointPulley::setLocalAnchorA(VxVector anchor) are not documented:
+  parameter 'anchor'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:524: Warning: argument 'VxVector' of command @param is not found in the argument list of pJointPulley::setLocalAnchorB(VxVector anchor)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:524: Warning: The following parameters of pJointPulley::setLocalAnchorB(VxVector anchor) are not documented:
+  parameter 'anchor'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:542: Warning: argument 'VxVector' of command @param is not found in the argument list of pJointPulley::getLocalAnchorB()
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:553: Warning: argument 'VxVector' of command @param is not found in the argument list of pJointPulley::setPulleyA(VxVector pulley)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:553: Warning: The following parameters of pJointPulley::setPulleyA(VxVector pulley) are not documented:
+  parameter 'pulley'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:563: Warning: argument 'VxVector' of command @param is not found in the argument list of pJointPulley::setPulleyB(VxVector pulley)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:563: Warning: The following parameters of pJointPulley::setPulleyB(VxVector pulley) are not documented:
+  parameter 'pulley'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:591: Warning: argument 'float' of command @param is not found in the argument list of pJointPulley::setStiffness(float stiffness)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:591: Warning: The following parameters of pJointPulley::setStiffness(float stiffness) are not documented:
+  parameter 'stiffness'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:614: Warning: argument 'float' of command @param is not found in the argument list of pJointPulley::setRatio(float ratio)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:614: Warning: The following parameters of pJointPulley::setRatio(float ratio) are not documented:
+  parameter 'ratio'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:637: Warning: argument 'bool' of command @param is not found in the argument list of pJointPulley::setRigid(bool rigid)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:637: Warning: The following parameters of pJointPulley::setRigid(bool rigid) are not documented:
+  parameter 'rigid'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:659: Warning: argument 'float' of command @param is not found in the argument list of pJointPulley::setDistance(float distance)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:659: Warning: The following parameters of pJointPulley::setDistance(float distance) are not documented:
+  parameter 'distance'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:686: Warning: argument 'pMotor' of command @param is not found in the argument list of pJointPulley::setMotor(pMotor motor)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pJoint/pJoint.h:686: Warning: The following parameters of pJointPulley::setMotor(pMotor motor) are not documented:
+  parameter 'motor'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBodyTypes.h:415: Warning: explicit link request to 'pRigidBodie::addSubShape' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBodyTypes.h:419: Warning: explicit link request to 'pRigidBodie::addSubShape' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBodyTypes.h:349: Warning: explicit link request to 'pFactory::createBody()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBodyTypes.h:349: Warning: explicit link request to 'pRigidBody::addSubShape()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBodyTypes.h:415: Warning: explicit link request to 'pRigidBodie::addSubShape' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBodyTypes.h:419: Warning: explicit link request to 'pRigidBodie::addSubShape' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/pTypes.h:226: Warning: explicit link request to 'pRigidBody::lockTransformation' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/pTypes.h:226: Warning: explicit link request to 'pRigidBody::lockTransformation' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/pTypes.h:244: Warning: explicit link request to 'pWorld::setDominanceGroupPair()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:147: Warning: explicit link request to 'pFbodyy::createBody()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:147: Warning: explicit link request to 'NxScene::deleteBody()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:214: Warning: explicit link request to 'getContactReportFlags()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:268: Warning: argument 'shape' of command @param is not found in the argument list of pRigidBody::setGroupsMask(CK3dEntity *shapeReference, const pGroupsMask &mask)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:268: Warning: The following parameters of pRigidBody::setGroupsMask(CK3dEntity *shapeReference, const pGroupsMask &mask) are not documented:
+  parameter 'shapeReference'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:406: Warning: argument 'angDamp' of command @param is not found in the argument list of pRigidBody::getMass(CK3dEntity *shapeReference=NULL)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:406: Warning: The following parameters of pRigidBody::getMass(CK3dEntity *shapeReference=NULL) are not documented:
+  parameter 'shapeReference'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:418: Warning: The following parameters of pRigidBody::setMass(float mass, CKBeObject *shapeReference=NULL) are not documented:
+  parameter 'shapeReference'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:435: Warning: argument 'vec' of command @param is not found in the argument list of pRigidBody::setCMassOffsetLocalPosition(VxVector offset)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:435: Warning: The following parameters of pRigidBody::setCMassOffsetLocalPosition(VxVector offset) are not documented:
+  parameter 'offset'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:456: Warning: explicit link request to 'NxShapeDesc' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:773: Warning: argument 'enable.' of command @param is not found in the argument list of pRigidBody::enableCollision(bool enable, CK3dEntity *subShapeReference=NULL)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:777: Warning: Found unknown command `\Note'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:773: Warning: The following parameters of pRigidBody::enableCollision(bool enable, CK3dEntity *subShapeReference=NULL) are not documented:
+  parameter 'enable'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pRigidBody/pRigidBody.h:954: Warning: explicit link request to 'pWorld::setDominanceGroupPair()' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/pTypes.h:27: Warning: explicit link request to 'pJSpring' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/Common/pTypes.h:27: Warning: explicit link request to 'pJSpring' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:165: Warning: explicit link request to 'NxRay' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:135: Warning: explicit link request to 'pRigidBody::setGroup' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:185: Warning: explicit link request to 'VxRay' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:187: Warning: explicit link request to 'pRigidBody::setGroup' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:211: Warning: included file NxUserRaycastReport_Usage.cpp is not found. Check your EXAMPLE_PATH
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:213: Warning: explicit link request to 'NxRay' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:201: Warning: argument 'report' of command @param is not found in the argument list of pWorld::raycastAllShapes(const VxRay &worldRay, pShapesType shapesType, int groups=0xffffffff, float maxDist=pFLOAT_MAX, pRaycastBit hintFlags=(pRaycastBit) 0xffffffff, const pGroupsMask *groupsMask=NULL)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:215: Warning: explicit link request to 'NxShapesType' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:216: Warning: explicit link request to 'NxShape::setGroup' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:218: Warning: explicit link request to 'NxRaycastHit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:218: Warning: explicit link request to 'NxRaycastBit' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:219: Warning: explicit link request to 'NxShape::setGroupsMask' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:260: Warning: explicit link request to 'VxSphere' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:263: Warning: explicit link request to 'pRigidBody::setGroup' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:252: Warning: The following parameters of pWorld::overlapSphereShapes(const VxSphere &worldSphere, CK3dEntity *shapeReference, pShapesType shapeType, CKGroup *shapes, int activeGroups=0xffffffff, const pGroupsMask *groupsMask=NULL, bool accurateCollision=false) are not documented:
+  parameter 'shapeReference'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:288: Warning: explicit link request to 'pRigidBody::setGroup' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:277: Warning: The following parameters of pWorld::overlapAABBShapes(const VxBbox &worldBounds, CK3dEntity *shapeReference, pShapesType shapeType, CKGroup *shapes, int activeGroups=0xffffffff, const pGroupsMask *groupsMask=NULL, bool accurateCollision=false) are not documented:
+  parameter 'shapeReference'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:308: Warning: explicit link request to 'NxBox' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:309: Warning: explicit link request to 'NxShapesType' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:311: Warning: explicit link request to 'NxShape::setGroup' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:312: Warning: explicit link request to 'NxShape::setGroupsMask' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:301: Warning: The following parameters of pWorld::overlapOBBShapes(const VxBbox &worldBox, CK3dEntity *shapeReference, pShapesType shapeType, CKGroup *shapes, int activeGroups=0xffffffff, const pGroupsMask *groupsMask=NULL, bool accurateCollision=false) are not documented:
+  parameter 'shapeReference'
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:324: Warning: argument 'worldCapsule' of command @param is not found in the argument list of pWorld::step(float stepsize)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:333: Warning: explicit link request to 'NxCapsule' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:324: Warning: argument 'shapeType' of command @param is not found in the argument list of pWorld::step(float stepsize)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:334: Warning: explicit link request to 'NxShapesType' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:324: Warning: argument 'shapes' of command @param is not found in the argument list of pWorld::step(float stepsize)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:324: Warning: argument 'activeGroups' of command @param is not found in the argument list of pWorld::step(float stepsize)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:336: Warning: explicit link request to 'NxShape::setGroup' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:324: Warning: argument 'groupsMask' of command @param is not found in the argument list of pWorld::step(float stepsize)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:337: Warning: explicit link request to 'NxShape::setGroupsMask' could not be resolved
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:324: Warning: argument 'accurateCollision' of command @param is not found in the argument list of pWorld::step(float stepsize)
+X:/ProjectRoot/svn/pearls-media/private/virtools/vtPhysX/SDK/Include/Core/pWorld/pWorld.h:324: Warning: The following parameters of pWorld::step(float stepsize) are not documented:
+  parameter 'stepsize'

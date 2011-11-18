@@ -1,0 +1,36 @@
+PhysicManager pm = GetPhysicManager();
+pFactory pf  = getPFactory();
+
+
+pRigidBody bodyA = pm.getBody(bodyARef);
+pRigidBody bodyB = pm.getBody(bodyBRef);
+
+//sanity check :
+if(!bodyA && !bodyB )
+	return;
+
+pWorld w  = null;
+
+//bodyARef or bodyBRef can be zero. However, we need a valid world object :
+if(bodyA)
+{
+	w = bodyA.getWorld();
+}
+
+if(bodyB)
+{
+	w = bodyB.getWorld();
+}
+
+
+// Get the joint object , identified by a given type:
+pJoint joint  = w.getJoint(bodyARef,bodyBRef,jType);
+
+
+// we set it breakable :
+if(joint)
+	joint.setBreakForces(2000.0f,2000.0f);
+
+// we set it unbreakable :
+if(joint)
+	joint.setBreakForces(0.0f,0.0f);

@@ -1,0 +1,60 @@
+//  [5/23/2008 mc007]
+
+- console mode added. run the projects binary like : vtWindowConsole -d=0 for no rendering.
+
+//  [1/14/2008 mc007]
+
+- entries in the player added/changed : 
+	
+  Section "ApplicationConfiguration"  : 
+  
+  
+		Render = 1			/not used yet, this is for a console application purpose where you only run pure schematics,or 
+									when you want to run the player as a service dispachter
+		  
+		AlwayOnTop = 0		/not used yet
+		  
+		ScreenSaverMode = 0		/ not used yet, but when you rename CustomPlayerStatic.exe to 
+											CustomPlayerStatic.scr and copy it together   with your player.ini and the composition
+											in the windows directory it works, still needs an "abort on mouse move" func
+											
+		MouseMovesTerminatePlayer = 0	/for saver mode
+		Resizeable = 1							/ not used yet
+		CaptionBar = 1							/ not used yet
+		ShowDialog = 1							/ show the dialog 
+		ShowAboutTab = 1						/ show the about tab !
+		ShowConfigTab = 1						/ show the config tab !
+		MinDirectXVersion = 9			
+		MinRAM = 256
+		SizeBox = 1								/ not used yet !
+		Title = Arsdoom2						/ your application title
+		UseSplash = 0							/ show the splash !
+		ShowLoadingProcess = 1				/ show loading percentage !
+  
+  Section "Paths"
+
+	RenderEngines = RenderEngines		/this is an explicit path setting, must be within the dist directory,not parsed in static  
+	ManagerPath = Managers				/this is an explicit path setting, must be within the dist directory,not parsed in static 
+	BehaviorPath = BuildingBlocks			/ this is an explicit path setting, must be within the dist directory,parsed in static !needs ck2.dll etc...  
+	PluginPath = Plugins						/this is an explicit path setting, must be within the dist directory,not parsed in static 
+	LoadFile = menu_start_03.cmo		/compostion file !
+	InstallDirectory = X:\sdk\dev4		/not used yet, needs to be filled by the installer ! 
+	
+	Section "VideoSettings"
+		DisableSwitch = 0  / not used !
+		AntiAlias = 8 / maximum is 8 !, the ck supports until 16, so it's internally multiplied by 2 always 
+		
+		
+- Notes : 
+
+	- when config tab is used : 
+		- OnApply : updates the player.ini !
+		- OnOK : doesn't update the player.ini !
+
+	
+
+
+ 
+	
+  
+  

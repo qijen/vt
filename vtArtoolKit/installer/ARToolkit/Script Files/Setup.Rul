@@ -1,0 +1,346 @@
+//===========================================================================
+//
+//  File Name:    Setup.rul
+//
+//  Description:  Blank setup main script file
+//
+//  Comments:     Blank setup is an empty setup project. If you want to
+//				  create a new project via. step-by step instructions use the
+//				  Project Assistant.
+//
+//===========================================================================
+
+// Included header files ----------------------------------------------------
+#include "ifx.h"  
+
+                      
+#include "isrt.h" 
+#include "iswi.h"     
+                 
+//#include "funcs.h"
+
+#include "SdAskDestPath2Dlg.rul"
+
+
+
+
+// Note: In order to have your InstallScript function executed as a custom
+// action by the Windows Installer, it must be prototyped as an 
+// entry-point function.
+
+// The keyword export identifies MyFunction() as an entry-point function.
+// The argument it accepts must be a handle to the Installer database.
+    
+/* export prototype MyFunction(HWND); */
+
+export prototype GetVPath( NUMBER, STRING ); 
+
+               
+function GetVPath( version,result )
+
+	
+	STRING cPath,versionString;
+	NUMBER nResult, nvSize, nvType, is64;
+	NUMBER regType; 
+	STRING errorText;  
+	STRING platformRegString;
+	
+begin
+
+	RegDBSetDefaultRoot ( HKEY_LOCAL_MACHINE );
+	nResult = 0;   
+	regType = HKEY_LOCAL_MACHINE;       
+	nvType = REGDB_STRING;
+	
+	
+	RegDBSetDefaultRoot(HKEY_LOCAL_MACHINE);
+	
+	REGDB_OPTIONS = REGDB_OPTIONS & ~REGDB_OPTION_WOW64_64KEY ;
+	
+	cPath = "SOFTWARE\\Virtools\\WebPlayer\\"; 
+	if (RegDBKeyExist (cPath) < 0) then
+		nResult = -1;     
+	else
+		
+		nvSize = 1024;
+		nResult = RegDBGetKeyValueEx (cPath, "InstallPath", nvType, result, nvSize);
+		nResult = RegDBGetKeyValueEx (cPath, "InstallPath", nvType, resultPath, nvSize);
+		if ( nResult = 0) then
+			
+			nResult = 1;
+		else    
+		 	nResult = -1;
+		endif;
+	endif;       
+	
+	//MessageBox( resultPath, SEVERE );
+	
+  	return nResult;
+  end;
+  
+//---------------------------------------------------------------------------
+// OnBegin
+//
+// The OnBegin event is called directly by the framework after the setup
+// initializes.
+//---------------------------------------------------------------------------
+function OnBegin()
+number  nResult, nLevel, nSize, nSetupType,PathCheckResult;
+STRING  result;   
+
+	STRING szFile[512], svDir, svFileList, svTemp;
+	NUMBER nReturn;
+	BOOL bMultiSel, bDerefLinks;
+	LIST listFiles;
+BOOL    bLicenseAccepted;   
+STRING errorText;         
+NUMBER nBuffer;   
+STRING svUsername[256]; 
+begin
+              
+   
+   PathCheckResult = GetVPath(0,result);  
+   
+   
+    if (PathCheckResult = 1) then
+    	errorText = " Virtools installation found : " +  resultPath;
+    	
+    	WebPlayerPath =resultPath;  
+  		if (PathCheckResult = 1 ) then
+    		MsiSetProperty(ISMSI_HANDLE,"INSTALLDIR",resultPath);
+    		MsiSetProperty(ISMSI_HANDLE,"TARGETDIR",resultPath); 
+    	else 
+    		MessageBox( "Please Install 3D Live Player before" ,SEVERE );
+  		endif;
+    endif;  
+end;  
+
+ 
+ #define SETUP_TYPE   "Compact" 
+
+#define SDSETUPTITLE "Setup Type Selection" 
+
+#define SDSETUPMSG   "Select a setup type other than " + SETUP_TYPE + "." 
+
+#define SDFEATTITLE  "Feature Selection" 
+
+#define SDFEATMSG1   "Feature selection before FeatureSetupTypeSet." 
+
+#define SDFEATMSG2   "Feature selection after FeatureSetupTypeSet." 
+
+#define MSG1         "FeatureSetupTypeSet will now select all\n" 
+
+#define MSG2         "features in the " + SETUP_TYPE + " setup type." 
+                 
+
+//---------------------------------------------------------------------------
+// OnFirstUIBefore
+//
+// The OnFirstUIBefore event is called by the framework when the setup is
+// running in first install mode. By default this event displays UI allowing
+// the end user to specify installation parameters.
+//---------------------------------------------------------------------------
+function OnFirstUIBefore()
+    NUMBER nResult, nSetupType, nvSize, nUser,nReserved;
+    STRING szTitle, szMsg, szQuestion, svName, svCompany, szFile,svSetupType;
+    STRING  svDir,szReserved,szSetupType, svSetup;  
+    
+
+    STRING szLicenseFile;
+	BOOL bCustom, bIgnore1, bIgnore2;
+	number  nLevel, nSize,PathCheckResult;
+	STRING  result;
+    BOOL    bLicenseAccepted;   
+    STRING errorText;         
+    NUMBER nBuffer;   
+    STRING svUsername[256]; 
+    NUMBER a0,a1,a2;
+begin	      
+          
+    // TO DO: if you want to enable background, window title, and caption bar title                                                                   
+    // SetTitle( @PRODUCT_NAME, 24, WHITE );                                        
+    // SetTitle( @PRODUCT_NAME, 0, BACKGROUNDCAPTION ); 	                  
+    // Enable( FULLWINDOWMODE );						   
+    // Enable( BACKGROUND );							  
+    // SetColor(BACKGROUND,RGB (0, 128, 128));					   
+
+    // Added in InstallShield 15 - Show an appropriate error message if
+    // -uninst is specified and the product is not installed.
+    if( REMOVEONLY ) then
+        Disable( DIALOGCACHE );
+		szMsg = SdLoadString( IDS_IFX_ERROR_PRODUCT_NOT_INSTALLED_UNINST );
+   		SdSubstituteProductInfo( szMsg );
+		MessageBox( szMsg, SEVERE );
+		abort;
+    endif;
+    
+	nSetupType = TYPICAL;	
+
+Dlg_SdWelcome:
+    szTitle = "";
+    szMsg   = "";
+    //nResult = SdWelcome(szTitle, szMsg);
+    //if (nResult = BACK) goto Dlg_SdWelcome;
+	
+	szTitle   = "";
+	svName    = "";
+    svCompany = "";   
+
+Dlg_SdRegisterUser:
+    szMsg = "";
+    szTitle = "";
+    //nResult = SdRegisterUser( szTitle, szMsg, svName, svCompany );
+    //if (nResult = BACK) goto Dlg_SdWelcome;
+
+Dlg_SetupType:
+    szTitle = "";
+    szMsg   = "";
+    //nResult = SetupType2(szTitle, szMsg, "", nSetupType, 0);
+
+    svSetupType = "Custom"; 
+    //nReserved   = 0;
+    
+    //Disable (BACKBUTTON); 
+    //nResult = SdSetupTypeEx ( "Feature Selection", szMsg, szReserved, svSetupType, nReserved ); 
+    // Select a setup type other than SETUP_TYPE to show default 
+	// selection settings. 
+	//SdSetupTypeEx (SDSETUPTITLE, SDSETUPMSG, "", svSetup, );  
+       // Display the SdSetupTypeEx dialog. 
+   
+   /*nResult = SdSetupTypeEx(szTitle, szMsg, szReserved, svSetupType, nReserved); 
+   gSetupTypeStr = svSetupType;
+                               
+   if( StrCompare(svSetupType,"Custom") = 0 ) then
+   	nSetupType = CUSTOM;                          
+   endif;  
+   
+   if( StrCompare(svSetupType,"Complete") = 0 ) then
+   	nSetupType = COMPLETE; 
+   	goto Dlg_SdAskDestPath;
+   endif;  
+   */
+   
+   
+   nSetupType = COMPLETE; 
+   
+   
+   
+    if (nResult = BACK) then
+        goto Dlg_SdRegisterUser;
+    else
+	    //nSetupType = nResult;
+        if (nSetupType != CUSTOM) then
+	        nvSize = 0;
+	        FeatureCompareSizeRequired(MEDIA, INSTALLDIR, nvSize);
+	        if (nvSize != 0) then      
+            	MessageBox(szSdStr_NotEnoughSpace, WARNING);
+	            goto Dlg_SetupType;
+            endif;
+			bCustom = FALSE;
+			goto START;
+		else
+			bCustom = TRUE; 
+			goto Dlg_SdFeatureTree;
+        endif;
+    endif;    
+
+          
+Dlg_SdFeatureTree: 
+
+    svDir   = TARGETDIR; 
+    
+    szTitle = "Select Features"; 
+
+    szMsg   = "Select the features you want to install on your computer."; 
+
+    //SdFeatureDialogAdv (szTitle, szMsg, svDir, ""); 
+    //szTitle    = "";
+    //szMsg      = "";  
+    
+  	nBuffer = 256; 
+
+    
+	
+	///////////////////////////////////////////////////////////////////////
+      /*
+    if (nSetupType = CUSTOM) then
+		nResult = SdFeatureTree(szTitle, szMsg, INSTALLDIR, "", 2); 
+		if (nResult = BACK) goto Dlg_SetupType;  
+    endif; 
+    */
+    
+    
+ Dlg_GetPaths:
+           
+ //if (SdAskDestPath2("dirctory", "msg", vDev40Path ) = NEXT) then 
+//	  TARGETDIR = svDir; 
+	  //goto Dlg_SdStartCopy;
+  //endif; 
+
+ 
+ Dlg_SdAskDestPath: 
+   /*
+   szTitle    = "Choose your Virtools Dev 4.1 Installation";
+   szMsg      = "Virtools Dev 4.1";    	     
+   
+   if(StrLength(WebPlayerPath) > 0 ) then
+   	nResult = SdAskDestPath(szTitle, szMsg, vDev41Path, 0);
+   INSTALLDIR  = WebPlayerPath;
+   else
+   	nResult = SdAskDestPath(szTitle, szMsg, INSTALLDIR, 0);
+   endif;
+   */
+	//nResult = SdAskDestPath(szTitle, szMsg, INSTALLDIR, 0);
+	//if(nResult = BACK) goto Dlg_SetupType;
+	//if(nResult = COMPLETE) goto Dlg_SetupType;
+  
+START:
+
+Dlg_SQL:
+    /*nResult = OnSQLLogin( nResult );
+    if( nResult = BACK ) then
+    	if (!bCustom) then
+    		goto Dlg_SetupType;    
+    	else
+    		goto Dlg_SdFeatureTree;
+    	endif;
+    endif;*/
+
+Dlg_ValueAddedServices:
+    nResult = OnFirstUIBeforeValueAddedServices( nResult );
+    if (nResult = BACK) goto Dlg_SQL;
+
+Dlg_SdStartCopy:
+    szTitle = "";
+    szMsg   = "";
+    nResult = SdStartCopy2( szTitle, szMsg );			
+	
+	if (nResult = BACK) then
+    	goto Dlg_ValueAddedServices;
+    endif;
+
+    // Added in IS 2009 - Set appropriate StatusEx static text.
+    SetStatusExStaticText( SdLoadString( IDS_IFX_STATUSEX_STATICTEXT_FIRSTUI ) );
+
+    // setup default status
+    Enable(STATUSEX);
+ 
+    return 0;
+end;
+//---------------------------------------------------------------------------
+// OnGeneratedMSIScript
+//
+// The OnGeneratedMSIScript event is called just after the MSI standard
+// action 'LauchConditions' is executed.
+//---------------------------------------------------------------------------
+function OnGeneratedMSIScript() 
+number  nResult, nLevel, nSize, nSetupType,PathCheckResult;
+STRING  result;
+    BOOL    bLicenseAccepted;   
+    STRING errorText;         
+    NUMBER nBuffer;   
+    STRING svUsername[256]; 
+begin  
+
+  
+end;

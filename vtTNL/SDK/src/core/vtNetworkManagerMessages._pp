@@ -1,0 +1,141 @@
+#include "precomp.h"
+#include "vtNetworkManager.h"
+#include "VSLManagerSDK.h"
+
+#include "xNetInterface.h"
+#include "xNetworkFactory.h"
+#include "tnlRandom.h"
+#include "tnlSymmetricCipher.h"
+#include "tnlAsymmetricKey.h"
+
+#include "xNetworkTypes.h"
+
+////////////////////////////////////////////////////////////////////////// ////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+vtNetworkMessage*vtNetworkManager::GetXNetworkMessage(int idMsg){	return GetXNetworkMessages().FindPtr(idMsg);}
+
+
+////////////////////////////////////////////////////////////////////////// ////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+vtNetworkMessage*vtNetworkManager::GetNetworkMessage(int idMsg)
+{
+
+	NetworkMessagesTypeIterator it = GetNetWorkMessages().find(idMsg);
+	if (it != GetNetWorkMessages().end() )
+	{
+		return it->second;
+	}
+
+	return NULL;
+}
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////// ////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+vtNetworkMessage vtNetworkManager::AddNetworkMessageStr(int srcID,int targetID,int type,int numSubs,String messageName,int msgID,int msgSubID,String  msgValue)
+{
+	vtNetworkMessage msg = NULL;
+	if (!GetXNetworkMessages().FindPtr(msgID))
+	{
+		msg = new vtNetworkMessage();
+		msg->complete = false;
+		msg->lifeTime = 0.0f;
+		msg->targetUserID  = targetID;
+		msg->numParameters = numSubs;
+		msg->name = XString (messageName);
+		msg->srcUserID = srcID;
+
+	}else
+	{
+		msg  = GetXNetworkMessages().FindPtr(msgID);
+	}
+	CKParameterManager pm  = m_Context->GetParameterManager();
+	CKParameter parameter  = m_Context->CreateCKParameterLocal("ci_parameter",pm->ParameterTypeToGuid(type),FALSE);
+	msg->m_RecievedParameters.insert(msg->m_RecievedParameters.end(),std::make_pair(msgSubID,parameter));
+	//parameter->SetValue(&msgValue);
+	parameter->SetString Value(const_cast<char*>(msgValue));
+	if (msgSubID == 0)
+	{
+		GetNM()->GetXNetworkMessages().Insert(msgID,msg,true);
+	}
+	return msg;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////// ////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+vtNetworkMessage*vtNetworkManager::AddNetworkMessageFloat(int srcID,int targetID,int type,int numSubs,String messageName,int msgID,int msgSubID,float msgValue)
+{
+	vtNetworkMessage msg = NULL;
+	if (!GetXNetworkMessages().FindPtr(msgID))
+	{
+		msg = new vtNetworkMessage();
+		msg->complete = false;
+		msg->lifeTime = 0.0f;
+		msg->targetUserID  = targetID;
+		msg->numParameters = numSubs;
+		msg->name = XString (messageName);
+		msg->srcUserID = srcID;
+
+	}else
+	{
+		msg  = GetXNetworkMessages().FindPtr(msgID);
+	}
+	CKParameterManager pm  = m_Context->GetParameterManager();
+	CKParameter parameter  = m_Context->CreateCKParameterLocal("ci_parameter",pm->ParameterTypeToGuid(type),FALSE);
+	msg->m_RecievedParameters.insert(msg->m_RecievedParameters.end(),std::make_pair(msgSubID,parameter));
+	parameter->SetValue(&msgValue);
+	if (msgSubID == 0)
+	{
+		GetNM()->GetXNetworkMessages().Insert(msgID,msg,true);
+	}
+	return msg;
+}
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////// ////////////////////////////////////////////////////////////////////////// //////////////////////////////////////////////////////////////////////////
+vtNetworkMessage*vtNetworkManager::AddNetworkMessage(int srcID,int targetID,int type,int numSubs,String messageName,int msgID,int msgSubID,int msgValue)
+{
+	vtNetworkMessage msg = NULL;
+	if (!GetXNetworkMessages().FindPtr(msgID))
+	{
+		msg = new vtNetworkMessage();
+        msg->complete = false;
+		msg->lifeTime = 0.0f;
+		msg->targetUserID  = targetID;
+		msg->numParameters = numSubs;
+		msg->name = XString (messageName);
+		msg->srcUserID = srcID;
+
+	}else
+	{
+		msg  = GetXNetworkMessages().FindPtr(msgID);
+	}
+	CKParameterManager pm  = m_Context->GetParameterManager();
+	CKParameter parameter  = m_Context->CreateCKParameterLocal("ci_parameter",pm->ParameterTypeToGuid(type),FALSE);
+	msg->m_RecievedParameters.insert(msg->m_RecievedParameters.end(),std::make_pair(msgSubID,parameter));
+	parameter->SetValue(&msgValue);
+	if (msgSubID == 0)
+	{
+		GetNM()->GetXNetworkMessages().Insert(msgID,msg,true);
+	}
+	return msg;
+}
+

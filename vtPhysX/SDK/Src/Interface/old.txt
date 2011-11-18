@@ -1,0 +1,483 @@
+DoubleParamDialog::~DoubleParamDialog(){}
+LRESULT DoubleParamDialog::WindowProc(UINT message, WPARAM wParam, LPARAM lParam) {
+	switch (message)
+	{
+	case WM_ERASEBKGND:
+		{
+			RECT r;
+			GetClientRect(&r);
+			CDC* pDC=CDC::FromHandle((HDC)wParam);
+			pDC->FillSolidRect(&r,RGB(200,200,200));
+			return 1;
+		}break;
+	case CKWM_OK:
+		{
+			CEdit *valueText = (CEdit*)GetDlgItem(IDC_EDIT);
+			/*CString l_strValue;
+			valueText->GetWindowText(l_strValue);
+
+			double d;
+			if (sscanf(l_strValue,"%Lf",&d)) {
+				parameter->SetValue(&d);
+			}*/
+		} break;
+
+	case CKWM_INIT:
+		{
+			/*char temp[64];
+			double d;
+			parameter->GetValue((void*)&d,FALSE);
+			sprintf(temp,"%Lf",d);
+
+			CEdit *valueText = (CEdit*)GetDlgItem(IDC_EDIT);*/
+//			valueText->SetWindowText(temp);
+		} break;
+	}
+	return CDialog::WindowProc(message, wParam, lParam);
+}
+
+BOOL DoubleParamDialog::OnInitDialog() 
+{
+	CDialog::OnInitDialog();
+
+
+	//do your initialization stuff here
+
+	editValue.SetEditStyle(VI_CTRL_EDIT_FLOAT);
+
+	editValue.Create(ES_CENTER|WS_VISIBLE|WS_CHILD|ES_AUTOHSCROLL, CRect(140,10,240,25), this, IDC_EDIT);
+	textValue.Create("Parameter (double) :", WS_VISIBLE|WS_CHILD, CRect(20,10,120,30), this, IDC_PARAM_NAME);
+
+	//end initialization stuff
+
+	return FALSE; //false don't set the focus on the value
+}
+
+void DoubleParamDialog::DoDataExchange(CDataExchange* pDX)
+{
+	CDialog::DoDataExchange(pDX);
+}
+
+
+BEGIN_MESSAGE_MAP(DoubleParamDialog, CDialog)
+END_MESSAGE_MAP()
+
+
+/*IMPLEMENT_DYNAMIC(CPBCommonDialog, CDialog)
+CPBCommonDialog::CPBCommonDialog(CKParameter *param, CWnd* pParent)
+: CDialog(CPBCommonDialog::IDD, pParent)
+{
+	parameter = param;
+}*/
+
+WIN_HANDLE CKDoubleUIFunc (CKParameter *param,WIN_HANDLE ParentWindow,CKRECT *rect) {
+
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+	DoubleParamDialog* dlg_modeless=new DoubleParamDialog(param);
+	dlg_modeless->Create(IDD_DIALOG1,CWnd::FromHandle((HWND)ParentWindow));
+	return dlg_modeless->GetSafeHwnd();
+}
+
+
+
+IMPLEMENT_DYNAMIC(DoubleParamDialog, CDialog)
+DoubleParamDialog::DoubleParamDialog(CKParameter *param, CWnd* pParent /*=NULL*/)
+: CDialog(DoubleParamDialog::IDD, pParent)
+{
+	parameter = param;
+}
+
+
+
+/*void CPBParentDialog::OnMouseMove(UINT nFlags, CPoint point) 
+{
+	if (!m_bOverControl)                    // Cursor has just moved over control
+	{
+		TRACE0("Entering control\n");
+
+		m_bOverControl = TRUE;              // Set flag telling us the mouse is in
+		Invalidate();                       // Force a redraw
+
+		SetTimer(m_nTimerID, 100, NULL);    // Keep checking back every 1/10 sec
+	}
+
+	CParameterDialog::OnMouseMove(nFlags, point);
+}
+
+*/
+/*
+void CPBParentDialog::OnTimer(UINT nIDEvent) 
+{
+	// Where is the mouse?
+	CPoint p(GetMessagePos());
+	ScreenToClient(&p);
+
+	// Get the bounds of the control (just the client area)
+	CRect rect;
+	GetClientRect(rect);
+
+	// Check the mouse is inside the control
+	if (!rect.PtInRect(p))
+	{
+		TRACE0("Leaving control\n");
+
+		// if not then stop looking...
+		m_bOverControl = FALSE;
+		KillTimer(m_nTimerID);
+
+		// ...and redraw the control
+		Invalidate();
+	}
+
+	CParameterDialog::OnTimer(nIDEvent);
+}
+
+*/
+//
+/*void CPBParentDialog::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct) 
+{
+
+}
+*/
+
+
+
+
+/*void CPBodyCfg::PreSubclassWindow() 
+{
+CParameterDialog::PreSubclassWindow();
+ModifyStyle(0, SS_OWNERDRAW);	// make the button owner drawn
+}*/
+
+/DDX_Control(pDX, IDC_TRACKTEST, mTestViControl);
+	DDX_Control(pDX, IDC_MAINTAB, mTestViControl);*/
+	
+	
+	//DDX_Control(pDX, IDC_HULLTYPE, HType);
+	//BS_OWNERDRAW | WS_TABSTOP
+
+
+
+
+
+
+//bodyXMLSetup->Init(src,IDD_PB_MAINTAB_DST,NULL);
+/*
+			CWnd* pWnd = this->GetDlgItem( IDC_MAIN_VIEW_XML);
+
+			MultiParamEditDlg* mF  = new MultiParamEditDlg(src->GetCKContext(),pWnd);
+			
+			mF->AddParameter(testVector);
+			CRect rcValue;
+			pWnd->GetWindowRect( &rcValue ); // Use picture box position.
+
+			pWnd->ScreenToClient( &rcValue );
+			
+			mF->SetMode(MultiParamEditDlg::MODELESSEDIT|MultiParamEditDlg::USER_CUSTOM_BUTTONS|MultiParamEditDlg::AUTOCLOSE_WHEN_MODELESS|MultiParamEditDlg::CENTERMOUSESTYLE);
+			//err = bodyXMLSetup->ModelessCreate(pWnd);
+
+			mF->UpdateData();
+			mF->UpdateWindow();
+			mF->ShowWindow(SW_NORMAL);
+			mF->DoModal();
+*/
+
+
+			
+			
+			//err = bodyXMLSetup->GetMode();
+			//bodyXMLSetup->SetMode(MultiParamEditDlg::MODELESSEDIT|MultiParamEditDlg::LIVE_UPDATE|MultiParamEditDlg::USER_CUSTOM_BUTTONS|MultiParamEditDlg::CREATEPARAM);
+			//bodyXMLSetup->SetMode(MultiParamEditDlg::MODELESSEDIT|MultiParamEditDlg::LIVE_UPDATE|MultiParamEditDlg::USER_CUSTOM_BUTTONS|MultiParamEditDlg::CREATEPARAM);
+			
+			//err = bodyXMLSetup->GetMode();
+		
+			//bodyXMLSetup->AddParameter(testVector);
+			//err = bodyXMLSetup->ModelessCreate(pWnd);
+			//bodyXMLSetup->AttachControlSite(pWnd,IDC_MAIN_VIEW_XML);
+			//bodyXMLSetup->SetParent(pWnd);
+//			bodyXMLSetup->
+/*
+
+			RECT r;
+			bodyXMLSetup->GetClientRect(&r);*/
+
+			/*
+			RECT r;
+			pWnd->GetClientRect(&r);
+			bodyXMLSetup->SetTitle("adsfasdf");
+			//the call to AdjustWindows is needed in order for all child windows to be correctly placed
+			//pWnd->AdjustWindows(&r,TRUE);
+			
+			//err = DoModal();
+			//bodyXMLSetup->GetStyle();
+			
+			
+
+			CRect rcValue;
+			pWnd->GetWindowRect( &rcValue ); // Use picture box position.
+			pWnd->ScreenToClient( &rcValue );
+			bodyXMLSetup->SetWindowPos( pWnd, rcValue.left, rcValue.top,rcValue.Width(), rcValue.Height(), SWP_HIDEWINDOW);
+			*/
+			
+			/*bodyXMLSetup->UpdateData();
+			bodyXMLSetup->UpdateWindow();
+			bodyXMLSetup->ShowWindow(SW_NORMAL);
+			*/
+
+		
+		
+			//err = bodyXMLSetup->SetStyle(0);
+			
+			
+			
+			
+			
+			//HTREEITEM newItem = mTestViControl.InsertItem("asddad2323",mTestViControl.GetFirstVisibleItem(), mTestViControl.GetFirstVisibleItem() );
+
+			/*HTREEITEM newItem;
+			newItem = mTestViControl.InsertItem("asddad", (HTREEITEM)NULL, NULL);
+			*/
+			/*
+			HNTVITEM newItem;
+			newItem = mTestViControl.InsertItem("asddad", (HNTVITEM)NULL, TRUE);
+			newItem->Flags = NTVI_EDITABLE;
+			newItem->Data = NULL;
+			
+*/
+/*
+			mTestViControl.UpdateWindow();
+			mTestViControl.ShowWindow(1);
+*/
+			
+			
+			
+			
+/*
+			mTestViControl.AddItem("asdasd",NULL);
+			int a = mTestViControl.GetSubItemCount(0);*/
+			
+			/*
+			RECT r;
+			GetClientRect(&r);
+
+			CDC* pDC=CDC::FromHandle((HDC)wParam);
+			pDC->FillSolidRect(&r,RGB(100,200,200));*/
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			CKBOOL CPBCommonDialog::On_Init()
+{	
+
+
+	//fillHullType();
+
+	
+	//CParameterDialog::On_Init();
+	//HType.set .SetEditStyle(VI_CTRL_EDIT_FLOAT);
+
+	//HType.Create()
+
+	//editValue.Create(ES_CENTER|WS_VISIBLE|WS_CHILD|ES_AUTOHSCROLL, CRect(0,0,100,25), this, IDC_EDIT);
+
+	//textValue.Create("Parameter (double) :", WS_VISIBLE|WS_CHILD, CRect(20,10,120,30), this, IDC_PARAM_NAME);
+
+	return true;
+
+
+}
+
+			
+			
+			LRESULT CPBCommonDialog::WindowProc(UINT message, WPARAM wParam, LPARAM lParam) {
+	switch (message)
+	{
+
+	
+	case WM_MOUSEWHEEL:
+		{
+			
+			/*LRESULT lResult;
+			WORD keyState = 0;
+			keyState |= (::GetKeyState(VK_CONTROL) < 0) ? MK_CONTROL : 0;
+			keyState |= (::GetKeyState(VK_SHIFT) < 0) ? MK_SHIFT : 0;*/
+			if(mDlgDeformable)
+			{
+
+				int cStates = GET_KEYSTATE_WPARAM(wParam);
+				int wheelDirection = GET_WHEEL_DELTA_WPARAM(wParam);
+				//mDlgDeformable->OnMouseWheel(cStates,wheelDirection,CPoint());
+                			
+// 				CWnd* pWnd = GetDlgItem( IDD_PBCOMMON_DEFORMABLE );
+// 				if (pWnd)
+// 				{
+//					lResult = ::SendMessage(mDlgDeformable->GetSafeHwnd(), WM_MOUSEWHEEL,(wParam << 16) | keyState, lParam);
+//				}
+				
+
+			}
+
+			//RECT r;
+			//GetClientRect(&r);
+			//CDC* pDC=CDC::FromHandle((HDC)wParam);
+			//pDC->FillSolidRect(&r,RGB(200,200,200));
+			break;
+	
+	}
+	case WM_ERASEBKGND:
+		{
+			RECT r;
+			GetClientRect(&r);
+			CDC* pDC=CDC::FromHandle((HDC)wParam);
+			pDC->FillSolidRect(&r,RGB(200,200,200));
+			
+		}break;
+	case CKWM_OK:
+		{
+			//CEdit *valueText = (CEdit*)GetDlgItem(IDC_EDIT);
+			/*CString l_strValue;
+			valueText->GetWindowText(l_strValue);
+
+			double d;
+			if (sscanf(l_strValue,"%Lf",&d)) {
+			parameter->SetValue(&d);
+			}*/
+		} break;
+
+	case CKWM_INIT:
+		{
+			char temp[64];
+			double d;
+
+		} break;
+	}
+	return CDialog::WindowProc(message, wParam, lParam);
+}
+
+
+void CPBCommonDialog::DoDataExchange(CDataExchange* pDX)
+{
+	//DDX_Control(pDX, IDC_FLEX_FRAME,BF_FLEX_Rect);
+
+	//CDialog::DoDataExchange(pDX);
+
+	CParameterDialog::DoDataExchange(pDX);
+	//{{AFX_DATA_MAP(CPBCommonDialog)
+			
+	//}}AFX_DATA_MAP
+
+}
+
+BEGIN_MESSAGE_MAP(CPBCommonDialog, CParameterDialog)
+	ON_WM_MOUSEMOVE()
+	ON_WM_MOUSEWHEEL()
+	ON_WM_HSCROLL()
+	ON_WM_VSCROLL()
+END_MESSAGE_MAP()
+
+// Sets up dialog as a child/control of this dialog.
+// "iWinID" is the resource ID of the dialog.
+bool CPBCommonDialog::InitChildWin( CDialog* pDlg, UINT iWinID,int otherID )
+{
+	CWnd* pWnd = GetDlgItem( otherID );
+	CRect rcValue;
+
+	if (pWnd && pDlg) {
+		pWnd->GetWindowRect( &rcValue ); // Use picture box position.
+		ScreenToClient( &rcValue );
+
+		if (pDlg->Create( iWinID, pWnd ))
+		{
+			pDlg->SetWindowPos( pWnd, rcValue.left, rcValue.top,rcValue.Width(), rcValue.Height(), SWP_HIDEWINDOW);
+			return true;
+		}
+		//pWnd->ShowWindow(SWP_SHOWWINDOW);
+	}
+
+	return false;
+}
+
+			
+			
+			
+			
+			
+			
+			
+			/*
+MultiParamEditDlg* CPBXMLSetup::refresh(CKParameter*src)
+{	return this;	}
+*/
+
+/*
+BOOL CPBXMLSetup::Init(CKParameter* Parameter,UINT nIDTemplate,CParameterDialog *parent)
+{
+
+	//int err = getXMLSetup().ModelessCreate(GetDlgItem( IDC_MAIN_VIEW_XML));
+	//id2= getXMLSetup().ModelessCreate(GetDlgItem( IDC_MAIN_VIEW_XML));
+	//id2 = getXMLSetup().ModelessCreate(GetDlgItem( IDD_PB_MAINTAB_DST));
+	//id2 = getXMLSetup().GetDlgCtrlID();
+	//getXMLSetup().SetDlgCtrlID()
+
+    	
+
+	//GetWindowRect( &rcValue ); // Use picture box position.
+
+//	getXMLSetup().SetMode(MultiParamEditDlg::MODELESSEDIT|MultiParamEditDlg::USER_CUSTOM_BUTTONS|MultiParamEditDlg::AUTOCLOSE_WHEN_MODELESS|MultiParamEditDlg::CREATEPARAM);
+	//getXMLSetup().AttachControlSite(this,IDC_MAIN_VIEW_XML);
+
+
+	bodyXMLSetup->getXMLSetup().UpdateData();
+	bodyXMLSetup->getXMLSetup().UpdateWindow();
+	bodyXMLSetup->getXMLSetup().ShowWindow(SW_NORMAL);
+	//bodyXMLSetup->getXMLSetup().FlashWindow(1);
+
+	return true;
+}
+*/
+
+/*
+CPBXMLSetup::CPBXMLSetup(CKParameter* Parameter,CK_CLASSID Cid)	: 
+	CParameterDialog(Parameter,Cid) , CPSharedBase(this,Parameter) ,
+	mXMLSetup(Parameter->GetCKContext(),NULL)
+{
+	setEditedParameter(Parameter);
+}
+
+CPBXMLSetup::CPBXMLSetup(CKParameter* Parameter,CWnd *parent,CK_CLASSID Cid) : 
+	CParameterDialog(Parameter,Cid) , CPSharedBase(this,Parameter) ,
+	mXMLSetup(Parameter->GetCKContext(),parent)
+{
+	setEditedParameter(Parameter);
+}
+*/
+/*
+BOOL CPBXMLSetup::Create(CKParameter* Parameter,UINT nIDTemplate, CWnd* pParentWnd )
+{
+
+	//CParameterDialog::Create(nIDTemplate,pParentWnd);
+	return TRUE; 
+
+}
+*/
+
+
+/*
+CPBXMLSetup::CPBXMLSetup(CKParameter* Parameter,CWnd* parent) : 
+	MultiParamEditDlg(Parameter->GetCKContext(),parent) , 
+	CPSharedBase(Parameter),
+	CParameterDialog(Parameter,Cid)
+{
+	mXMLSetup = NULL;
+}
+*/
+
+//DDX_Control(pDX, IDC_MAIN_VIEW_XML, mXMLSetup);
+//DDX_Control(pDX, IDC_XINTERN_LINK_LBL2, XMLInternLinkLbl);//DDX_Control(pDX, IDC_XEXTERN_LINK_LBL, XMLExternLinkLbl);
+//DDX_Control(pDX, IDC_XEXTERN_LINK, XMLExternLink);

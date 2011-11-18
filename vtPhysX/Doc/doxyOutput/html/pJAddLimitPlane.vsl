@@ -1,0 +1,24 @@
+PhysicManager pm = GetPhysicManager();
+
+pJoint joint  = pm.getJoint(bodyARef,bodyBRef,JT_PointInPlane);
+if(!joint)
+	return;
+
+//	Limit plane normal
+Vector normalOut  = normal;
+if (normalReference)
+{
+	Vector dir;
+	Vector up;
+	Vector right;
+	normalReference.GetOrientation(dir,up,right);
+	normalReference.TransformVector(normalOut,up);
+}
+
+//	Point in Plane
+Vector   pipOut = pointInPlane;
+if(pointInPlaneReferemce)
+	pointInPlaneReferemce.Transform(pipOut,pointInPlane);
+
+
+joint.addLimitPlane(normalOut,pipOut,restitution);

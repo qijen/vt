@@ -1,0 +1,75 @@
+<dotvehicle>
+	<vehicleTemplate name="jet">
+		<!-- chassis -->
+		<chassis>
+			<body totalMass="10" />
+			<shapeSet>
+				<box x="3" y="1" z="10">
+					<position x="0" y="0" z="0" />
+				</box>
+			</shapeSet>
+		</chassis>
+		<!-- left thruster -->
+		<mountPoint name="left">
+			<position x="7" y="0" z="0" />
+			<direction x="1" y="0" z="0" />
+		</mountPoint>
+		<engine name="left" type="MountedThruster" mountPoint="left">
+			<forces min="0." max="10." dieOff="4" rise="8" />
+		</engine>
+		<!-- right thruster -->
+		<mountPoint name="right">
+			<position x="-7" y="0" z="0" />
+			<direction x="-1" y="0" z="0" />
+		</mountPoint>
+		<engine name="right" type="MountedThruster" mountPoint="right">
+			<forces min="0." max="10." dieOff="4" rise="8" />
+		</engine>
+		<!-- front thruster -->
+		<mountPoint name="front">
+			<position x="0" y="0" z="7" />
+			<direction x="0" y="0" z="1" />
+		</mountPoint>
+		<engine name="backward" type="MountedThruster" mountPoint="front">
+			<forces min="0." max="20." dieOff="4" rise="8" />
+		</engine>
+		<!-- rear thruster -->
+		<mountPoint name="rear">
+			<position x="0" y="0" z="-7" />
+			<direction x="0" y="0" z="-1" />
+		</mountPoint>
+		<engine name="forward" type="MountedThruster" mountPoint="rear">
+			<forces min="0." max="80." dieOff="10" rise="20" />
+		</engine>
+		<!-- bottom (upward) thruster -->
+		<mountPoint name="bottom">
+			<position x="0" y="0" z="0" />
+			<direction x="0" y="-1" z="0" />
+		</mountPoint>
+		<engine name="upward" type="MountedThruster" mountPoint="bottom">
+			<forces min="0." max="500." dieOff="10" rise="20" />
+		</engine>
+		<!-- bottom (downward) thruster -->
+		<mountPoint name="top">
+			<position x="0" y="0" z="0" />
+			<direction x="0" y="1" z="0" />
+		</mountPoint>
+		<engine name="downward" type="MountedThruster" mountPoint="top">
+			<forces min="0." max="250." dieOff="10" rise="20" />
+		</engine>
+		<!-- two axles -->
+		<axle name="front" />
+		<axle name="rear" />
+		<!-- wheels - one in front for steering, two at the rear end -->
+		<steeringGroup index="0" />
+		<wheel name="frontWheel" axle="front" steeringGroup="0" radius="1.0" mass="0.05" massIsRelativeToChassis="yes" suspensionSpring="100" suspensionDamping="20">
+			<position x="0" y="-3" z="5.5" />
+		</wheel>
+		<wheel name="leftRearWheel" axle="rear" radius="1.0" mass="0.05" massIsRelativeToChassis="yes" suspensionSpring="150" suspensionDamping="20">
+			<position x="-3" y="-3" z="-3" />
+		</wheel>
+		<wheel name="rightRearWheel" axle="rear" radius="1.0" mass="0.05" massIsRelativeToChassis="yes" suspensionSpring="150" suspensionDamping="20">
+			<position x="3" y="-3" z="-3" />
+		</wheel>
+	</vehicleTemplate>
+</dotvehicle>

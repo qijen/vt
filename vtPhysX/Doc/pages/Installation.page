@@ -1,0 +1,67 @@
+/*! \page Installation
+	
+	Install PhysX System Software : http://www.nvidia.com/object/physx_9.09.0814.html or just google for "PhysX System Software".
+	Install Visual Studio 2005 Redistributables :  http://www.microsoft.com/downloads/details.aspx?FamilyId=32BC1BEE-A3F9-4C13-9C99-220B62A191EE
+	
+	
+	<b>Author</b> : Contains the dlls for Dev 4.0,4.1 and Dev 5.0 for Virtools Dev authoring. 
+	 - vtPhysXLib.dll to your Virtools Dev main directory
+	 - BuildingBlocks/vtPhysX.dll to your Virtools Dev main directory/BuildingBlocks
+	 - PhysicDefaults.xml to your Virtools Dev main directory
+	 
+	 
+	
+	<b>Redist</b> : Contains the dlls for Dev 4.0 and Dev 4.1 for the custom player. Those dlls are not working in Virtools Dev !
+	 - vtPhysXLib.dll to you Virtools Dev main directory
+	 - BuildingBlocks/vtPhysX.dll to your Virtools Dev main directory/BuildingBlocks
+	 - PhysicDefaults.xml to your Virtools Dev main directory
+		
+	\note You are not allowed to distribute the Author dlls with your product ! Please use the "Redist" dlls instead. In the SDK you need to switch to the <b>"ReleaseRedist"</b> configuration.
+	
+	<b>Documentation</b> : Contains a html help file. It allows simple pressing of F1 on a physic related building block.
+	   - copy vtPhysX.chm and vtPhysX.chi  to your Virtools Dev Main Directory under Documentation
+	   
+	   
+	<b>Dongle</b> Contains the network application to share a dongle over a network. 
+	
+	  - matrix32.dll to your Virtools Dev main directory (<b> Only for Dongle users ! </b>)
+	  - DonglePaths.ini to your Virtools Dev main directory (<b> Only for Dongle users ! </b>)
+	
+	  - copy the application and the ini file to the machine where the dongle is connected ! 
+	  - run the application and open it through the clicking in the taskbar(dongle icon).  
+	  - update the server path to a path accesible to clients as network drive or unc path(\\server\sharename\vtAgeia.dat).
+	  - update the DonglePaths.ini on your client machines. The ini file can contain multiple paths.
+	  - optional you can change in the settings dialog of  the network application in order to let run the program as service. 
+	  
+	  The dongle check will be made once if Virtools is started.  
+
+*/
+
+/*! \page InstallationSDK
+	
+	
+	<b>Installation “PhysX for Virtools – SDK “ </b>
+        -   Introduction
+        -   Software Requirements
+            -   Optional Software
+            -   Recommended Software
+        -   Installation Steps
+        -   SDK Notes
+
+
+    -   Introduction 
+        
+        In general we approach maximum comfort for our clients.<br />
+        -   Software Requirements
+            
+            Visual Studio for C++ whereby the version depends to your target Virtools Version : <br />
+            -   Virtools Dev 4.0.x:  “Visual Studio 2003” 
+            -   Virtools Dev 4.1.x:  “Visual Studio 2005” 
+            -   Virtools Dev 5.0.x:  “Visual Studio 2008” 
+
+                Notes: Out build generator supports <br />
+            	CodeBlocks with Intel Compilers too<br />
+            	
+            	
+*/
+

@@ -1,0 +1,394 @@
+# depslib dependency file v1.0
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\assert.cpp
+	"tnl.h"
+	"tnlAssert.h"
+	<stdarg.h>
+	"tnlLog.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnl.h
+	"tnlTypes.h"
+	"tnlAssert.h"
+	"tnlEndian.h"
+	"tnlPlatform.h"
+	"tnlUDP.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnltypes.h
+	<stdlib.h>
+	<new>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlassert.h
+	"tnlTypes.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlendian.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlplatform.h
+	"tnlTypes.h"
+	<string.h>
+	<stdlib.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnludp.h
+	"tnlTypes.h"
+	"tnlVector.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlvector.h
+	"tnlTypes.h"
+	"tnlPlatform.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnllog.h
+	"tnlBitSet.h"
+	"tnl.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlbitset.h
+	"tnlTypes.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\asymmetrickey.cpp
+	"tnlAsymmetricKey.h"
+	"tnlRandom.h"
+	<mycrypt.h>
+	"tnlLog.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlasymmetrickey.h
+	"tnlBitStream.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlbitstream.h
+	"tnlByteBuffer.h"
+	"tnlConnectionStringTable.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlbytebuffer.h
+	"tnl.h"
+	"tnlNetBase.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetbase.h
+	"tnlTypes.h"
+	"tnlPlatform.h"
+	"tnlAssert.h"
+	"tnlBitSet.h"
+	"tnlVector.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlconnectionstringtable.h
+	"tnlNetStringTable.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetstringtable.h
+	"tnlTypes.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlrandom.h
+	"tnl.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt.h
+	<assert.h>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<time.h>
+	<ctype.h>
+	<limits.h>
+	<mycrypt_custom.h>
+	<mycrypt_cfg.h>
+	<mycrypt_macros.h>
+	<mycrypt_cipher.h>
+	<mycrypt_hash.h>
+	<mycrypt_prng.h>
+	<mycrypt_pk.h>
+	<mycrypt_gf.h>
+	<mycrypt_misc.h>
+	<mycrypt_kr.h>
+	<mycrypt_argchk.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_custom.h
+	<stdlib.h>
+	<mycrypt.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_cfg.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_macros.h
+	<stdlib.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_cipher.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_hash.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_prng.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_pk.h
+	"tommath.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\tommath.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	<limits.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_gf.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_misc.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_kr.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\libtomcrypt\mycrypt_argchk.h
+	<signal.h>
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\bitstream.cpp
+	"tnlBitStream.h"
+	"tnlVector.h"
+	"tnlNetBase.h"
+	"tnlHuffmanStringProcessor.h"
+	"tnlSymmetricCipher.h"
+	<mycrypt.h>
+	<math.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlhuffmanstringprocessor.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlsymmetriccipher.h
+	"tnlNetBase.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\bytebuffer.cpp
+	"tnlByteBuffer.h"
+	<mycrypt.h>
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\certificate.cpp
+	"tnlCertificate.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlcertificate.h
+	"tnlByteBuffer.h"
+	"tnlAsymmetricKey.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\clientpuzzle.cpp
+	"tnl.h"
+	"tnlClientPuzzle.h"
+	"tnlRandom.h"
+	<mycrypt.h>
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlclientpuzzle.h
+	"tnlDataChunker.h"
+	"tnlNonce.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnldatachunker.h
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnonce.h
+	"tnlBitStream.h"
+	"tnlRandom.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\connectionstringtable.cpp
+	"tnl.h"
+	"tnlEventConnection.h"
+	"tnlBitStream.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnleventconnection.h
+	"tnlNetConnection.h"
+	"tnlNetEvent.h"
+	"tnlDataChunker.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetconnection.h
+	"tnlNetBase.h"
+	"tnlLog.h"
+	"tnlNonce.h"
+	"tnlSymmetricCipher.h"
+	"tnlConnectionStringTable.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetevent.h
+	"tnlNetBase.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\datachunker.cpp
+	"tnl.h"
+	"tnlDataChunker.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\eventconnection.cpp
+	"tnl.h"
+	"tnlEventConnection.h"
+	"tnlBitStream.h"
+	"tnlLog.h"
+	"tnlNetInterface.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetinterface.h
+	"tnlVector.h"
+	"tnlNetBase.h"
+	"tnlClientPuzzle.h"
+	"tnlNetObject.h"
+	"tnlNetConnection.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlnetobject.h
+	"tnlNetBase.h"
+	"tnlBitStream.h"
+	"tnlRPC.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlrpc.h
+	"tnlNetEvent.h"
+	"tnlMethodDispatch.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlmethoddispatch.h
+	"tnlTypes.h"
+	"tnlVector.h"
+	"tnlBitStream.h"
+	"tnlNetStringTable.h"
+	"tnlString.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlstring.h
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\ghostconnection.cpp
+	"tnl.h"
+	"tnlGhostConnection.h"
+	"tnlBitStream.h"
+	"tnlNetBase.h"
+	"tnlNetObject.h"
+	"tnlNetInterface.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlghostconnection.h
+	"tnlEventConnection.h"
+	"tnlRPC.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\huffmanstringprocessor.cpp
+	"tnlBitStream.h"
+	"tnlVector.h"
+	"tnlHuffmanStringProcessor.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\journal.cpp
+	"tnlJournal.h"
+	"tnlEndian.h"
+	"tnlLog.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnljournal.h
+	"tnlMethodDispatch.h"
+	<stdio.h>
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\log.cpp
+	"tnlLog.h"
+	"tnlDataChunker.h"
+	<stdarg.h>
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\netbase.cpp
+	"tnl.h"
+	"tnlNetBase.h"
+	"tnlVector.h"
+	"tnlLog.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\netconnection.cpp
+	"tnl.h"
+	"tnlNetBase.h"
+	"tnlNetConnection.h"
+	"tnlNetInterface.h"
+	"tnlLog.h"
+	"tnlRandom.h"
+	"tnlSymmetricCipher.h"
+	"tnlAsymmetricKey.h"
+	"tnlConnectionStringTable.h"
+	<stdarg.h>
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\netinterface.cpp
+	"tnl.h"
+	"tnlAsymmetricKey.h"
+	"tnlNetConnection.h"
+	"tnlNetInterface.h"
+	"tnlBitStream.h"
+	"tnlRandom.h"
+	"tnlNetObject.h"
+	"tnlClientPuzzle.h"
+	"tnlCertificate.h"
+	<mycrypt.h>
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\netobject.cpp
+	"tnl.h"
+	"tnlNetObject.h"
+	"tnlGhostConnection.h"
+	"tnlNetInterface.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\netstringtable.cpp
+	"tnl.h"
+	"tnlNetBase.h"
+	"tnlNetConnection.h"
+	"tnlNetStringTable.h"
+	"tnlDataChunker.h"
+	"tnlNetInterface.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\platform.cpp
+	"tnlTypes.h"
+	"tnl.h"
+	"tnlJournal.h"
+	<string.h>
+	<xtl.h>
+	<windows.h>
+	<malloc.h>
+	<unistd.h>
+	<signal.h>
+	<sys/time.h>
+	<stdlib.h>
+	<ctype.h>
+	<stdarg.h>
+	<stdio.h>
+	"tnlRandom.h"
+	"tnlLog.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\random.cpp
+	<mycrypt.h>
+	"tnl.h"
+	"tnlRandom.h"
+	"tnlJournal.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\rpc.cpp
+	"tnl.h"
+	"tnlBitStream.h"
+	"tnlVector.h"
+	"tnlNetEvent.h"
+	"tnlRPC.h"
+	"tnlEventConnection.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\symmetriccipher.cpp
+	"tnl.h"
+	"tnlSymmetricCipher.h"
+	"tnlByteBuffer.h"
+	"mycrypt.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\thread.cpp
+	"tnlThread.h"
+	"tnlLog.h"
+
+1211294547 x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlthread.h
+	"tnl.h"
+	"tnlNetBase.h"
+	"tnlMethodDispatch.h"
+	<windows.h>
+	<pthread.h>
+	<semaphore.h>
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\tnlmethoddispatch.cpp
+	"tnlMethodDispatch.h"
+	"tnlNetStringTable.h"
+	"tnlThread.h"
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\udp.cpp
+	"tnl.h"
+	"tnlJournal.h"
+	<xtl.h>
+	<winsock.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<netinet/in.h>
+	<errno.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<netinet/in.h>
+	<errno.h>
+	<sys/ioctl.h>
+	<stdio.h>
+	<wsipx.h>
+	"tnlLog.h"
+	<ifaddrs.h>
+	<stdio.h>
+	<sys/ioctl.h>
+	<arpa/inet.h>
+	<netinet/in.h>
+	<netdb.h>
+	<net/if.h>
+
+1211294547 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\subs\tnl\vector.cpp
+	"tnlVector.h"
+

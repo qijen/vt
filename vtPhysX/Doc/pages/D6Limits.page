@@ -1,0 +1,162 @@
+/*!    \page D6LinearLimitGuide Linear Limits
+
+    <h3>Linear Limits</h3>
+	
+	Linear joint limits are currently specified by a single radial distance parameter applying to all three DOFs. It is a radial parameter because with two or three limited DOFs the limits are combined into a circle or a sphere, rather than a square or a cubical box, in order to avoid having multiple limits active at corners.
+
+	<h4>Examples</h4>
+
+	<b>Three linear DOFs limited: Spherical limit : </b>
+
+	Limiting all three DOFs gives a spherical limit surface which can be visualized as a bubble centered on the parent frame origin, such that the origin of the child frame is constrained to remain inside the sphere.
+
+	\image html 6dof_linearsphere.png
+
+	The red circle becomes a sphere when extended to 3 dimension. 
+
+	<SPAN CLASS="NiceCode">
+	\include D62LinearLimit.vsl
+	</SPAN>
+	<br>
+	<hr>
+
+	<b>Two linear DOFs limited: Cylindrical limit</b>
+
+	Limiting two linear DOFs and leaving one free creates a cylindrical limit surface centered on the free axis. The child frame origin is constrained to remain inside the cylinder.
+
+	See the above illustration, but instead of the red circle becoming a sphere, when extended to 3 dimension, it becomes a cylinder along the axis into the page.
+
+	If the third DOF is locked rather than left free, the joint collapses to a planar joint with a circular limit. 
+
+	<SPAN CLASS="NiceCode">
+	\include D62LinearLimitCylindrical.vsl
+	</SPAN>
+	<br>
+
+	<hr>
+
+	<b>One linear DOF limit: Pair-of-planes limit</b>
+
+	Limiting just one DOF and leaving the others free creates a pair of parallel limit planes fixed in the parent and separated along the selected limited axis by the radial distance either side of the parent frame origin. 
+	The child frame origin is constrained to lie between the two planes.
+
+	\image html  6dof_linearsingle.png
+
+	If one of the free DOFs is locked then the joint collapses to a planar joint and the origin of the child frame is constrained to lie between a pair of parallel lines centered in the selected plane of the parent frame.
+
+	If both of the free DOFs are locked then the joint collapses to a point-in-line joint with the child frame origin constrained to lie between ± the specified radial distance along the selected parent frame axis.
+
+	\image html  6dof_linearsingle2.png
+
+	<SPAN CLASS="NiceCode">
+	\include D62LinearLimitSingle.vsl
+	</SPAN>
+	<br>
+
+	<hr>
+	<hr>
+
+*/
+
+
+/*! \page D6AngularLimitGuide Angular Limits
+
+<h3>Angular Joint Limits</h3>
+
+	Limits on the 1DOF twist and the 2DOF swing motions are configured separately, therefore, unlike the linear case, two limit constraints can be active on angular DOFs.
+
+	Also unlike linear, each DOF has its own separate maximum limit parameter - angles in this case. 
+	As with the linear radius parameter, they are specified as maximum angles measured symmetrically on both sides of the zero angle so that the 
+	full angular separation between the limits is twice the specified angle.
+
+	<b>Twist Limit</b>
+
+	The twist limit is a little different than the swing limits, specified using a pair of angles rather than just a single radius. This allows the limit orientations to be nonsymmetrical around the twist axis, unlike the swing axis.
+	\image html  6dof_twistlimit.png
+
+	To visualize the affect of the limits, it is best to consider them with respect to a particular axis, such as the z-axis. In the diagram above, the child frame and parent frame are aligned. When the joint twists, the z-axis can rotate around the twist axis, but only as far as the limits (red lines).
+
+	<SPAN CLASS="NiceCode">
+	\include D62AngularTwistLimit.vsl
+	</SPAN>
+	<br>
+
+	<hr>
+
+	<b>Swing Limit Types</b>
+
+	The table below lists all five swing limit possibilities with suggested their names: 
+	
+<table>
+<tr>
+<td ><b>Swing1 </b> </td>
+<td ><b>Swing2 </b> </td>
+<td><b>Limit Name </b> </td>
+</tr>
+
+<tr>
+<td >limited<br>	</td>
+<td >limited<br>	</td>
+<td >(elliptic)	swing-cone limit</td>
+</tr>
+
+<tr>
+<td >limited<br></td>
+<td >free<br>	</td>
+<td >swing1 limit</td>
+</tr>
+
+<tr>
+<td >free<br></td>
+<td >limited<br></td>
+<td >swing2 limit</td>
+</tr>
+
+<tr>
+
+<td >limited<br></td>
+<td >locked<br></td>
+<td >zero-swing2 joint with swing1 limit</td>
+</tr>
+
+<tr>
+<td >locked<br>	</td>
+<td >limited<br>	</td>
+<td >zero-swing1 joint with swing2 limit</td>
+</tr>
+</table>
+
+	<b>A swing-cone limit:</b>
+
+	If both swing DOFs are limited, then the limit surface geometry is a cone centered on the principal axis of the parent. The principal axis of the child is constrained to stay inside the parent-fixed cone.
+
+	\image html 	6dof_conelimit.png
+
+	In the above screen shot, the cone is represented in red. The principal child axis (x-axis) is a red arrow near the center of the cone; it is constrained to lie within the cone.
+
+	If both parameters specifying the maximum swing angles are equal, then the cone is circular. Generally, however, the cone has an elongated elliptical shape.
+
+	The maximum swing angles may be set between 0 and 180°. 
+
+	Avoid cases where one swing limit angle is much smaller than the other as this results in an extremely elongated (highly eccentric elliptic) swing cone limit which may cause problems in simulation (the small swing DOF could be locked instead).
+
+	<SPAN CLASS="NiceCode">
+	\include D62AngularSwingLimits.vsl
+	</SPAN>
+	<br>
+
+	<hr>
+	<b>A single swing limit:</b>
+
+	If only one swing DOF is limited and the other is left free, this is interpreted as a limit surface in the shape of a double cone aligned with the free swing axis of the parent frame. The principal axis of the child is constrained to be excluded from the double cone.
+
+	If the other swing DOF is locked rather than left free, then swing sphere reduces to a circle and the single swing limit is just a segment of the circle located on the specified swing limit angle either side of zero.
+
+
+	\image html  6dof_swingLimit.PNG
+
+
+
+
+
+*/

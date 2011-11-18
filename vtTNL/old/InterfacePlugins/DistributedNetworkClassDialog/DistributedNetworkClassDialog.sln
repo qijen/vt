@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DistributedNetworkClassDialog", "DistributedNetworkClassDialog.vcproj", "{4848EA00-380A-449B-9D06-7A81B9561EF1}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4848EA00-380A-449B-9D06-7A81B9561EF1}.Debug.ActiveCfg = Debug|Win32
+		{4848EA00-380A-449B-9D06-7A81B9561EF1}.Debug.Build.0 = Debug|Win32
+		{4848EA00-380A-449B-9D06-7A81B9561EF1}.Release.ActiveCfg = Release|Win32
+		{4848EA00-380A-449B-9D06-7A81B9561EF1}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

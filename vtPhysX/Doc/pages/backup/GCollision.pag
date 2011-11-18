@@ -1,0 +1,68 @@
+/*! \page CollisionFiltering
+        
+	<b>Contact Filtering </b>
+	
+	In addition to the filtering mechanisms implemented using #pWorld::setGroupCollisionFlag(), \ref PWSetCollisionGroupFlag and pWorld::setShapePairFlags() the SDK provides a more sophisticated filtering mechanism based on boolean operations and flags.
+
+	The user is able to specify a 128 bit group mask for each shape. This mask is combined with user specified constants and operators, which results in a boolean value indicating if contacts should be generated for a pair of shapes. The shape culling operates according to the following pseudocode:
+
+    bool shouldGenerateContacts(shape0Bits, shape1Bits)    <br>
+    {   <br>     
+		value = (shape0Bits op0 constant0) op2 (shape1Bits op1 constant1)<br>
+		return ((bool)value)==filterBool;    <br>
+	}<br>
+	
+	In other words, the bit mask associated with shape 0 is combined with constant 0 using operator 0. The bit mask associated with shape 1 is combined with constant 1 using operator 1. Finally, the two results are combined with operator 2 and compared to filterBool. If the result is true then contacts are generated for the shape pair.
+	
+
+	Available operators (members of pFilterOp):
+	- FO_And - result = A & B 
+	- FO_Or - result = A | B 
+	- FO_Xor - result = A ^ B 
+	- FO_Nand result = ~ (A & B) 
+	- FO_Nor - result = ~ (A | B) 
+	- FO_NXor - result = ~ (A ^ B) 
+
+	results.bits0 = A.bits0 & B.bits2;<br>
+	results.bits1 = A.bits1 & B.bits3;<br>
+	results.bits2 = A.bits2 & B.bits0;<br>
+	results.bits3 = A.bits3 & B.bits1;<br>
+	
+	
+	To set the filter operators/constants and filterBool value, #pWorld provides the following methods: 
+
+    void #pWorld::setFilterOps(pFilterOp op0, pFilterOp op1, pFilterOp op2);    <br>
+    void #pWorld::setFilterBool(bool flag);    <br>
+    void #pWorld::setFilterConstant0(const pGroupsMask& mask);    <br>
+    void #pWorld::setFilterConstant1(const pGroupsMask& mask); <br>
+    
+    pGroupsMask is a class which encapsulates a 128 bit value as a set of 32 bit values:
+    
+	class pGroupsMask    <br>
+	{  <br>  
+		public:    int bits0, bits1, bits2, bits3;    <br>
+		
+	};<br>
+	
+	Finally, pRigidBody provides methods to set/get the group mask associated with the shape:<br>
+
+    void pRigidBody::setGroupsMask(CK3dEntity *shapeReference, const pGroupsMask& mask);    <br>
+    const pGroupsMask pRigidBody::getGroupsMask(CK3dEntity *shapeReference) const;<br>
+   
+   To set up the operators/constants, ensure that contacts between a pair of shapes are generated if their masks produce a non zero value when ANDed together:<br>
+
+    gWorld->setFilterOps(FO_Or, FO_Or,FO_And);<br>
+    void pWorld::setFilterBool(true);<br>    
+    pGroupsMask zeroMask;<br>
+    zeroMask.bits0=zeroMask.bits1=zeroMask.bits2=zeroMask.bits3=0;    <br>
+    void pWorld::setFilterConstant0(zeroMask);<br>
+    void pWorld::setFilterConstant1(zeroMask);<br>
+    
+    Setting the filter constants to zero and operators 0 and 1 to FO_Or effectively makes them no ops. The final NX_FILTEROP_AND causes the groupsMasks to be ANDed together and the result compared to the filterBool value producing the intended result.<br>
+
+    Note 1: Since it is undefined which of any two shapes checked for collision is assigned "G0" and which "G1" in the above formula, you should refrain from using filters that give different results depending on this assignment.
+   
+    
+   See <A HREF="pWFiltering.cmo">pWFiltering.cmo</A> for example. 
+   
+   */

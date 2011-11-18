@@ -1,0 +1,34 @@
+
+#include "CKAll.h"
+#include "vtLogTools.h"
+#include "base.h"
+
+namespace vtTools
+{
+
+const char*
+BehaviorInfoTools::getBuildingBlockName(CKContext *ctx,CKGUID* guid)
+{
+
+	using namespace base;
+	
+
+	Assertf( ctx !=NULL && guid !=NULL && ctx->GetBehaviorManager() );
+	
+	xNString result ="unknown";
+
+	CKBehaviorManager *bm = ctx->GetBehaviorManager();
+	CKBehaviorPrototype *bproto = CKGetPrototypeFromGuid(*guid);
+	if(bproto)
+	{
+		result = strlen(bproto->GetName()) ? bproto->GetName() : "";
+	}
+	return result;
+
+
+}  
+
+
+
+}
+

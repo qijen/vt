@@ -1,0 +1,14 @@
+PhysicManager pm = GetPhysicManager();
+pRigidBody body = pm.getBody(targetEntity);
+
+if(body)
+{
+	pObjectDescr oDescr;
+	oDescr.hullType = HT_Box;
+
+	Quaternion localRotation; //not used if transformationReference !=null
+	Vector localPosition; //not used if transformationReference !=null
+	
+	body.addSubShape(srcMesh,oDescr,transformationReference,localPosition,localRotation);
+	
+}

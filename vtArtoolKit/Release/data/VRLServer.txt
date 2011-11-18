@@ -1,0 +1,8 @@
+   0:  [2009/Mar/9|11:54:10]    Loading settings
+   1:  [2009/Mar/9|11:54:10]    Make ini: C:\Archivos de programa\Archivos comunes\ChaosGroup
+   2:  [2009/Mar/9|11:54:10]    Create directory: C:\Archivos de programa\Archivos comunes\ChaosGroup 0
+   3:  [2009/Mar/9|11:54:10]    Got license: 2121414741694E746865424553542121B3F3D70BBDCA5ADA7CAE73DA06467C6985DAFD661DCC694004C6C731DB2116FCB06CBA59E003942D61CA102610A0AF44EB1C
+   4:  [2009/Mar/9|11:54:10]    Port: 30303
+   5:  [2009/Mar/9|11:54:10]    Loaded settings.C:\Archivos de programa\Archivos comunes\ChaosGroup\VRFLServer.ini	2121414741694E746865424553542121B3F3D70BBDCA5ADA7CAE73DA06467C6985DAFD661DCC694004C6C731DB2116FCB06CBA59E003942D61CA102610A0AF44EB1C	30303
+   6:  [2009/Mar/9|11:54:10]    Subdiv
+   7:  [2009/Mar/9|11:54:10]    Subdiv 0

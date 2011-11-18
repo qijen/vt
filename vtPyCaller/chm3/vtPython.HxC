@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE HelpCollection SYSTEM "ms-help://Hx/Resources/HelpCollection.DTD">
+<HelpCollection
+  DTDVersion="1.0"
+  FileVersion="0.0.0.0"
+  LangId="1033"
+  Font="Tahoma"
+  FontSize="10"
+  Title="Python for Virtools">
+
+  <CompilerOptions OutputFile="vtPython.HxS">
+    <IncludeFile File="vtPython.HxF"/>
+  </CompilerOptions>
+
+  <TOCDef File="vtPython.HxT"/>
+
+  <KeywordIndexDef File="vtPython.HxK"/>
+  <KeywordIndexDef File="NamedURLIndex.HxK"/>
+
+  <ItemMoniker Name="!DefaultFullTextSearch" ProgId="HxDs.HxFullTextSearch" InitData="AnyString"/>
+  <ItemMoniker Name="!DefaultTOC" ProgId="HxDs.HxHierarchy" InitData="vtPython"/>
+  <ItemMoniker Name="!DefaultKeywordIndex" ProgId="HxDs.HxIndex" InitData="C"/>
+  <ItemMoniker Name="!NamedURLIndex_index" ProgId="HxDs.HxIndex" InitData="NamedURLIndex"/>
+  <ItemMoniker Name="!DefaultContextWindowIndex" ProgId="HxDs.HxIndex" InitData="C"/>
+  <ItemMoniker Name="!DefaultNamedUrlIndex" ProgId="HxDs.HxIndex" InitData="C"/>
+  <ItemMoniker Name="!DefaultAssociativeIndex" ProgId="HxDs.HxIndex" InitData="C"/>
+
+  <ToolData Name="MSVHWNamespace" Value="vtPython"/>
+  <ToolData Name="MSVHWUniqueID" Value="vtPython"/>
+  <ToolData Name="FAR.CommandLine" Value="F:\Programme\Gemeinsame Dateien\Microsoft Shared\Help 8\dexplore.exe"/>
+  <ToolData Name="FAR.CommandLineArgs" Value="/helpcol ms-help://$NAMESPACE"/>
+  <ToolData Name="FAR.IncBuildNumber" Value="0"/>
+  <ToolData Name="MSVHWLogFile" Value="vtPython.log"/>
+  <ToolData Name="MSVHWLogLevel" Value="3"/>
+</HelpCollection>

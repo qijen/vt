@@ -1,0 +1,46 @@
+X:/ProjectRoot/svn/local/usr/include/virtools/vt_tools.h:103: Warning: no matching class member found for
+  int vtTools::Structs::ParameterInfo::horizontalItems()
+Possible candidates:
+  int vtTools::Structs::ParameterInfo::horizontalItems
+  int vtTools::Enumerations::Structs::ParameterInfo::horizontalItems
+X:/ProjectRoot/svn/local/usr/include/virtools/vt_tools.h:104: Warning: no matching class member found for
+  int vtTools::Structs::ParameterInfo::verticalItems()
+Possible candidates:
+  int vtTools::Structs::ParameterInfo::verticalItems
+  int vtTools::Enumerations::Structs::ParameterInfo::verticalItems
+X:/ProjectRoot/svn/local/usr/include/virtools/vt_tools.h:106: Warning: no matching class member found for
+  Enums::SuperType vtTools::Structs::ParameterInfo::superType()
+Possible candidates:
+  Enums::SuperType vtTools::Structs::ParameterInfo::superType
+  Enums::SuperType vtTools::Enumerations::Structs::ParameterInfo::superType
+X:/ProjectRoot/svn/local/usr/include/virtools/vt_tools.h:107: Warning: no matching class member found for
+  Enums::SuperType vtTools::Structs::ParameterInfo::memberType()
+Possible candidates:
+  Enums::SuperType vtTools::Structs::ParameterInfo::memberType
+  Enums::SuperType vtTools::Enumerations::Structs::ParameterInfo::memberType
+X:/ProjectRoot/svn/local/usr/include/virtools/vt_tools.h:119: Warning: no matching class member found for
+  Enums::SuperType vtTools::Structs::WidgetInfo::WidgetInfoItem::baseType()
+Possible candidates:
+  Enums::SuperType vtTools::Structs::WidgetInfo::WidgetInfoItem::baseType
+  Enums::SuperType vtTools::Enumerations::Structs::WidgetInfo::WidgetInfoItem::baseType
+X:/ProjectRoot/svn/local/usr/include/virtools/vt_tools.h:120: Warning: no matching class member found for
+  Enums::EVTWidgetType vtTools::Structs::WidgetInfo::WidgetInfoItem::widgetType()
+Possible candidates:
+  Enums::EVTWidgetType vtTools::Structs::WidgetInfo::WidgetInfoItem::widgetType
+  Enums::EVTWidgetType vtTools::Enumerations::Structs::WidgetInfo::WidgetInfoItem::widgetType
+X:/ProjectRoot/svn/local/usr/include/virtools/vt_tools.h:121: Warning: no matching class member found for
+  XString vtTools::Structs::WidgetInfo::WidgetInfoItem::value()
+Possible candidates:
+  XString vtTools::Structs::WidgetInfo::WidgetInfoItem::value
+  XString vtTools::Enumerations::Structs::WidgetInfo::WidgetInfoItem::value
+X:/ProjectRoot/svn/local/usr/include/virtools/vt_tools.h:122: Warning: no matching class member found for
+  XString vtTools::Structs::WidgetInfo::WidgetInfoItem::label()
+Possible candidates:
+  XString vtTools::Structs::WidgetInfo::WidgetInfoItem::label
+  XString vtTools::Enumerations::Structs::WidgetInfo::WidgetInfoItem::label
+X:/ProjectRoot/svn/local/usr/include/virtools/vt_tools.h:126: Warning: no matching class member found for
+  Structs::ParameterInfo vtTools::Structs::WidgetInfo::parameterInfo()
+Possible candidates:
+  Structs::ParameterInfo vtTools::Structs::WidgetInfo::parameterInfo
+  Structs::ParameterInfo vtTools::Enumerations::Structs::WidgetInfo::parameterInfo
+X:/ProjectRoot/svn/local/usr/include/virtools/vtTypes.h:22: Warning: explicit link request to 'GetVirtoolsSuperType()' could not be resolved

@@ -1,0 +1,679 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BodyShortPane DIALOGEX 0, 0, 316, 185
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Static",IDC_STATIC,6,7,303,171
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_BodyShortPane, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDC_MAIN_VIEW DIALOGEX 0, 0, 355, 192
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+EXSTYLE WS_EX_TRANSPARENT | WS_EX_CONTROLPARENT | WS_EX_NOINHERITLAYOUT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "MainTab",IDC_PBODY_TAB_PANE,"SysTabControl32",
+                    TCS_BOTTOM | TCS_RAGGEDRIGHT | WS_TABSTOP,33,39,226,30
+    CONTROL         "",IDC_SPACER,"Static",SS_BLACKRECT | SS_NOTIFY | 
+                    SS_REALSIZEIMAGE | WS_BORDER,32,116,189,62,
+                    WS_EX_DLGMODALFRAME | WS_EX_TRANSPARENT
+END
+
+IDD_PB_MAINTAB_DST DIALOGEX 0, 0, 432, 338
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+FONT 7, "Tahoma", 400, 0, 0x0
+BEGIN
+END
+
+IDD_PBCOMMON DIALOGEX 0, 0, 276, 123
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | DS_CENTER | WS_CHILD | 
+    WS_VISIBLE
+EXSTYLE WS_EX_TRANSPARENT
+FONT 7, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_HULLTYPE,5,65,67,70,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "UserLevel",IDC_LBL_HTYPE,14,38,38,11
+    CONTROL         "Moving",IDC_BFLAGS_MOVING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,86,14,40,10,WS_EX_TRANSPARENT
+    CONTROL         "Deformable",IDC_BFLAGS_DEFORMABLE,"Button",
+                    BS_AUTOCHECKBOX,204,14,58,9,WS_EX_TRANSPARENT
+    CONTROL         "Gravity",IDC_BFLAGS_GRAV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,86,26,42,13,WS_EX_TRANSPARENT
+    CONTROL         "Kinematic",IDC_BFLAGS_KINEMATIC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,86,39,48,13,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Collision",IDC_BFLAGS_COLL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,134,14,44,10,WS_EX_TRANSPARENT
+    CONTROL         "Collision Notify",IDC_BFLAGS_COLL_NOTIFY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,134,26,65,13,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Trigger Shape",IDC_BFLAGS_TRIGGER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,134,39,61,13,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Sub Shape",IDC_BFLAGS_SSHAPE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,134,54,52,13,WS_EX_TRANSPARENT
+    CONTROL         "Hierarchy",IDC_BFLAGS_HIERARCHY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,86,54,50,13,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Sleep",IDC_BFLAGS_SLEEP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,204,51,44,13,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_FLAGS_BG,"Static",SS_BLACKFRAME | WS_TABSTOP,88,
+                    73,175,42
+    LTEXT           "Flags",IDC_LBL_FLAGS,79,0,42,11,0,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_HULLTYPE2,5,95,67,70,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Hull Type",IDC_LBL_HTYPE2,10,12,38,11
+END
+
+IDD_PB_COLLISION_PARENT DIALOGEX 0, 0, 448, 359
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 7, "Tahoma", 400, 0, 0x0
+BEGIN
+END
+
+IDD_PB_XML_PARENT DIALOGEX 0, 0, 360, 199
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_BORDER
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_XEXTERN_LINK,95,4,90,70,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "XML Link Extern Format",IDC_XEXTERN_LINK_LBL,6,7,88,11
+    COMBOBOX        IDC_XINTERN_LINK2,95,22,90,70,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "XML Link Intern Format",IDC_XINTERN_LINK_LBL2,7,26,85,
+                    11
+    CONTROL         "Moving",IDC_BFLAGS_MOVING,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,198,4,80,10,WS_EX_TRANSPARENT
+    CONTROL         "Gravity",IDC_BFLAGS_GRAV,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,198,17,80,10,WS_EX_TRANSPARENT
+    CONTROL         "Kinematic",IDC_BFLAGS_KINEMATIC,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,198,30,80,10,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Hierarchy",IDC_BFLAGS_HIERARCHY,"Button",BS_AUTO3STATE | 
+                    WS_GROUP | WS_TABSTOP,198,43,80,10,WS_EX_TRANSPARENT
+END
+
+IDD_PB_PARENT_DIALOG DIALOGEX 0, 0, 477, 269
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 7, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "MainTab",IDC_PB_MAINTAB,"SysTabControl32",
+                    TCS_FOCUSNEVER,13,9,424,16
+    LTEXT           "StaticPlaceHolder",IDC_MAIN_VIEW,140,84,297,94,
+                    WS_TABSTOP
+    LTEXT           "XML",IDC_MAIN_VIEW_XML,16,127,319,124,WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDC_MAIN_VIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 329
+    END
+
+    IDD_PB_XML_PARENT, DIALOG
+    BEGIN
+        VERTGUIDE, 198
+        VERTGUIDE, 278
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,90
+ PRODUCTVERSION 4,0,0,90
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Virtools SA"
+            VALUE "FileDescription", "Editor DLL"
+            VALUE "FileVersion", "4.0.0.90"
+            VALUE "InternalName", "Editor"
+            VALUE "LegalCopyright", "© 1998-2007 Virtools SA"
+            VALUE "LegalTrademarks", "© 1998-2007 Virtools"
+            VALUE "OriginalFilename", "Editor.DLL"
+            VALUE "ProductName", "Virtools"
+            VALUE "ProductVersion", "4.0.0.90"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+VS_VERSION_INFO1 VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "VisualStudioDemo MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "VisualStudioDemo"
+            VALUE "LegalCopyright", "Copyright (C) 2001"
+            VALUE "OriginalFilename", "VisualStudioDemo.EXE"
+            VALUE "ProductName", "VisualStudioDemo Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "VisualStudioDemo"
+    IDR_DEVTYPE0            "\n\n\n\n\nVisualStudioDemo.Document\nVisualStudioDemo Document"
+    IDR_DEVTYPE_CPP         "\nC++ example - \nC++ File\nC++ Files (.cpp)\n.cpp\nVisualStudioDemo.Document\nVisualStudioDemo Document"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MAIN_TOOLBAR        "Standard"
+    IDS_STRING_NOT_FOUND_FMT "Cannot find the string ""%s"""
+    IDS_BUILD_TOOLBAR       "Build"
+    IDS_RESOURCE_TOOLBAR    "Resource"
+    IDS_EDIT_TOOLBAR        "Edit"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "VisualStudioDemo"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Creates a new document\nNew"
+    ID_FILE_OPEN            "Opens an existing document\nOpen"
+    ID_FILE_CLOSE           "Closes the active document\nClose"
+    ID_FILE_SAVE            "Saves the active document\nSave"
+    ID_FILE_SAVE_AS         "Saves the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Changes the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Changes the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Prints the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Displays full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Displays program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quits the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Opens this document"
+    ID_FILE_MRU_FILE2       "Opens this document"
+    ID_FILE_MRU_FILE3       "Opens this document"
+    ID_FILE_MRU_FILE4       "Opens this document"
+    ID_FILE_MRU_FILE5       "Opens this document"
+    ID_FILE_MRU_FILE6       "Opens this document"
+    ID_FILE_MRU_FILE7       "Opens this document"
+    ID_FILE_MRU_FILE8       "Opens this document"
+    ID_FILE_MRU_FILE9       "Opens this document"
+    ID_FILE_MRU_FILE10      "Opens this document"
+    ID_FILE_MRU_FILE11      "Opens this document"
+    ID_FILE_MRU_FILE12      "Opens this document"
+    ID_FILE_MRU_FILE13      "Opens this document"
+    ID_FILE_MRU_FILE14      "Opens this document"
+    ID_FILE_MRU_FILE15      "Opens this document"
+    ID_FILE_MRU_FILE16      "Opens this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switches to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switches back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Opens another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arranges icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arranges windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arranges windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arranges windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Splits the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erases the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erases everything\nErase All"
+    ID_EDIT_COPY            "Copies the selection and puts it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cuts the selection and puts it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Finds the specified text\nFind"
+    ID_EDIT_PASTE           "Inserts Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeats the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replaces specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Selects the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undoes the last action\nUndo"
+    ID_EDIT_REDO            "Redoes the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UAT_UNINDENT        "Unindent"
+    IDS_UAT_DRAGDROP        "Drag/drop"
+    IDS_UAT_TAB             "Tab"
+    IDS_UAT_ENTER           "Enter"
+    ID_EDIT_FIND_COMBO      "Finds the specified text\nFind"
+    ID_TOOLS_OPTIONS        "Changes options\nOptions"
+    ID_VIEW_APP_LOOK        "Modifies the application general look\nApplication Look"
+    ID_HELP_WEB             "Opens the Microsoft Home page\nMicrosoft on the Web"
+    ID_EDIT_HIDESELECTION   "Adds the user-defined collapsible node for the currently selected text\nHide Selection"
+    ID_EDIT_TOGGLEOUTLINING "Toggles outlining inside selection\nToggle Outlining"
+    ID_EDIT_STOPHIDINGCURRENT 
+                            "Deletes the user-defined collapsible node(s) inside selection\nStop Hiding Current"
+    ID_EDIT_TOGGLEALLOUTLINING 
+                            "Toggles outlinings for the whole text\nToggle All Outlining"
+    ID_EDIT_COLLAPSETODEFINITIONS 
+                            "Collapses the members of all outlining types\nCollapse to Definitions"
+    ID_EDIT_STOPOUTLINING   "Cancels auto-outlining mode\nStop Outlining"
+    ID_EDIT_AUTOOUTLINING   "Enables/disables auto-outlining mode\nEnable Auto-Outlining"
+    ID_EDIT_ENABLEOUTLINING "Enables/disables outlining mode\nEnable Outlining"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Shows or hides the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Shows or hides the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Changes the window size"
+    AFX_IDS_SCMOVE          "Changes the window position"
+    AFX_IDS_SCMINIMIZE      "Reduces the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarges the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switches to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switches to the previous document window"
+    AFX_IDS_SCCLOSE         "Closes the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restores the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activates Task List"
+    AFX_IDS_MDICHILD        "Activates this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Closes print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EDITFAILED          "You cannot edit the document!"
+    IDS_PGUPFAILED          "PgUp is failed!"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_CUSTOMIZE       "Customizes toolbars and menus\nCustomize"
+    ID_VIEW_USER_TOOLBAR1   "Shows or hides the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR2   "Shows or hides the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR3   "Shows or hides the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR4   "Shows or hides the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR5   "Shows or hides the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR6   "Shows or hides the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR7   "Shows or hides the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR8   "Shows or hides the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR9   "Shows or hides the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR10  "Shows or hides the user toolbar\nToggle User ToolBar"
+    ID_VIEW_WORKSPACE       "Shows or hides the workspace\nWorkSpace"
+    ID_VIEW_OUTPUT          "Shows or hides the output\nOutput"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_NEXT_WORD       "Find next word\nFind Next word"
+    ID_EDIT_LINENUMBERS     "Shows/hides the line numbers\nLine Numbers"
+    IDS_UAT_REPLACE         "Replace"
+    ID_EDIT_GOTO_LINE       "Moves to a specified location\nGo to line"
+    ID_MDI_NEW_VERT_GROUP   "Creates a new vertical tab group"
+    ID_MDI_NEW_HORZ_TAB_GROUP "Creates a new horizontal tab group"
+    ID_MDI_MOVE_TO_PREV_GROUP 
+                            "Moves the current view to the previous tab group"
+    ID_MDI_MOVE_TO_NEXT_GROUP "Moves the current view to the next tab group"
+    ID_MDI_TABBED_DOCUMENT  "Tabbed Document\nTabbed Document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_MANAGER       "Manages the currently open windows\nWindow List"
+    ID_VIEW_DYNAMICHELP     "Shows or hides the Dynamic Help\nDynamicHelp"
+    ID_DUMMY_COMPILE        "Compiles the file\nCompile"
+    ID_DUMMY_BUILD          "Builds the project\nBuild"
+    ID_DUMMY_STOP_BUILD     "Stops the build\nStop Build"
+    ID_DUMMY_EXECUTE        "Executes the program\nExecute Program"
+    ID_DUMMY_GO             "Starts or continues the program\nGo"
+    ID_DUMMY_SELECT_ACTIVE_CONFIGURATION 
+                            "Selects the active configuration\nSelect Active Configuration"
+    ID_DUMMY_REMOVE_ALL_BREAKPOINTS 
+                            "Removes all breakpoints\nRemove All Breakpoints"
+    ID_VIEW_BUILD_TOOLBAR   "Shows or hides the build toolbar\nToggle Build ToolBar"
+    ID_DUMMY_REBUILD_ALL    "Rebuilds the active project\nRebuild All"
+    ID_DUMMY_CLEAN          "Cleans the project\nClean"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_TOGGLEBREAKPOINT 
+                            "Inserts or removes a breakpoint\nInsert/Remove Breakpoint"
+    ID_EDIT_CLEAR_ALLBOOKMARKS 
+                            "Clears all bookmarks in the window\nClear All Bookmarks"
+    ID_EDIT_INCREASE_IDENT  "Indents the selection text right one tab stop\nIncrease Ident"
+    ID_EDIT_DECREASE_IDENT  "Indents the selection text left one tab stop\nDecrease Ident"
+    ID_VIEW_EDIT_TOOLBAR    "Shows or hides the edit toolbar\nToggle Build ToolBar"
+    ID_EDIT_LISTMEMBERS     "Brings up the completion list box\nList Members"
+    IDS_UAT_UNDEFINED       "<Cut-in>"
+    IDS_UAT_TYPING          "Typing"
+    IDS_UAT_DELETE          "Delete"
+    IDS_UAT_INDENT          "Indent"
+    IDS_UAT_UNKNOWN         "<Unknown>"
+    IDS_UAT_CUT             "Cut"
+    IDS_UAT_PASTE           "Paste"
+    IDS_UAT_BACKSPACE       "Backspace"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DUMMY_UNDO_ACTION   "Undoes this action\nUndo"
+    ID_VIEW_CB_CAPTION      "Toggle control bar captions\nControl Bar Captions"
+    ID_VIEW_FORCE_GRADIENT  "Force Gradiend Captions\nGradiend Captions"
+    ID_USER_TOOL1           "Activates user-defined tool"
+    ID_USER_TOOL2           "Activates user-defined tool"
+    ID_USER_TOOL3           "Activates user-defined tool"
+    ID_USER_TOOL4           "Activates user-defined tool"
+    ID_USER_TOOL5           "Activates user-defined tool"
+    ID_USER_TOOL6           "Activates user-defined tool"
+    ID_USER_TOOL7           "Activates user-defined tool"
+    ID_USER_TOOL8           "Activates user-defined tool"
+    ID_USER_TOOL9           "Activates user-defined tool"
+    ID_USER_TOOL10          "Activates user-defined tool"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_HELP_SHOW_START      "Shows the Start Page\nShow Start Page"
+    ID_VIEW_REFRESH         "Refreshes the current view\nRefresh"
+    ID_VIEW_PROPERTIES      "Shows or hides the Properties View\nProperties View"
+    ID_VIEW_WATCH           "Shows or hides the watch\nToggle Watch"
+    ID_VIEW_FULLSCREEN      "Toggles full screen mode On and Off\nToggles Full Screen"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_MACRO          "Creates and edits macros\nMacro"
+    ID_TOOLS_ENTRY          "<User defined tools>\n<User defined tools>"
+    ID_NEW_DIALOG           "Creates a new dialog resource\nNew Dialog"
+    ID_NEW_MENU             "Creates a new menu resource\nNew Menu"
+    ID_NEW_CURSOR           "Creates a new cursor resource\nNew Cursor"
+    ID_NEW_ICON             "Creates a new icon resource\nNew Icon"
+    ID_NEW_BITMAP           "Creates a new bitmap resource\nNew Bitmap"
+    ID_NEW_TOOLBAR          "Creates a new toolbar resource\nNew Toolbar"
+    ID_NEW_ACCELERATOR      "Creates a new accelerator resource\nNew Accelerator"
+    ID_NEW_STRING_TABLE     "Creates a new string table resource\nNew String Table"
+    ID_NEW_VERSION          "Creates a new version resource\nNew Version"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OUTPUT_GOTO_ERROR    "Moves to the line containing current error or tag\nGo to Error"
+    ID_CLASS_DEFINITION     "Displays the definition of the selected item\nDefinition"
+    ID_CLASS_ADD_MEMEBER_FUNCTION 
+                            "Adds a member function to the selected class\nAdd Member Function"
+    ID_CLASS_ADD_MEMEBER_VARIABLE 
+                            "Adds a member variable to the selected class\nAdd Member Variable"
+    ID_CLASS_PROPERTIES     "Edits the current selection properties"
+    ID_RESOURCE_OPEN        "Opens the selected resource for editing\nOpen"
+    ID_RESOURCE_OPEN_BINARY "Opens the selected resource for binary editing\nOpen Binary"
+    ID_VIEW_TAB_FLAT_BORDERS "Toggles Tab Flat Borders\nTab &Flat Borders"
+    ID_HELP_KEYBOARDMAP     "Displays all keyboard commands\nKeyboard Map"
+    ID_MENU_DIR1            "$(ItemDirectory)"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MENU_ITEM1           "$(ItemPath)"
+    ID_MENU_ITEM2           "$(ItemFilename)"
+    ID_MENU_ITEM3           "$(ItemExtension)"
+    ID_DHELP1               "Help Content\nHelp Content"
+    ID_DHELP2               "Help Index\nIndex"
+    ID_DHELP3               "Help Search\nSearch"
+    ID_EXPAND               "Categorized\nCategorized"
+    ID_SORTINGPROP          "Alphabetic\nAlphabetic"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MENU_DIR2            "$(WindowsDirectory)"
+    ID_MENU_DIR3            "$(SystemDirectory)"
+    ID_MDITABS_ICONS        "Toggles MDI Tab Icons\nMDI Icons"
+    ID_MDITABS_TOP          "Shows MDI Tabs on top\nTop"
+    ID_MDITABS_BOTTOM       "Shows MDI Tabs at bottom\nBottom"
+    ID_VIEW_MDI_TABS        "Toggles MDI Tabs\nShow/Hide Tabs"
+    ID_MDITABS_CLOSE        "Closes clicked document\nClose Document"
+    ID_VIEW_CLASS           "Shows or hides the Class View\nClassView"
+    ID_VIEW_RESOURCE        "Shows or hides the Resource View\nResourceView"
+    ID_VIEW_FILE            "Shows or hides the Solution Explorer\nSolutionExplorer"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PROPERIES1           "Properties\nProperties"
+    ID_PROPERIES2           "Events\nEvents"
+    ID_NEW_FOLDER           "New Folder\nNew Folder"
+    ID_PROPERTIES           "Show Properties\nProperties"
+    ID_SOLUTION_OPEN        "Opens a file\nOpen"
+    ID_SOLUTION_OPEN_WITH   "Opens a solution\nOpen With...."
+    ID_FILE_NEW_PROJECT     "Creates a new project\nNew Project"
+    ID_FILE_NEW_BLANK_SOLUTION "Creates a new blank solution\nBlank Solution"
+    ID_FILE_OPEN_SOLUTION   "Opens a solution\nOpen Solution"
+    ID_FILE_CLOSE_SOLUTION  "Closes the solution\nClose Solution"
+    ID_FILE_SAVE_ALL        "Saves all open documents\nSave All"
+    ID_TOOLS_DEBUG_PROCESSES "Shows debug processes\nDebug Processes"
+    ID_TOOLS_CONNECT_TO_DATABASE "Connects to a database\nConnect to Database"
+    ID_WINDOW_CLOSE_ALL     "Closes all documents\nClose All Documents"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_TOGGLEBOOKMARK  "Inserts or removes a Bookmark\nToggle Bookmark"
+    ID_EDIT_NEXTBOOKMARK    "Goes to the next temporary bookmark\nNext Bookmark"
+    ID_EDIT_PREVIOUSBOOKMARK 
+                            "Goes to the previous temporary bookmark\nPrevious Bookmark"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

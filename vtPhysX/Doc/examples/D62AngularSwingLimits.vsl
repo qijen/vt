@@ -1,0 +1,42 @@
+//we retrieve a joint object : 
+pJoint joint  = w.getJoint(bodyARef,bodyBRef,JT_Revolute);
+if(!joint)
+return;
+
+//Virtools is not providing simple downcasts : 
+pJointD6 d6  = joint.castD6Joint();
+if(!d6)
+return;
+
+
+//Limit motion on the swing axis to lie within the elliptical cone specified by the     
+//angles swing1Limit and swing2Limit, relative to the parent frame.
+
+d6.setSwing1MotionMode(D6MM_Limited);
+	
+
+float swing1LimitRad = 0.7f;
+
+pJD6SoftLimit swing1Limit;
+
+swing1Limit.value 	= swing1LimitRad ;
+swing1Limit.damping 	= 0.0f;		//0 is default anyway
+swing1Limit.restitution = 0.0f;	//0 is default anyway
+swing1Limit.spring = 0.0f;	//0 is default anyway
+
+d6.setSwing1Limit(swing1Limit);
+
+
+
+float swing2LimitRad = 0.7f;
+
+pJD6SoftLimit swing2Limit;
+
+swing2Limit.value 	= swing2LimitRad ;
+swing2Limit.damping 	= 0.0f;		//0 is default anyway
+swing2Limit.restitution = 0.0f;	//0 is default anyway
+swing2Limit.spring = 0.0f;	//0 is default anyway
+
+d6.setSwing2Limit(swing2Limit);
+
+

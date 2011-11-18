@@ -1,0 +1,65 @@
+void main()
+{
+	PhysicManager pm = GetPhysicManager();
+	pFactory pf  = getPFactory();
+	
+		
+	pRigidBody bodyA = pm.getBody(bodyARef);
+	pRigidBody bodyB = pm.getBody(bodyBRef);
+
+
+	//sanity check : 
+	if(!bodyA && !bodyB )
+		return;
+
+	pWorld w  = null;
+	
+	//bodyARef or bodyBRef can be zero. This creates a revolute constraint with the environment then.
+	//However, we need a valid world object : 
+	if(bodyA)
+	{
+		w = bodyA.getWorld();
+	}
+	
+	if(bodyB)
+	{
+		w = bodyB.getWorld();
+	}
+	
+
+	//we retrieve a joint object : 
+	pJoint joint  = w.getJoint(bodyARef,bodyBRef,JT_Revolute);
+	if(!joint)
+	return;
+	
+
+	//Virtools is not providing simple downcasts : 
+	pJointRevolute revJoint = joint.castRevolute();
+	if(!revJoint)
+	return;
+	
+	//////////////////////////////////////////////////////
+	//
+	//
+	//		Limit High : 
+	//
+	//
+	pJointLimit hLimit;
+
+	hLimit.value = limitHigh;
+	
+	revJoint.setHighLimit(hLimit);
+	
+	//////////////////////////////////////////////////////
+	//
+	//
+	//		Limit Low : 
+	//
+	//
+	pJointLimit lLimit;
+
+	lLimit.value = pi / 180.0f * limitLow;
+	
+	revJoint.setLowLimit(lLimit);
+			
+}

@@ -1,0 +1,304 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BODYSHORTPANE DIALOGEX 0, 0, 316, 185
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Static",IDC_STATIC,33,31,238,131,WS_BORDER
+END
+
+IDD_PBODY_TAB_PANE DIALOGEX 0, 0, 266, 198
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "MainTab",IDC_PBODY_TAB_PANE,"SysTabControl32",0x0,7,7,
+                    252,163
+    PUSHBUTTON      "OK",IDOK,74,178,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,178,50,14
+END
+
+IDD_PB_MAINTAB_DST DIALOGEX 0, 0, 432, 338
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+FONT 7, "Tahoma", 400, 0, 0x0
+BEGIN
+END
+
+IDD_PBCOMMON DIALOGEX 0, 0, 342, 70
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+FONT 7, "Tahoma", 400, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_HULLTYPE,40,3,67,70,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Hull Type",IDC_LBL_HTYPE,7,5,32,9
+    CONTROL         "Moving",IDC_BFLAGS_MOVING,"Button",BS_AUTOCHECKBOX,7,29,
+                    36,10,WS_EX_TRANSPARENT
+    CONTROL         "Deformable",IDC_BFLAGS_DEFORMABLE,"Button",
+                    BS_AUTOCHECKBOX,7,48,47,9,WS_EX_TRANSPARENT
+    CONTROL         "Gravity",IDC_BFLAGS_GRAV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,60,47,35,10,WS_EX_TRANSPARENT
+    CONTROL         "Kinematic",IDC_BFLAGS_KINEMATIC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,122,57,48,10,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Collision",IDC_BFLAGS_COLL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,60,29,37,10,WS_EX_TRANSPARENT
+    CONTROL         "Collision Notify",IDC_BFLAGS_COLL_NOTIFY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,60,38,57,11,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Trigger Shape",IDC_BFLAGS_TRIGGER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,122,29,55,9,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Sub Shape",IDC_BFLAGS_SSHAPE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,122,38,46,10,WS_EX_TRANSPARENT
+    CONTROL         "Hierarchy",IDC_BFLAGS_HIERARCHY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,38,45,11,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Sleep",IDC_BFLAGS_SLEEP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,122,46,44,13,WS_EX_TRANSPARENT
+    LTEXT           "Static Flags",IDC_LBL_FLAGS,7,19,45,10,0,
+                    WS_EX_TRANSPARENT
+    LTEXT           "",IDC_DYNA_FLAGS_RECT,138,3,94,11,WS_BORDER,
+                    WS_EX_TRANSPARENT
+    LTEXT           "Dynamic Flags",IDC_LBL_DYNAFLAGS,60,19,45,10,0,
+                    WS_EX_TRANSPARENT
+    LTEXT           "Lock Transformation",IDC_LBL_LFLAGS,187,19,93,10,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Position",IDC_TLFLAGS_POS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,188,29,60,10,WS_EX_TRANSPARENT
+    CONTROL         "Rotation",IDC_TLFLAGS_ROT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,188,50,38,9,WS_EX_TRANSPARENT
+    CONTROL         "X",IDC_TLFLAGS_POS_X,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,197,39,18,10,WS_EX_TRANSPARENT
+    CONTROL         "Y",IDC_TLFLAGS_POS_Y,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,215,39,18,10,WS_EX_TRANSPARENT
+    CONTROL         "Z",IDC_TLFLAGS_POS_Z,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,234,39,18,10,WS_EX_TRANSPARENT
+    CONTROL         "Y",IDC_TLFLAGS_ROT_Y,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,215,59,18,9,WS_EX_TRANSPARENT
+    CONTROL         "Z",IDC_TLFLAGS_ROT_Z,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,234,59,18,9,WS_EX_TRANSPARENT
+    CONTROL         "X",IDC_TLFLAGS_ROT_X,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,198,59,18,9,WS_EX_TRANSPARENT
+END
+
+IDD_PB_COLLISION_PARENT DIALOGEX 0, 0, 448, 359
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 7, "Tahoma", 400, 0, 0x0
+BEGIN
+END
+
+IDD_PB_XML_PARENT DIALOGEX 0, 0, 360, 199
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_BORDER
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_XEXTERN_LINK,95,4,90,70,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "XML Link Extern Format",IDC_XEXTERN_LINK_LBL,6,7,88,11
+    COMBOBOX        IDC_XINTERN_LINK2,95,22,90,70,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "XML Link Intern Format",IDC_XINTERN_LINK_LBL2,7,26,85,
+                    11
+    CONTROL         "Moving",IDC_BFLAGS_MOVING,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,198,4,80,10,WS_EX_TRANSPARENT
+    CONTROL         "Gravity",IDC_BFLAGS_GRAV,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,198,17,80,10,WS_EX_TRANSPARENT
+    CONTROL         "Kinematic",IDC_BFLAGS_KINEMATIC,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,198,30,80,10,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Hierarchy",IDC_BFLAGS_HIERARCHY,"Button",BS_AUTO3STATE | 
+                    WS_GROUP | WS_TABSTOP,198,43,80,10,WS_EX_TRANSPARENT
+END
+
+IDC_MAIN_VIEW DIALOGEX 0, 0, 355, 192
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+EXSTYLE WS_EX_TRANSPARENT | WS_EX_CONTROLPARENT | WS_EX_NOINHERITLAYOUT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "MainTab",IDC_PBODY_TAB_PANE,"SysTabControl32",
+                    TCS_MULTILINE | TCS_RAGGEDRIGHT,30,15,286,30
+    CONTROL         "",IDC_SPACER,"Static",SS_BLACKRECT | SS_REALSIZEIMAGE,
+                    30,48,286,108
+END
+
+IDD_PB_PARENT_DIALOG DIALOGEX 0, 0, 524, 371
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 7, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "MainTab",IDC_PB_MAINTAB,"SysTabControl32",
+                    TCS_FOCUSNEVER,7,3,424,16
+    LTEXT           "StaticPlaceHolder",IDC_MAIN_VIEW,62,34,297,94,NOT 
+                    WS_VISIBLE | WS_TABSTOP
+    LTEXT           "XML",IDC_MAIN_VIEW_XML,64,202,319,124,NOT WS_VISIBLE | 
+                    WS_TABSTOP
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,90
+ PRODUCTVERSION 4,0,0,90
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Virtools SA"
+            VALUE "FileDescription", "Editor DLL"
+            VALUE "FileVersion", "4.0.0.90"
+            VALUE "InternalName", "Editor"
+            VALUE "LegalCopyright", "© 1998-2007 Virtools SA"
+            VALUE "LegalTrademarks", "© 1998-2007 Virtools"
+            VALUE "OriginalFilename", "Editor.DLL"
+            VALUE "ProductName", "Virtools"
+            VALUE "ProductVersion", "4.0.0.90"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_EDITORICON          ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PBCOMMON, DIALOG
+    BEGIN
+        VERTGUIDE, 7
+        VERTGUIDE, 60
+        VERTGUIDE, 138
+        BOTTOMMARGIN, 68
+        HORZGUIDE, 14
+        HORZGUIDE, 29
+    END
+
+    IDD_PB_XML_PARENT, DIALOG
+    BEGIN
+        VERTGUIDE, 198
+        VERTGUIDE, 278
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

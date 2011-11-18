@@ -1,0 +1,37 @@
+//we retrieve a joint object : 
+pJoint joint  = w.getJoint(bodyARef,bodyBRef,JT_Revolute);
+if(!joint)
+return;
+
+//Virtools is not providing simple downcasts : 
+pJointD6 d6  = joint.castD6Joint();
+if(!d6)
+return;
+
+//Set a hard twist limit, which limits the twist angle to twistLowLimit < twistAngle < twistHighLimit
+	
+d6.setTwistMotionMode(D6MM_Limited);
+
+float twistLowLimitRad = 0.7f;
+
+pJD6SoftLimit twistLimitLow;
+
+twistLimitLow.value 	= twistLowLimitRad ;
+twistLimitLow.damping 	= 0.0f;		//0 is default anyway
+twistLimitLow.restitution = 0.0f;	//0 is default anyway
+twistLimitLow.spring = 0.0f;	//0 is default anyway
+
+d6.setTwistLowLimit(twistLimitLow);
+
+
+
+float twistHighLimitRad = 1.54f;
+
+pJD6SoftLimit twistLimitHigh;
+
+twistLimitHigh.value 	= twistHighLimitRad;
+twistLimitHigh.damping 	= 0.0f;		//0 is default anyway
+twistLimitHigh.restitution = 0.0f;	//0 is default anyway
+twistLimitHigh.spring = 0.0f;	//0 is default anyway
+
+d6.setTwistHighLimit(twistLimitHigh);

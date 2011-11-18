@@ -1,0 +1,12 @@
+/----------------------------------------------------------------
+//
+// fill optimization parameters
+//
+pOptimization optimization;
+
+optimization.transformationFlags  +=BF_LRY; 			//lock rotation around Y
+optimization.transformationFlags  +=BF_LPY; 			//lock moving along Y
+
+oDescr.setOptimization(optimization);
+
+oDescr.mask 						+=OD_Optimization;

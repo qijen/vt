@@ -1,0 +1,1 @@
+For MSVC, I set the std lib to be DLL (and not static), and removed the custom malloc/clock declarations ("extern...").

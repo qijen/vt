@@ -1,0 +1,48 @@
+void main()
+{
+	PhysicManager pm = GetPhysicManager();
+	pFactory pf  = getPFactory();
+	
+		
+	pRigidBody bodyA = pm.getBody(bodyARef);
+	pRigidBody bodyB = pm.getBody(bodyBRef);
+
+	//sanity check : 
+	if(!bodyA && !bodyB )
+		return;
+
+	pWorld w  = null;
+	
+	//bodyARef or bodyBRef can be zero. This creates a distance constraint with the environment then.
+	//However, we need a valid world object : 
+	if(bodyA)
+	{
+		w = bodyA.getWorld();
+	}
+	
+	if(bodyB)
+	{
+		w = bodyB.getWorld();
+	}
+	
+
+	//we ask the world whether a joint distance exists already amongst the both bodies : 
+	pJoint joint  = w.getJoint(bodyARef,bodyBRef,JT_Distance);
+
+	pJointDistance distanceJoint = null;
+	if(!joint)
+	{
+		pSpring jSpring;
+		jSpring.spring = springValue;
+		jSpring.damper = springDamper;
+
+		//not used : jSpring.targetValue 
+
+		distanceJoint = pf.createDistanceJoint(bodyARef,bodyBRef,localAnchor0,localAnchor1,minDistance,maxDistance,jSpring);
+
+		if(distanceJoint)
+			distanceJoint.enableCollision(collision);
+			
+	}
+	
+}

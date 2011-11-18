@@ -1,0 +1,5 @@
+DEV35DIR="X:/sdk/dev35"
+DEV40DIR="X:/sdk/dev4"
+DEV41DIR="X:/sdk/dev41R"
+DEV5DIR="X:/ProjectRoot/vtArtoolKit/Dependencies/vt/dev50"
+WEBPLAYERDIR="h:/Programme/Virtools/3D Life Player"

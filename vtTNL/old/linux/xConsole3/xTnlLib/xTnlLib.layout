@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="..\..\..\subs\tnl\asymmetricKey.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1278" topLine="16" />
+	</File>
+	<File name="..\..\..\subs\tnl\byteBuffer.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2004" topLine="33" />
+	</File>
+	<File name="..\..\..\subs\tnl\tnlAsymmetricKey.h" open="1" top="0" tabpos="3">
+		<Cursor position="2284" topLine="54" />
+	</File>
+	<File name="..\..\..\subs\tnl\tnlBitStream.h" open="1" top="0" tabpos="2">
+		<Cursor position="2444" topLine="53" />
+	</File>
+	<File name="..\..\..\subs\tnl\tnlEndian.h" open="1" top="0" tabpos="5">
+		<Cursor position="4017" topLine="111" />
+	</File>
+	<File name="..\..\..\subs\tnl\tnlTypes.h" open="1" top="0" tabpos="4">
+		<Cursor position="14454" topLine="417" />
+	</File>
+	<File name="..\..\..\subs\tnl\tnlVector.h" open="1" top="0" tabpos="1">
+		<Cursor position="7923" topLine="292" />
+	</File>
+</CodeBlocks_layout_file>

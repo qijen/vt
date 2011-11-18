@@ -1,0 +1,32 @@
+pFactory pf = getPFactory();
+
+//----------------------------------------------------------------
+//
+// fill object description
+//
+
+pObjectDescr oDescr;
+
+oDescr.flags 	 					= BF_Moving + BF_Collision + BF_Gravity;
+
+oDescr.hullType 					= HT_Box;	//	set hull type
+
+//----------------------------------------------------------------
+//
+// load material
+//
+int error = pf.loadMaterial(oDescr.material,"Slippy");	// the manager will notify it if where something went wrong
+
+//	tell manager, there are material settings being used, otherwise,
+//	it looks for cylinder settings in the objects attributes, lookup order :
+//		- 	3D-entity
+//		- 	current mesh
+//		-	materials
+//
+oDescr.mask 						+=OD_Material;
+
+//	Make it a bit more bouncy :
+//
+pMaterial material = oDescr.getMaterial();
+material.restitution +=0.5f;
+oDescr.setMaterial(material);

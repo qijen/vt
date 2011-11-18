@@ -1,0 +1,44 @@
+PhysicManager pm = GetPhysicManager();
+pFactory pf  = getPFactory();
+
+
+pRigidBody bodyA = pm.getBody(bodyARef);
+pRigidBody bodyB = pm.getBody(bodyBRef);
+
+//sanity check :
+if(!bodyA && !bodyB )
+	return;
+
+
+//we ask the world whether a point in plane joint  exists already amongst the both bodies :
+pJoint joint  = pm.getJoint(bodyARef,bodyBRef,JT_PointInPlane);
+
+pJointPointInPlane pipJoint = null;
+
+
+//pickup and adjust data
+Vector globalAnchor  = anchor;
+if(anchorReference)
+	anchorReference.Transform(globalAnchor,anchor);
+
+Vector globalAxis  = axis;
+if (axisReference)
+{
+	Vector dir;
+	Vector up;
+	Vector right;
+	axisReference.GetOrientation(dir,up,right);
+	axisReference.TransformVector(globalAxis,up);
+
+}
+
+if(!joint)
+	pipJoint= pf.createPointInPlaneJoint(bodyARef,bodyBRef,globalAnchor,globalAxis);
+else
+	pipJoint= joint.castPointInPlane();
+
+if(pipJoint){
+	pipJoint.enableCollision(collision);
+	pipJoint.setGlobalAnchor(globalAnchor);
+	pipJoint.setGlobalAxis(globalAnchor);
+}

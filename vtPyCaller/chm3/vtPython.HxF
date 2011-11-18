@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE HelpFileList SYSTEM "MS-Help://Hx/Resources/HelpFileList.DTD">
+<HelpFileList DTDVersion = "1.0">
+   <File Url = "Building_Blocks.htm"/>
+   <File Url = "CallPyFunc.htm"/>
+   <File Url = "CallPyFuncEx.htm"/>
+   <File Url = "CallPythonEx.htm"/>
+   <File Url = "CallPythonFunc.png"/>
+   <File Url = "CallPythonFuncEx.png"/>
+   <File Url = "Copyright.htm"/>
+   <File Url = "DestroyPython.htm"/>
+   <File Url = "DestroyPython.png"/>
+   <File Url = "Dialogs.htm"/>
+   <File Url = "GettingStarted.htm"/>
+   <File Url = "Installation.htm"/>
+   <File Url = "LoadPython.htm"/>
+   <File Url = "LoadPython.png"/>
+   <File Url = "Office11.css"/>
+   <File Url = "pyMul.jpg"/>
+   <File Url = "Python Bindings.htm"/>
+   <File Url = "Python.htm"/>
+   <File Url = "PythonBindings.htm"/>
+   <File Url = "Registration.htm"/>
+   <File Url = "Support.htm"/>
+   <File Url = "teset.htm"/>
+   <File Url = "Tutorial.htm"/>
+   <File Url = "vsl.bmp"/>
+   <File Url = "vtPython.HxT"/>
+   <File Url = "vtPython.HxK"/>
+   <File Url = "vtPythonTOC.htm"/>
+   <File Url = "Welcome.htm"/>
+   <File Url = "NamedURLIndex.HxK"/>
+</HelpFileList>

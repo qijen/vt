@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="libtomcrypt" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="libtomcrypt" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Debug\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option projectCompilerOptionsRelation="0" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-ansi" />
+					<Add option="-g" />
+					<Add option="-Wall -Wsign-compare -W -Wshadow -Wno-unused-parameter -DLTC_SOURCE" />
+					<Add directory="..\..\..\subs\libtomcrypt" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="libtomcrypt" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O2" />
+					<Add directory="..\..\..\subs\libtomcrypt" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Os" />
+		</Compiler>
+		<Linker>
+			<Add option="-s" />
+		</Linker>
+		<Unit filename="..\..\..\subs\libtomcrypt\aes.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\base64.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\bits.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\blowfish.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\cast5.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\cbc.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\cfb.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\crypt.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\ctr.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\des.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\dh.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\dsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\ecb.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\ecc.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\gf.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\hash.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\hmac.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\keyring.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\md2.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\md4.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\md5.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mem.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mpi.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_argchk.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_cfg.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_cipher.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_custom.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_gf.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_hash.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_kr.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_macros.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_misc.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_pk.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\mycrypt_prng.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\noekeon.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\ofb.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\omac.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\packet.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\prime.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\rc2.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\rc4.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\rc5.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\rc6.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\rmd128.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\rmd160.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\rsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\safer+.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\safer.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\safer_tab.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\sha1.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\sha256.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\sha512.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\skipjack.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\sprng.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\strings.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\tiger.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\tommath.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\twofish.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\twofish_tab.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\xtea.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="..\..\..\subs\libtomcrypt\yarrow.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

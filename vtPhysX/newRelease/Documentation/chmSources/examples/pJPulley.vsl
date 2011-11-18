@@ -1,0 +1,76 @@
+PhysicManager pm = GetPhysicManager();
+pFactory pf  = getPFactory();
+
+
+pRigidBody bodyA = pm.getBody(bodyARef);
+pRigidBody bodyB = pm.getBody(bodyBRef);
+
+//sanity check :
+if(!bodyA && !bodyB )
+	return;
+
+pWorld w  = null;
+
+//bodyARef or bodyBRef can be zero. This creates a revolute constraint with the environment then.
+//However, we need a valid world object :
+if(bodyA)
+{
+	w = bodyA.getWorld();
+}
+
+if(bodyB)
+{
+	w = bodyB.getWorld();
+}
+
+
+
+///////////////////////////////////////////////////////
+//
+// Pickup data
+//
+
+
+//	Determines the suspension point A by a reference
+
+Vector pulleyAOut = pulleyA;
+if(pulleyAReference)
+	pulleyAReference.Transform(pulleyAOut,pulleyA);
+
+
+//	Determines the suspension point B by a reference
+Vector pulleyBOut = pulleyB;
+if(pulleyBReference)
+	pulleyBReference.Transform(pulleyBOut,pulleyB);
+
+// 	we ask the world whether a pulley joint exists already amongst the both bodies, if not create one,
+//	otherwise, modify it
+pJoint joint  = w.getJoint(bodyARef,bodyBRef,JT_Pulley);
+
+pJointPulley pulleyJoint = null;
+
+if(!joint)
+	pulleyJoint= pf.createPulleyJoint(bodyARef,bodyBRef,pulleyAOut,pulleyBOut,localAnchorA,localAnchorB);
+else
+	pulleyJoint= joint.castPulley();
+
+
+
+// Modification :
+if(pulleyJoint)
+{
+
+	pulleyJoint.setPulleyA(pulleyAOut);
+	pulleyJoint.setPulleyB(pulleyBOut);
+
+	pulleyJoint.setLocalAnchorA(localAnchorA);
+	pulleyJoint.setLocalAnchorA(localAnchorB);
+
+
+	pulleyJoint.enableCollision(Collision);
+	pulleyJoint.setStiffness(Stiffness);
+	pulleyJoint.setRatio(Ratio);
+	pulleyJoint.setDistance(distance);
+	pulleyJoint.setRigid(IsRigid);
+
+}

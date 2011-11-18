@@ -1,0 +1,9 @@
+; OggReaderDll.def : Declares the module parameters for the DLL.
+
+ 
+DESCRIPTION  'Ogg Reader extension'
+
+EXPORTS
+	CKGetReader
+	CKGetPluginInfo
+	

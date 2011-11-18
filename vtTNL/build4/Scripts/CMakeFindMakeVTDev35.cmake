@@ -1,0 +1,9 @@
+FIND_PATH(VTDEV35DIR
+  NAMES dev.exe devr.exe
+  PATHS
+  [HKEY_LOCAL_MACHINE\\SOFTWARE\\Virtools\\Dev\\3.5;InstallPath]
+  "X:/sdk/dev322/"
+  )
+MARK_AS_ADVANCED(CMAKE_MAKE_PROGRAM)
+SET(VTDEV35 1)
+

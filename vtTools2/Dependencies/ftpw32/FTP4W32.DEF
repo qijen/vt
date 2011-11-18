@@ -1,0 +1,74 @@
+LIBRARY   		FTP4W32
+DESCRIPTION     'Ftp4w32.dll V3.01  Ph. Jounin (ph.jounin@computer.org)'
+CODE		    PRELOAD MOVEABLE DISCARDABLE
+EXETYPE			 WINDOWS
+DATA 			 PRELOAD MOVEABLE SINGLE
+HEAPSIZE 		 1024
+EXPORTS
+          DLLWndProc    @2
+          Ftp4wVer      @10
+          FtpInit       @20
+          FtpMtInit     @21
+          FtpRelease    @25
+          FtpDataPtr    @30
+		  FtpBufferPtr	@32
+		  FtpErrorString @35
+
+          IntTnSend            @40
+          IntFtpGetAnswerCode  @41
+          FtpAutomate		   @42
+	
+          FtpSetVerboseMode         @50
+          FtpSetDefaultTimeOut      @51
+          FtpSetDefaultPort         @52
+          FtpSetNewDelay            @53
+          FtpSetNewSlices           @54
+          FtpSetAsynchronousMode    @55
+          FtpSetSynchronousMode     @56
+          FtpIsAsynchronousMode     @57
+          FtpBytesTransferred       @60
+          FtpBytesToBeTransferred   @61
+          FtpSetPassiveMode         @65
+          FtpLogTo                  @70
+
+          FtpFlush                  @100
+          FtpLogin                  @110
+          FtpOpenConnection         @111
+          FtpSendUserName           @112
+          FtpSendPasswd             @113
+          FtpSendAccount            @114
+          FtpCloseConnection        @115
+          FtpLocalClose             @116
+
+
+          FtpHelp                   @150
+          FtpDeleteFile             @151
+          FtpRenameFile             @152
+          FtpQuote                  @153
+          FtpSyst                   @154
+          FtpSetType                @155
+          FtpCWD                    @156
+          FtpCDUP                   @157
+          FtpPWD                    @158
+          FtpMKD                    @159
+          FtpRMD                    @160
+
+          FtpAbort                  @200
+          FtpRestart                @201
+          FtpRecvFile               @210
+          FtpAppendToLocalFile      @211
+          FtpRestartRecvFile        @212
+          FtpGetFileSize            @215
+
+          FtpSendFile               @220
+          FtpAppendToRemoteFile     @221
+          FtpRestartSendFile        @222
+
+          FtpDir                    @250
+
+          FtpMGet                   @260
+                       
+          FtpOpenDataConnection         @300
+          FtpCloseDataConnection        @301
+          FtpSendThroughDataConnection  @302
+          FtpRecvThroughDataConnection  @303

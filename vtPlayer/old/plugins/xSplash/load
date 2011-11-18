@@ -1,0 +1,74 @@
+
+/*	
+	typedef void(*_sFunc)(HINSTANCE,int,int);
+	DllTools::DllFunc<_sFunc>sFunc(_T("xSplash.dll"),"CreateSplash",true);
+	sFunc.Load();  // binds the func to the functor
+	(*sFunc)(hInst,0,0 );
+	Sleep(4000);
+
+	typedef void(*__sFuncH)();
+	DllTools::DllFunc<__sFuncH>sFunc2(_T("xSplash.dll"),"HideSplash",false);
+	sFunc2.Load();
+	(*sFunc2)();
+*/
+
+void xApp::HideSplash()
+{
+
+
+	typedef void(*__sFunc)();
+	DllTools::DllFunc<__sFunc>sFunc2(_T("xSplash.dll"),"HideSplash",true);
+	sFunc2.Load();
+	(*sFunc2)();
+	xLogger::xLog("disable splash------------------------------------------");
+}
+//////////////////////////////////////////////////////////////////////////
+void xApp::ShowSplash()
+{
+
+
+	MCore::LOG("showing splash");
+	//xLogger::xLog("enabling splash------------------------------------------");
+	typedef void(*_sFunc)(HINSTANCE,int,int);
+	HINSTANCE gobalInstal = ENIGMA_ENGINE->GetHInstance();
+
+	DllTools::DllFunc<_sFunc>sFunc(_T("xSplash.dll"),"CreateSplash",true);
+	sFunc.Load();  // binds the func to the functor
+	(*sFunc)(gobalInstal,0,0 );
+
+
+}
+
+
+
+
+
+
+
+
+void xApp::HideSplash()
+{
+
+
+	typedef void(*__sFunc)();
+	DllTools::DllFunc<__sFunc>sFunc2(_T("xSplash.dll"),"HideSplash",true);
+	sFunc2.Load();
+	(*sFunc2)();
+	xLogger::xLog("disable splash------------------------------------------");
+}
+//////////////////////////////////////////////////////////////////////////
+void xApp::ShowSplash()
+{
+
+
+	MCore::LOG("showing splash");
+	//xLogger::xLog("enabling splash------------------------------------------");
+	typedef void(*_sFunc)(HINSTANCE,int,int);
+	HINSTANCE gobalInstal = ENIGMA_ENGINE->GetHInstance();
+
+	DllTools::DllFunc<_sFunc>sFunc(_T("xSplash.dll"),"CreateSplash",true);
+	sFunc.Load();  // binds the func to the functor
+	(*sFunc)(gobalInstal,0,0 );
+
+
+}

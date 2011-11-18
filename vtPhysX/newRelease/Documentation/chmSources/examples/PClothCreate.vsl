@@ -1,0 +1,18 @@
+void main()
+{
+	PhysicManager pm = GetPhysicManager();
+	pFactory pf  = getPFactory();
+	
+	pClothDesc desc;
+	desc.setToDefault();
+	
+	desc.flags = PCF_Bending + PCF_AttachToCollidingShapes + PCF_Gravity;
+	
+	desc.attachmentFlags = PCAF_ClothAttachmentTwoway;
+
+	desc.bendingStiffness = 0.5f;
+
+	pCloth cloth  = pf.createCloth(clothReference,desc);
+	
+	
+}

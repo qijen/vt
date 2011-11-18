@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1212086476 source:x:\junctions\projectroot\current\vt_plugins\svnlocal\vttnlmaster\linux\xconsoleserver\main.cpp
+	<iostream>
+

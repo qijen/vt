@@ -1,0 +1,60 @@
+void main()
+{
+	PhysicManager pm = GetPhysicManager();
+	pFactory pf  = getPFactory();
+	
+		
+	pRigidBody bodyA = pm.getBody(bodyARef);
+	pRigidBody bodyB = pm.getBody(bodyBRef);
+
+
+	//sanity check : 
+	if(!bodyA && !bodyB )
+		return;
+
+	pWorld w  = null;
+	
+	//bodyARef or bodyBRef can be zero. This creates a ball constraint with the environment then.
+	//However, we need a valid world object : 
+	if(bodyA)
+	{
+		w = bodyA.getWorld();
+	}
+	
+	if(bodyB)
+	{
+		w = bodyB.getWorld();
+	}
+	
+
+	//we retrieve a joint object : 
+	pJoint joint  = w.getJoint(bodyARef,bodyBRef,JT_Spherical);
+	if(!joint)
+		return;
+
+	//Virtools is not providing simple downcasts : 
+	pJointBall ballJoint = joint.castBall();
+	if(!ballJoint)
+			return;
+	
+	
+
+	//change swing limit : 
+	pJointLimit swingLimit = ballJoint.getSwingLimit();
+	swingLimit.value = _swingLimit; //must be non-zero, otherwise swing limit is disable at all!
+	ballJoint.setSwingLimit(swingLimit);
+	
+	
+	//change twist high limit : 
+	pJointLimit twistLimitHigh = ballJoint.getTwistHighLimit();
+	twistLimitHigh.value = _twistLimitHigh; //must be non-zero, otherwise twist limit is disable at all!
+	ballJoint.setTwistHighLimit(twistLimitHigh);
+	
+	//change twist low limit : 
+	pJointLimit twistLimitLow = ballJoint.getTwistLowLimit();
+	twistLimitLow.value = _twistLimitLow; //must be non-zero, otherwise twist limit is disable at all!
+	ballJoint.setTwistLowLimit(twistLimitLow);
+	
+			
+		
+}

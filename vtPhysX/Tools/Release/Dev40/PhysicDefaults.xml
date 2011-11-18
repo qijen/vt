@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<vtPhysics>
+
+	<Debugger name="Default">
+		<settings host="localhost" port="5425" enabled="0"/>
+	</Debugger>
+
+	<material name="Default">
+		<settings DynamicFriction="0.5"/>
+		<settings StaticFriction="0.5" />
+		<settings Restitution="0.5" />
+		<settings DynamicFrictionV="0.0" />
+		<settings StaticFrictionV="0.0" />
+		<settings DirOfAnisotropy="0.0,0.0,0.0" />
+		<settings FrictionCombineMode="AVERAGE" />
+		<settings RestitutionCombineMode="AVERAGE"/>
+		<settings Flags=""/>
+	</material>
+
+	<material name="Default2">
+		<settings DynamicFriction="0.5"/>
+		<settings StaticFriction="0.5" />
+		<settings Restitution="0.5" />
+		<settings DynamicFrictionV="0.0" />
+		<settings StaticFrictionV="0.0" />
+		<settings DirOfAnisotropy="0.0,0.0,0.0" />
+		<settings FrictionCombineMode="AVERAGE" />
+		<settings RestitutionCombineMode="AVERAGE"/>
+		<settings Flags=""/>
+	</material>
+
+	<material name="Slippy">
+		<settings DynamicFriction="0.1"/>
+		<settings StaticFriction="0.1" />
+		<settings Restitution="0.0" />
+		<settings DynamicFrictionV="0.0" />
+		<settings StaticFrictionV="0.0" />
+		<settings DirOfAnisotropy="1.0,0.0,0.0" />
+		<settings FrictionCombineMode="AVERAGE" />
+		<settings RestitutionCombineMode="AVERAGE"/>
+		<settings Flags="Anisotropic|DisableFriction"/>
+	</material>
+
+	<material name="High Friction">
+		<settings DynamicFriction="1.0"/>
+		<settings StaticFriction="20.0" />
+		<settings Restitution="0.0" />
+		<settings DynamicFrictionV="0.0" />
+		<settings StaticFrictionV="0.0" />
+		<settings DirOfAnisotropy="1.0,0.0,0.0" />
+		<settings FrictionCombineMode="AVERAGE" />
+		<settings RestitutionCombineMode="AVERAGE"/>
+		<settings Flags="Anisotropic|DisableFriction"/>
+	</material>
+
+	<material name="High Friction Wheel">
+		<settings DynamicFriction="1.0"/>
+		<settings StaticFriction="20.0" />
+		<settings Restitution="0.0" />
+		<settings DynamicFrictionV="0.0" />
+		<settings StaticFrictionV="0.0" />
+		<settings DirOfAnisotropy="1.0,0.0,0.0" />
+		<settings FrictionCombineMode="AVERAGE" />
+		<settings RestitutionCombineMode="AVERAGE"/>
+		<settings Flags="DisableFriction"/>
+	</material>
+
+	<material name="Bouncy">
+		<settings DynamicFriction="0.9"/>
+		<settings StaticFriction="0.9" />
+		<settings Restitution="1.0" />
+		<settings DynamicFrictionV="1.0" />
+		<settings StaticFrictionV="0.0" />
+		<settings DirOfAnisotropy="1.0,0.0,0.0" />
+		<settings FrictionCombineMode="AVERAGE" />
+		<settings RestitutionCombineMode="AVERAGE"/>
+		<settings Flags="DisableFriction|DisableStrongFriction"/>
+	</material>
+
+
+  <tireFunction name="Default Lateral">
+  		<settings ExtremumSlip="1.0" />
+  		<settings ExtremumValue="0.02" />
+  		<settings AsymptoteSlip="2.0" />
+  		<settings AsymptoteValue="0.01" />
+  		<settings StiffnessFactor="1000000.0f" />
+  </tireFunction>
+
+  <tireFunction name="Default Longitude">
+  		<settings ExtremumSlip="1.0" />
+  		<settings ExtremumValue="100" />
+  		<settings AsymptoteSlip="2.0" />
+  		<settings AsymptoteValue="0.01" />
+  		<settings StiffnessFactor="1000000.0f" />
+  </tireFunction>
+
+  <tireFunction name="Default Longitude Clamped">
+  		<settings ExtremumSlip="1.0" />
+  		<settings ExtremumValue="50.8" />
+  		<settings AsymptoteSlip="1.0" />
+  		<settings AsymptoteValue="0.09" />
+  		<settings StiffnessFactor="1.0f" />
+  </tireFunction>
+
+  <tireFunction name="Default Lateral Clamped">
+  		<settings ExtremumSlip="0.4" />
+  		<settings ExtremumValue="10.0" />
+  		<settings AsymptoteSlip="2.0" />
+  		<settings AsymptoteValue="0.08" />
+  		<settings StiffnessFactor="1.0f" />
+  </tireFunction>
+
+
+  <wheel name="Default Vehicle Front">
+		<settings Suspension="0.4" Restitution="0.1" Damping="0.1" Bias="0.1" />
+		<settings InverseWheelMass="0.083" />
+		<settings MaxBreakForce="1" />
+		<settings FrictionToSide="0.5" />
+		<settings FrictionToFront="0.5" />
+		<settings Flags="VehicleControlled|Steerable"/>
+		<settings ShapeFlags="AxleSpeedOverride|ClampedFriction|InputLateralSlip|InputLongitudinal|UnscaledSpringBehavior"/>
+		<settings LateralFunction="Default Lateral Clamped" />
+		<settings LongitudeFunction="Default Longitude Clamped" />
+   </wheel>
+
+
+   <wheel name="MaxFlags">
+		<settings Suspension="0.2" Restitution="7000.0" Damping="800" Bias="0.0" />
+		<settings InverseWheelMass="0.8" />
+		<settings MaxBreakForce="1" />
+		<settings FrictionToSide="0.5" />
+		<settings FrictionToFront="0.5" />
+		<settings Flags="Accelerated||VehicleControlled|Steerable|Handbrake"/>
+		<settings ShapeFlags="WheelAxisContactNormal|InputLateralSlip|InputLongitudinal|ClampedFriction|UnscaledSpringBehavior|EmulateLegacyWheel"/>
+		<settings LateralFunction="Default Lateral" />
+		<settings LongitudeFunction="Default Longitude" />
+   </wheel>
+
+   <wheel name="Default Vehicle Back">
+		<settings Suspension="1" Restitution="70" Damping="30" Bias="0.1" />
+		<settings InverseWheelMass="0.3" />
+		<settings MaxBreakForce="1" />
+		<settings FrictionToSide="0.1" />
+		<settings FrictionToFront="0.1" />
+		<settings Flags="Accelerated|VehicleControlled|Handbrake|Differential"/>
+		<settings ShapeFlags="InputLongitudinal|InputLateralSlip|ClampedFriction|AxleSpeedOverride|UnscaledSpringBehavior"/>
+		<settings LateralFunction="Default Lateral Clamped" />
+		<settings LongitudeFunction="Default Longitude Clamped" />
+   </wheel>
+
+
+
+   <wheel name="Default Vehicle Back Normal">
+		<settings Suspension="0.2" Restitution="7000.0" Damping="800" Bias="1.2" />
+		<settings InverseWheelMass="0.8" />
+		<settings MaxBreakForce="1" />
+		<settings FrictionToSide="0.3" />
+		<settings FrictionToFront="0.4" />
+		<settings Flags="Accelerated|VehicleControlled|Handbrake|Differential"/>
+		<settings ShapeFlags="InputLateralSlip|InputLongitudinal|ClampedFriction"/>
+		<settings LateralFunction="Default Lateral" />
+		<settings LongitudeFunction="Default Longitude" />
+   </wheel>
+
+	<wheel name="Default Front Wheel Settings">
+		<settings Suspension="0.8" Restitution="5" Damping="0.1" Bias="0.6" />
+		<settings InverseWheelMass="0.2" />
+		<settings MaxBreakForce="1" />
+		<settings FrictionToSide="0.5" />
+		<settings FrictionToFront="0.5" />
+		<settings Flags="Accelerated|Handbrake"/>
+		<settings ShapeFlags="InputLateralSlip|InputLongitudinal|ClampedFriction"/>
+		<settings LateralFunction="Default Lateral" />
+		<settings LongitudeFunction="Default Longitude" />
+   </wheel>
+
+
+
+   <wheel name="Default Back Wheel Settings">
+		<settings Suspension="0.6" Restitution="5" Damping="0.1" Bias="0" />
+		<settings MaxBreakForce="1" />
+		<settings InverseWheelMass="0.01" />
+		<settings FrictionToSide="0.9" />
+		<settings FrictionToFront="0.9" />
+		<settings Flags="Accelerated|Handbrake|Steerable"/>
+		<settings ShapeFlags=""/>
+		<settings LateralFunction="Default Lateral" />
+		<settings LongitudeFunction="Default Longitude" />
+
+   </wheel>
+
+   <wheel name="Wheel Chair Front Settings">
+		<settings Suspension="0.05" Restitution="0.0" Damping="0.0" Bias="0.0" />
+		<settings InverseWheelMass="1" />
+		<settings MaxBreakForce="1" />
+		<settings FrictionToSide="0.5" />
+		<settings FrictionToFront="0.5" />
+		<settings Flags="Wheelshape|Accelerated|Steerable"/>
+		<settings ShapeFlags=""/>
+		<settings LateralFunction="Default Lateral" />
+		<settings LongitudeFunction="Default Longitude" />
+   </wheel>
+
+   <wheel name="Wheel Chair Back Settings">
+		<settings Suspension="0.01" Restitution="0.0" Damping="0.0" Bias="0.0" />
+		<settings InverseWheelMass="1" />
+		<settings MaxBreakForce="1" />
+		<settings FrictionToSide="0.9" />
+		<settings FrictionToFront="0.9" />
+		<settings Flags="Wheelshape|Accelerated|Steerable"/>
+		<settings ShapeFlags=""/>
+		<settings LateralFunction="Default Lateral" />
+		<settings LongitudeFunction="Default Longitude" />
+
+   </wheel>
+
+
+	<world name="Default">
+		<settings Gravity="0.0,-9.81,0.0" SkinWith="0.025"/>
+	</world>
+
+</vtPhysics>

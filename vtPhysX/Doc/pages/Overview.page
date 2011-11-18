@@ -1,0 +1,24 @@
+/*! \page Overview
+
+   
+   <b>This is an overview to the entire PhysX implementation : </b>
+      
+   \image html Overview.png
+   
+   
+   <br>
+   
+   
+   Files : 
+   
+   -    vtPhysX.dll  must be copied into Virtools Dev/BuildingBlocks
+   -    vtPhysXLib.dll  must be copied into Virtools Dev
+   -    PhysicDefaults.xml : must be copied into "Virtools Dev" or "MyPlayer"
+   
+   Optional Files : 
+   
+   -    vtInterface Plug-In  : vtPhysXInterface.dll  must be copied into Virtools Dev/InterfacePlugins
+   -    vtSerialisation  : vtPhysXStream.dll  must be copied into Virtools Dev/Plugins
+   
+    
+*/

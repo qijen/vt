@@ -1,0 +1,21 @@
+1. install the installer module for vc2003
+2. add a new project to the solution :
+  "Setup and Deployment Projects" -> "Setup Project"
+3. Right click on the project created and : 
+    -> "add Project Output"
+    -> choose "cs-runner" ( Primary Output )
+    -> in the solution folder you should find now under "Detected Dependencies" :
+        "dotnetfxredist_x86.msm"
+4. correct the rest of the projects properties
+
+
+I have a InstallShield-Express11 Version. Its a black one. I can upload it when you want. 
+- allows skins
+- is integrated in viusal studio
+- allows a lot of customization or adding other merge modules.
+- pretty nice !
+
+
+
+
+

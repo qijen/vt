@@ -1,0 +1,20 @@
+#ScrollBar Tiles Definition
+#By Guillaume Laferriere 17/05/05
+
+String	TextureName	Data\Textures\winScrollbar.png
+Float 	SliderSize	64
+Float 	ArrowSize	16
+Float		BarSize	64
+
+#-----------ID-------L---T---R---B		
+Rect 		Slider0 32   0  48  64
+Rect 		Slider1 32   0  48  64
+
+Rect 		Bar0	  16   0  32  64
+Rect 		Bar1	  16   0  32  64
+
+Rect 		Up0	   0   0  16  16
+Rect 		Up1	   0  32  16  48
+
+Rect 		Down0	   0  16  16  32	
+Rect 		Down1	   0  48  16  64

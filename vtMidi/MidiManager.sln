@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MidiManager", "MidiManager.vcproj", "{2BB64A1F-AC8E-4BE5-8534-14F5C47EA1F4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Dev4 Release = Dev4 Release
+		Release = Release
+		ReleaseDebug = ReleaseDebug
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{2BB64A1F-AC8E-4BE5-8534-14F5C47EA1F4}.Debug.ActiveCfg = Debug|Win32
+		{2BB64A1F-AC8E-4BE5-8534-14F5C47EA1F4}.Debug.Build.0 = Debug|Win32
+		{2BB64A1F-AC8E-4BE5-8534-14F5C47EA1F4}.Dev4 Release.ActiveCfg = Dev4 Release|Win32
+		{2BB64A1F-AC8E-4BE5-8534-14F5C47EA1F4}.Dev4 Release.Build.0 = Dev4 Release|Win32
+		{2BB64A1F-AC8E-4BE5-8534-14F5C47EA1F4}.Release.ActiveCfg = Release|Win32
+		{2BB64A1F-AC8E-4BE5-8534-14F5C47EA1F4}.Release.Build.0 = Release|Win32
+		{2BB64A1F-AC8E-4BE5-8534-14F5C47EA1F4}.ReleaseDebug.ActiveCfg = ReleaseDebug|Win32
+		{2BB64A1F-AC8E-4BE5-8534-14F5C47EA1F4}.ReleaseDebug.Build.0 = ReleaseDebug|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

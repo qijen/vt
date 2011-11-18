@@ -1,0 +1,64 @@
+
+#include "funcs.h"
+
+
+STRING strOrigTARGETDIR; // Copy of original TARGETDIR during Prerequisites feature install
+
+//---------------------------------------------------------------------------
+// The UnInstalling event is sent just before the feature 
+// Prerequisites is uninstalled.
+//---------------------------------------------------------------------------
+
+export prototype Prerequisites_UnInstalling();
+function Prerequisites_UnInstalling()
+begin
+// Temporarily adjust TARGETDIR to Programs subdir for
+// uninstallation of Microsoft Merge Modules
+strOrigTARGETDIR = TARGETDIR;
+TARGETDIR = TARGETDIR ^ @PRODUCT_BINDIR;
+end;
+//---------------------------------------------------------------------------
+// The Installing event is sent just before the feature 
+// Prerequisites is installed.
+//---------------------------------------------------------------------------
+
+export prototype Prerequisites_Installing();
+function Prerequisites_Installing()
+STRING newPath,newPath1,newPath2;
+begin
+
+// Temporarily adjust TARGETDIR to Programs subdir for
+// installation of Microsoft Merge Modules
+//strOrigTARGETDIR = TARGETDIR;
+//newPath = TARGETDIR;   
+//MessageBox( newPath, SEVERE );
+//newPath1 = vDev40Path;
+//MessageBox( newPath1, SEVERE );
+
+//TARGETDIR  = newPath2;         
+//MessageBox( newPath2, SEVERE );
+
+//TARGETDIR = TARGETDIR ^ @PRODUCT_BINDIR;
+end;
+//---------------------------------------------------------------------------
+// The Installing event is sent after the feature Prerequisites
+// is installed.
+//---------------------------------------------------------------------------
+
+export prototype Prerequisites_Installed();
+function Prerequisites_Installed()
+begin
+// Restore correct TARGETDIR
+TARGETDIR = strOrigTARGETDIR;
+end;
+//---------------------------------------------------------------------------
+// The UnInstalling event is sent after the feature Prerequisites
+// is uninstalled.
+//---------------------------------------------------------------------------
+
+export prototype Prerequisites_UnInstalled();
+function Prerequisites_UnInstalled()
+begin
+// Restore correct TARGETDIR
+TARGETDIR = strOrigTARGETDIR;
+end;

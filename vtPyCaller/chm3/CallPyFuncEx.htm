@@ -1,0 +1,172 @@
+<HTML xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+	<HEAD>
+		<TITLE>CallPyFuncEx</TITLE>
+		<META content="MSHTML 6.00.5730.11" name="GENERATOR">
+		<META content="3.04.15 [01-SEP-07]" name="HELP-GENERATOR-VERSION">
+		<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<LINK href="Office11.css" type="text/css" rel="stylesheet"><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLink.css"><LINK REL="stylesheet" TYPE="text/css" HREF="ms-help://Hx/HxRuntime/HxLinkDefault.css"></HEAD>
+	<BODY>
+		<H1>
+			<H1><FONT color="#004000" size="3">CallPyFuncEx</FONT>
+				<HR>
+			</H1>
+			<P></P>
+			<P></P>
+			<P><FONT size="2"><IMG src="vsl.bmp" align="left" border="0"></FONT><FONT size="2">CallPyFuncEx<BR>
+					Version 0.5 - Günter Baumgart<BR>
+					Categorized in Python&nbsp;</FONT>
+			</P>
+			<H3>
+				<TABLE cellSpacing="1" cellPadding="1" width="75%" border="0">
+					<TBODY>
+						<TR>
+							<TD bgColor="#004000">
+								<P><STRONG><FONT face="Tahoma" color="#ffffff">Description</FONT></STRONG></P>
+							</TD>
+						</TR>
+					</TBODY></TABLE>
+			</H3>
+			<H3><FONT face="Tahoma" size="1">Apply to a BEOBJECT.</FONT></H3>
+			<H3><FONT face="Tahoma" size="2">Runs a Python script.&nbsp;This building block doesn't
+					make any type checks. You are responsible for this within in your Python
+					script. It also doesn't pass any arguments</FONT></H3>
+			<P><FONT face="Tahoma" size="2"><STRONG>to the Python script directly like "<FONT color="#004000">CallPyFunc".</FONT><FONT color="#000000">You
+							have to retrieve parameter input values in your script by hand. The same for
+							the setting output values. </FONT></STRONG></FONT>
+			</P>
+			<P><FONT face="Tahoma" size="2"><STRONG><FONT color="#000000">But the&nbsp;&nbsp;building block
+							it self gives </FONT></STRONG></FONT>
+			</P>
+			<P>
+				<TABLE cellSpacing="1" cellPadding="1" width="75%" border="0">
+					<TBODY>
+						<TR>
+							<TD bgColor="#004000">
+								<P><STRONG><FONT face="Tahoma" color="#ffffff">Technical Information</FONT></STRONG></P>
+							</TD>
+						</TR>
+					</TBODY></TABLE>
+				<BR>
+				<IMG alt="" hspace="0" src="CallPythonFunc.png" align="baseline" border="0">&nbsp;
+			</P>
+			<P><FONT face="Tahoma"><FONT size="2"><STRONG><SPAN class="in"><FONT color="#ff0000">In</FONT>: </SPAN>triggers
+							the process.<BR>
+							<SPAN class="out"><FONT color="#800000">Out</FONT>: </SPAN>is activated when
+							the process is completed.<BR>
+							<BR>
+							<SPAN class="pin"><FONT color="#0080ff">File</FONT>: </SPAN>specify you python
+							script here. Don't add the "py" extension. Just use the filename.&nbsp; </STRONG>
+					</FONT></FONT>
+			</P>
+			<P><SPAN class="pin"><FONT face="Tahoma"><FONT size="2"><STRONG><FONT color="#0080ff">Func: </FONT><FONT color="#000000">
+									Here you specify the name of your Python function. In the case you have a main
+									function in the script then let it free. It executes the whole file then.</FONT></STRONG></FONT></FONT></SPAN></P>
+			<SPAN class="pin">
+				<P><SPAN class="pin"><FONT face="Tahoma"><FONT size="2"><STRONG><FONT color="#0080ff">Reload: </FONT>
+									<FONT color="#000000">On trrigger the building block reloads the python script.
+										This is usefull when you change the script during the development.</FONT></STRONG></FONT></FONT></SPAN></P>
+				<SPAN class="pin">
+					<P><SPAN class="pin"><FONT face="Tahoma"><FONT size="2"><STRONG><FONT color="#0080ff">Added Parameter
+											Inputs : </FONT><FONT color="#000000">Here you specify the arguments you want
+											to pass to your Python function.Allowed are Integer,String, Float or Bool.</FONT></STRONG></FONT></FONT></SPAN></P>
+					<SPAN class="pin">
+						<P><SPAN class="pin"><FONT face="Tahoma"><FONT size="2"><STRONG><FONT color="#0080ff">Added Parameter
+												Outputs: </FONT><FONT color="#000000">Thate are the outputs for your Python
+												script. Allowed are Integer,String, Float or Bool.It must be the right type you
+												choosed as return type in your Python script. </FONT></STRONG></FONT>
+								</FONT>
+							</SPAN></P>
+						<P><SPAN class="pin"><FONT face="Tahoma" size="2"><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some
+										Python functions returning a type called "Tuple". This type is supported and
+										converted to a comma seperated string. </STRONG></FONT>
+							</SPAN></P>
+						<P><SPAN class="pin"></SPAN><SPAN class="pin"><FONT face="Tahoma" size="2"></FONT></SPAN>&nbsp;</P>
+						<SPAN class="pin">
+<P>
+								<TABLE cellSpacing="1" cellPadding="1" width="75%" border="0">
+									<TBODY>
+										<TR>
+											<TD bgColor="#004000">
+												<P><STRONG><FONT face="Tahoma" color="#ffffff">Sample</FONT></STRONG></P>
+											</TD>
+										</TR>
+									</TBODY></TABLE>
+							</P>
+<P><FONT face="Tahoma" size="2">As mentioned, the building block doesn't creates and passes the parameter inputs to
+									the choosen function. You have to retrieve the parameter input values by hand
+									in your script. </FONT>
+							</P>
+<P><FONT face="Tahoma" size="2"></FONT>&nbsp;</P>
+<P><FONT face="Tahoma" size="2">Consider the following python script : </FONT>
+							</P>
+<P><STRONG><FONT face="Consolas" color="#000080" size="2">def multiply(a,b):<BR>
+										&nbsp;&nbsp;&nbsp; c = 0<BR>
+										&nbsp;&nbsp;&nbsp; for i in range(0, a):<BR>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = c + b<BR>
+										&nbsp;&nbsp;&nbsp; return c</FONT></STRONG></P>
+<P>
+								<TABLE cellSpacing="1" cellPadding="1" width="688" border="1" height="595">
+									<TBODY>
+										<TR>
+											<TD bgColor="#004000"><FONT style="BACKGROUND-COLOR: #004000" face="Tahoma" color="#ffffff"><STRONG>The
+														CallPython Version :</STRONG></FONT></TD>
+											<TD bgColor="#004000"><STRONG><FONT face="Tahoma" color="#ffffff">The CallPython-Ex Version
+														:</FONT></STRONG></TD>
+										</TR>
+										<TR>
+											<TD><STRONG><FONT face="Consolas" color="#000080" size="2">def multiply(a,b):<BR>
+														&nbsp;&nbsp;&nbsp; c = 0<BR>
+														&nbsp;&nbsp;&nbsp; for i in range(0, a):<BR>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = c + b<BR>
+														&nbsp;&nbsp;&nbsp; return c</FONT></STRONG></TD>
+											<TD>
+												<P><STRONG><FONT face="Consolas" color="#004000" size="2">#&nbsp;The building block
+															doesn't&nbsp;pass arguments to a function,</FONT></STRONG><STRONG><FONT face="Consolas"><FONT size="2"><FONT color="#000080"><FONT size="+0"><FONT color="#004000"><FONT size="2">therefore
+																				we use our special&nbsp;Python functions to communicate with </FONT></FONT>
+																	</FONT></FONT></FONT></FONT></STRONG>
+												</P>
+												<P><STRONG><FONT face="Consolas"><FONT size="2"><FONT color="#000080"><FONT size="+0"><FONT color="#004000"><FONT size="2">#&nbsp;Python.</FONT></FONT></FONT></FONT></FONT></FONT></STRONG></P>
+												<P><STRONG><FONT face="Consolas" color="#004000" size="2"></FONT></STRONG>&nbsp;</P>
+												<P><STRONG><FONT face="Consolas" color="#004000" size="2"># import&nbsp;the virtools module
+															: </FONT></STRONG>&nbsp;</P>
+												<P><STRONG><FONT face="Consolas" color="#000080" size="2">import vt</FONT></STRONG></P>
+												<STRONG><FONT face="Consolas" color="#000080" size="2">
+														<P>def multiply():<BR>
+														</P>
+														<P>&nbsp;&nbsp; <FONT color="#004000">#We retrieve our variable "a" from the building
+																block and we assume the type of the parameter input is set to Integer.<BR>
+															</FONT>&nbsp;&nbsp; <FONT color="#004000">#This can be done with vt.<FONT color="#800000">GetInVal</FONT>(<FONT color="#ff8000">bid</FONT>,IndexOfParameterInput).
+																"<FONT color="#ff8000" size="3">bid</FONT>" is an automatically created
+																variable when the&nbsp;<BR>
+															</FONT><FONT color="#004000">&nbsp;&nbsp; #building blocks starts. It is&nbsp;an
+																unique identifier for the building block for intern processing.</FONT><FONT color="#004000">Just
+																write "<FONT color="#ff8000">bid</FONT>"&nbsp;!</FONT><BR>
+															&nbsp;&nbsp; a&nbsp; = vt.<FONT color="#800000">GetInVal</FONT>(<FONT color="#ff8000">bid</FONT>,3)<BR>
+														</P>
+														<P>&nbsp;&nbsp; <FONT color="#004000"># Now we retrieve variable "b" :</FONT>&nbsp;<BR>
+															&nbsp;&nbsp; b&nbsp; = vt.<FONT color="#800000">GetInVal</FONT>(<FONT color="#ff8000">bid</FONT>,4)&nbsp;</P>
+														<P><BR>
+															&nbsp;&nbsp; c = 0<BR>
+															&nbsp;&nbsp; for i in range(0, a):<BR>
+															&nbsp;&nbsp;&nbsp;&nbsp; c = c + b<BR>
+														</P>
+														<FONT color="#004000"></FONT>
+														<P><FONT color="#004000">&nbsp;&nbsp; #When the loop is finish, we store the result in
+																the building blocks parameter output :</FONT>&nbsp;<BR>
+															&nbsp;&nbsp; vt.<FONT color="#ff0000">SetOutVal</FONT>(<FONT color="#ff8000">bid</FONT>,0,c)</P>
+														<P><FONT color="#004000">&nbsp;&nbsp; #And we trigger an output we created on the
+																building block : </FONT>
+														</P>
+														<P><FONT color="#004000">&nbsp;&nbsp; vt.<FONT color="#800000">ActivateOut</FONT>(<FONT color="#ff8000">bid</FONT>,0,1)</FONT><BR>
+														</P>
+														<P>&nbsp;&nbsp; <FONT color="#004000">#vt.<FONT color="#800000">ActivateOut</FONT>(<FONT color="#ff8000">bid</FONT>,2,1)
+																means : activate output trigger number 2 wherer&nbsp;the last "1" sets&nbsp;the
+																state to true !&nbsp;</FONT></P>
+														<P>
+													</FONT></STRONG>
+								&nbsp;</P></TD></TR></TBODY></TABLE></P></SPAN>
+					</SPAN>
+				</SPAN>
+			</SPAN></H1>
+	</BODY>
+</HTML>

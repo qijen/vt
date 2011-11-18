@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="xConsole3\libtomcrypt\libtomcrypt.cbp" />
+		<Project filename="xConsole3\xTnlLib\xTnlLib.cbp" />
+		<Project filename="xConsole3\xConsole3\xConsole3.cbp" active="1" />
+	</Workspace>
+</CodeBlocks_workspace_file>

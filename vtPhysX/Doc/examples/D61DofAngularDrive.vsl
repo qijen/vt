@@ -1,0 +1,26 @@
+pJoint joint  = w.getJoint(a,b,JT_D6);
+if(joint)
+{
+	pJointD6 d6 = joint.castD6Joint();
+	
+	d6.setTwistMotionMode(D6MM_Free);
+	d6.setSwing1MotionMode(D6MM_Locked);
+	d6.setSwing2MotionMode(D6MM_Locked);
+	
+	
+	pJD6Drive twistDrive;
+	twistDrive.driveType 	= D6DT_Position;
+	twistDrive.forceLimit 	= 0.0f;
+	twistDrive.spring		= 250.0f;
+	twistDrive.damping		= 0.0f;
+	
+	d6.setTwistDrive(twistDrive);
+	
+	
+	Quaternion quat;
+	Vector rot( 1.0f , 0.0f , 0.0f );
+	float angle  = 45.0f;
+	quat.FromRotation(rot,angle);
+	
+	d6.setDriveRotation(quat);
+}

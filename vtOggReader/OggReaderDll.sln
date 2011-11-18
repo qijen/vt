@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OggReaderDll", "OggReaderDll.vcproj", "{AAA0FAB8-E3CA-4876-A3D7-D99D47F411FA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		ReleaseDebug = ReleaseDebug
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{AAA0FAB8-E3CA-4876-A3D7-D99D47F411FA}.Debug.ActiveCfg = Debug|Win32
+		{AAA0FAB8-E3CA-4876-A3D7-D99D47F411FA}.Debug.Build.0 = Debug|Win32
+		{AAA0FAB8-E3CA-4876-A3D7-D99D47F411FA}.Release.ActiveCfg = ReleaseDebug|Win32
+		{AAA0FAB8-E3CA-4876-A3D7-D99D47F411FA}.Release.Build.0 = ReleaseDebug|Win32
+		{AAA0FAB8-E3CA-4876-A3D7-D99D47F411FA}.ReleaseDebug.ActiveCfg = ReleaseDebug|Win32
+		{AAA0FAB8-E3CA-4876-A3D7-D99D47F411FA}.ReleaseDebug.Build.0 = ReleaseDebug|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

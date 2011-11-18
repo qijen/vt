@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="xConsole3" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option platforms="Windows;" />
+				<Option output="bin\Debug\xConsole3" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin\Debug" />
+				<Option object_output="obj\Debug" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Option projectCompilerOptionsRelation="0" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-O3" />
+					<Add option="-pedantic" />
+					<Add option="-W" />
+					<Add directory="..\..\..\Manager" />
+					<Add directory="..\..\..\subs\libtomcrypt" />
+					<Add directory="..\..\..\subs\tnl" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="..\xTnlLib\libxTnlLib.a" />
+					<Add library="..\..\..\..\..\..\..\..\..\sdk\psdk2xp\Lib\WSock32.Lib" />
+					<Add library="..\libtomcrypt\libtomcrypt.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option platforms="Unix;" />
+				<Option output="bin\Release\xConsole3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="cygwin" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-O3" />
+					<Add directory="..\..\..\Manager" />
+					<Add directory="..\..\..\subs\libtomcrypt" />
+					<Add directory="..\..\..\subs\tnl" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,-u,_WinMain@16" />
+					<Add library="..\xTnlLib\libxTnlLib.a" />
+					<Add library="..\..\..\..\..\..\..\..\..\sdk\psdk2xp\Lib\WSock32.Lib" />
+					<Add library="..\libtomcrypt\libtomcrypt.a" />
+					<Add library="X:\sdk\psdk2xp\Lib\libcp.lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="..\..\..\Manager\IDistributedClasses.cpp" />
+		<Unit filename="..\..\..\Manager\IDistributedClasses.h" />
+		<Unit filename="..\..\..\Manager\IDistributedObjectsInterface.cpp" />
+		<Unit filename="..\..\..\Manager\IDistributedObjectsInterface.h" />
+		<Unit filename="..\..\..\Manager\IMessages.cpp" />
+		<Unit filename="..\..\..\Manager\IMessages.h" />
+		<Unit filename="..\..\..\Manager\vtConnection.cpp" />
+		<Unit filename="..\..\..\Manager\vtConnection.h" />
+		<Unit filename="..\..\..\Manager\vtConnectionMessages.cpp" />
+		<Unit filename="..\..\..\Manager\vtDistributedProperty.h" />
+		<Unit filename="..\..\..\Manager\xConstants.h" />
+		<Unit filename="..\..\..\Manager\xDistTools.cpp" />
+		<Unit filename="..\..\..\Manager\xDistTools.h" />
+		<Unit filename="..\..\..\Manager\xDistributed3DObject.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributed3DObject.h" />
+		<Unit filename="..\..\..\Manager\xDistributed3DObjectClass.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributed3DObjectClass.h" />
+		<Unit filename="..\..\..\Manager\xDistributedBaseClass.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedBaseClass.h" />
+		<Unit filename="..\..\..\Manager\xDistributedClient.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedClient.h" />
+		<Unit filename="..\..\..\Manager\xDistributedInteger.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedInteger.h" />
+		<Unit filename="..\..\..\Manager\xDistributedObject.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedObject.h" />
+		<Unit filename="..\..\..\Manager\xDistributedPoint1F.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedPoint1F.h" />
+		<Unit filename="..\..\..\Manager\xDistributedPoint2F.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedPoint2F.h" />
+		<Unit filename="..\..\..\Manager\xDistributedPoint3F.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedPoint3F.h" />
+		<Unit filename="..\..\..\Manager\xDistributedPoint4F.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedPoint4F.h" />
+		<Unit filename="..\..\..\Manager\xDistributedProperty.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedProperty.h" />
+		<Unit filename="..\..\..\Manager\xDistributedPropertyInfo.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedPropertyInfo.h" />
+		<Unit filename="..\..\..\Manager\xDistributedRect.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedRect.h" />
+		<Unit filename="..\..\..\Manager\xDistributedString.cpp" />
+		<Unit filename="..\..\..\Manager\xDistributedString.h" />
+		<Unit filename="..\..\..\Manager\xMathFnc2.h" />
+		<Unit filename="..\..\..\Manager\xMathStream.h" />
+		<Unit filename="..\..\..\Manager\xMathTools.h" />
+		<Unit filename="..\..\..\Manager\xMessageTypes.h" />
+		<Unit filename="..\..\..\Manager\xNetConstants.h" />
+		<Unit filename="..\..\..\Manager\xNetEnumerations.h" />
+		<Unit filename="..\..\..\Manager\xNetInterface.cpp" />
+		<Unit filename="..\..\..\Manager\xNetInterface.h" />
+		<Unit filename="..\..\..\Manager\xNetInterfaceMessages.cpp" />
+		<Unit filename="..\..\..\Manager\xNetObject.cpp" />
+		<Unit filename="..\..\..\Manager\xNetObject.h" />
+		<Unit filename="..\..\..\Manager\xPoint.h" />
+		<Unit filename="..\..\..\Manager\xPredictionSetting.h" />
+		<Unit filename="..\..\..\Manager\xQuat.h" />
+		<Unit filename="xServerMain.cpp" />
+		<Extensions>
+			<code_completion>
+				<search_path add="..\..\..\Manager" />
+			</code_completion>
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
